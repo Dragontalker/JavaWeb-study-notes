@@ -24,6 +24,11 @@
 	<servlet>
 		<servlet-name>MyServlet</servlet-name>
 		<servlet-class>com.dragontalker.MyServlet</servlet-class>
+		
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Yang</param-value>
+		</init-param>
 	</servlet>
 	
 	<servlet-mapping>
