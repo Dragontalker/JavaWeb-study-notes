@@ -1,5 +1,7 @@
 package com.dragontalker;
 
-public class AddServlet {
+import javax.servlet.http.HttpServlet;
+
+public class AddServlet extends HttpServlet{
 
 }
