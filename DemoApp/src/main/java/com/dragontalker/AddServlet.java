@@ -1,7 +1,6 @@
 package com.dragontalker;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,10 +19,12 @@ public class AddServlet extends HttpServlet {
 		
 		int k = i + j;
 		
-		req.setAttribute("k", k);
+//		req.setAttribute("k", k);
+//		
+//		RequestDispatcher rd = req.getRequestDispatcher("square");
+//		rd.forward(req, res);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("square");
-		rd.forward(req, res);
+		res.sendRedirect("square?k=" + k);
 	}
 
 }
