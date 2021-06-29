@@ -10,5 +10,15 @@
 		<servlet-name>AddServlet</servlet-name>
 		<url-pattern>/add</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SquareServlet</servlet-name>
+		<servlet-class>com.dragontalker.SquareServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SquareServlet</servlet-name>
+		<url-pattern>/square</url-pattern>
+	</servlet-mapping>
 
 </web-app>
