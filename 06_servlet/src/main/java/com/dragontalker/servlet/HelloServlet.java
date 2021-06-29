@@ -9,11 +9,16 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 public class HelloServlet implements Servlet{
+	
+	public HelloServlet() {
+		
+		System.out.println(">> 1. Constructor called...");
+	}
 
 	@Override
 	public void destroy() {
-		// TODO Auto-generated method stub
 		
+		System.out.println(">> 4. destroy() called...");
 	}
 
 	@Override
@@ -30,14 +35,14 @@ public class HelloServlet implements Servlet{
 
 	@Override
 	public void init(ServletConfig arg0) throws ServletException {
-		// TODO Auto-generated method stub
 		
+		System.out.println(">> 2. init() called...");
 	}
 
 	@Override
 	public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
 		
-		System.out.println(">> Hello Servlet: visited!");
+		System.out.println(">> 3. service() called...");
 		
 	}
 
