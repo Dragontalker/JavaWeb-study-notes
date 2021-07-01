@@ -13,13 +13,16 @@ public class JdbcUtilsTest {
 		
 		for (int i = 0; i < 100; i++) {
 			Connection connection = JdbcUtils.getConnection();
+			
 			System.out.println(">> " + (i + 1) + "th connection: " + connection);
+			
 			try {
 				connection.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
 		}
 		
 	}
