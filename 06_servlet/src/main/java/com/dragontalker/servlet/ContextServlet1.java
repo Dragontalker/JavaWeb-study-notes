@@ -16,6 +16,10 @@ public class ContextServlet1 extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		ServletContext context = getServletContext();
+		
+		context.setAttribute("key1", "value1");
+		
+		System.out.println("Context1: value of key1: " + context.getAttribute("key1"));
 	}
 	
 	
