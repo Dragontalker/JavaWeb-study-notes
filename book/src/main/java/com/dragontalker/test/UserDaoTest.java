@@ -10,6 +10,10 @@ public class UserDaoTest {
 	@Test
 	public void testQueryUserByUsername() {
 		UserDao userDao = new UserDaoImpl();
-		System.out.println(userDao.queryUserByUsername("admin"));
+		if (userDao.queryUserByUsername("admin") == null) {
+			System.out.println("用户名可用!");
+		} else {
+			System.out.println("用户名已存在...");
+		}
 	}
 }
