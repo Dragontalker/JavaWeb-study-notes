@@ -16,4 +16,14 @@ public class UserDaoTest {
 			System.out.println("用户名已存在...");
 		}
 	}
+	
+	@Test
+	public void testQueryUserByUsernameAndPassword() {
+		UserDao userDao = new UserDaoImpl();
+		if (userDao.queryUserByUsernameAndPassword("admin", "admin") == null) {
+			System.out.println("用户名或密码错误, 登录失败!");
+		} else {
+			System.out.println("查询成功!");
+		}
+	}
 }
