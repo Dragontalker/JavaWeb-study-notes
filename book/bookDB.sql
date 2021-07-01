@@ -10,3 +10,8 @@ CREATE TABLE t_user(
     `password` VARCHAR(32) NOT NULL,
     `email` VARCHAR(200)
 );
+
+INSERT INTO t_user(`username`, `password`, `email`)
+VALUES('admin', 'admin', 'admin@email.com');
+
+SELECT * FROM t_user;
