@@ -71,4 +71,14 @@
   	<url-pattern>/contextServlet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>ContextServlet1</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.ContextServlet1</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ContextServlet1</servlet-name>
+  	<url-pattern>/contextServlet1</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
