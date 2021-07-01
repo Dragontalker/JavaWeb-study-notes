@@ -46,4 +46,13 @@
   	<url-pattern>/servlet2</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>ForwardC</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.ForwardC</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ForwardC</servlet-name>
+  	<url-pattern>/forwardC</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
