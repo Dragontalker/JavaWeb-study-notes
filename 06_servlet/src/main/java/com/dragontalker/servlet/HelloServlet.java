@@ -8,7 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-public class MyServlet implements Servlet {
+public class HelloServlet implements Servlet {
 
 	@Override
 	public void destroy() {
