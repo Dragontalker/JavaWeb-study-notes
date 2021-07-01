@@ -25,8 +25,6 @@ public class JdbcUtils {
 			
 			dataSource = (DruidDataSource) DruidDataSourceFactory.createDataSource(properties);
 			
-			System.out.println(dataSource.getConnection());
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
