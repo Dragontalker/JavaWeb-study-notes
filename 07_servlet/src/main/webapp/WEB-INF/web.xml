@@ -55,4 +55,13 @@
   	<url-pattern>/forwardC</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>ResponseIOServlet</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.ResponseIOServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ResponseIOServlet</servlet-name>
+  	<url-pattern>/responseIOServlet</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
