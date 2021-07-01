@@ -11,8 +11,9 @@ public class Servlet1 extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		
+		String username = req.getParameter("username");
+		System.out.println("@Servlet1 => check data => username=" + username);
 	}
 
 }
