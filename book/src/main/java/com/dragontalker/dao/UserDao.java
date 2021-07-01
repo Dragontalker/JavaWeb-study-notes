@@ -11,4 +11,10 @@ public interface UserDao {
 	 */
 	public User queryUserByUsername(String username);
 	
+	/**
+	 * 保存用户信息
+	 * @param user 用户对象
+	 * @return 
+	 */
+	public int saveUser(User user);
 }
