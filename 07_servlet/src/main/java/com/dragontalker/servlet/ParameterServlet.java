@@ -1,6 +1,7 @@
 package com.dragontalker.servlet;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,11 +15,11 @@ public class ParameterServlet extends HttpServlet {
 		
 		String userName = req.getParameter("username");
 		String password = req.getParameter("password");
-		String hobby = req.getParameter("hobby");
+		String[] hobby = req.getParameterValues("hobby");
 		
 		System.out.println(">> User Name=" + userName);
 		System.out.println(">> Password=" + password);
-		System.out.println(">> Hobby=" + hobby);
+		System.out.println(">> Hobby=" + Arrays.asList(hobby));
 	}
 
 	
