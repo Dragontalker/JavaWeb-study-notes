@@ -14,8 +14,10 @@ public class Response1 extends HttpServlet {
 		
 		System.out.println("I was here!! @Response1");
 		
-		resp.setStatus(302);
-		resp.setHeader("Location", "http://localhost:8080/07_servlet/response2");
+//		resp.setStatus(302);
+//		resp.setHeader("Location", "http://localhost:8080/07_servlet/response2");
+		
+		resp.sendRedirect("http://localhost:8080/07_servlet/response2");
 	}
 
 	

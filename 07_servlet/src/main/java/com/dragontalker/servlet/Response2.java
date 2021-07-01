@@ -11,8 +11,9 @@ public class Response2 extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		
+		System.out.println(req.getAttribute("key1"));
+		resp.getWriter().write("Response2 Result!");
 	}
 
 }
