@@ -22,8 +22,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean existsUsername(String username) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		if (userDao.queryUserByUsername(username) == null) {
+			return false;
+		}
+		
+		return true;
 	}
 
 }
