@@ -13,8 +13,8 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
 	@Override
 	public User queryUserByUsernameAndPassword(String username, String password) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select `id`, `username`, `password`, `email` from `t_user` where `username` = ? and `password` = ?";
+		return queryForOne(User.class, sql, username);
 	}
 
 	@Override
