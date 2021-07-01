@@ -8,12 +8,12 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-public class HelloServlet implements Servlet{
+public class MyServlet implements Servlet {
 
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -31,13 +31,13 @@ public class HelloServlet implements Servlet{
 	@Override
 	public void init(ServletConfig arg0) throws ServletException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
-		
-		System.out.println("Hello Servlet: being visited!");
+		// TODO Auto-generated method stub
+
 	}
 
 }
