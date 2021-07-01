@@ -33,6 +33,7 @@ public class HelloServlet implements Servlet {
 	public void init(ServletConfig servletConfig) throws ServletException {
 		
 		System.out.println(">> ServletConfig: servlet-name=" + servletConfig.getServletName());
+		System.out.println(">> ServletConfig: servlet-context=" + servletConfig.getServletContext());
 		
 		System.out.println(">> Init-param: username=" + servletConfig.getInitParameter("username"));
 		System.out.println(">> Init-param: url=" + servletConfig.getInitParameter("url"));
