@@ -7,6 +7,7 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
 
 public class HelloServlet implements Servlet {
 
@@ -35,9 +36,12 @@ public class HelloServlet implements Servlet {
 	}
 
 	@Override
-	public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
+	public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 		
-		System.out.println(">> Hello Servlet: being visited!");
+		HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+		String method = httpServletRequest.getMethod();
+		
+		System.out.println(">> Method called = " + method);
 	}
 
 }
