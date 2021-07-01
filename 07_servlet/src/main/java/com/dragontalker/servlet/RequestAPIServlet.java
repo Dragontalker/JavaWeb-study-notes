@@ -19,6 +19,8 @@ public class RequestAPIServlet extends HttpServlet {
 		System.out.println("Client IP Address => " + req.getRemoteHost());
 		
 		System.out.println("Header>>User Agent => " + req.getHeader("User-Agent"));
+		
+		System.out.println("Request Method => " + req.getMethod());
 	}
 
 	

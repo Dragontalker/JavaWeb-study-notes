@@ -7,6 +7,6 @@
 <title>Home</title>
 </head>
 <body>
-	Day 07 Servlet
+	<form action="" method="GET"></form>
 </body>
 </html>
