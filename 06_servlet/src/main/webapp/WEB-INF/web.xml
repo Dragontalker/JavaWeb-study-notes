@@ -23,7 +23,7 @@
   	</init-param>
   	<init-param>
   		<param-name>url</param-name>
-  		<param-value>jdbc:mysql://localhost:3306</param-value>
+  		<param-value>jdbc:mysql://localhost:3306/test1</param-value>
   	</init-param>
   </servlet>
   
@@ -35,6 +35,15 @@
   <servlet>
   	<servlet-name>HelloServlet2</servlet-name>
   	<servlet-class>com.dragontalker.servlet.HelloServlet2</servlet-class>
+  	
+  	<init-param>
+  		<param-name>username</param-name>
+  		<param-value>root</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>url</param-name>
+  		<param-value>jdbc:mysql://localhost:3306/test2</param-value>
+  	</init-param>
   </servlet>
   
   <servlet-mapping>
