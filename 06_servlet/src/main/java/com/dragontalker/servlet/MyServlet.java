@@ -36,8 +36,8 @@ public class MyServlet implements Servlet {
 
 	@Override
 	public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-
+		
+		System.out.println(">> Hello Servlet: being visited!");
 	}
 
 }
