@@ -24,4 +24,13 @@ public class UserDaoImplTest {
 			System.out.println("登录成功!");
 		}
 	}
+	
+	@Test
+	public void testExistsUsername() {
+		if (userService.existsUsername("wzg168")) {
+			System.out.println("用户名已存在!");
+		} else {
+			System.out.println("用户名可用!");
+		}
+	}
 }
