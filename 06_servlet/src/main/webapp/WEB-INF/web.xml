@@ -13,5 +13,13 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <servlet>
+  	<servlet-name>MyServlet</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.MyServlet</servlet-class>
+  </servlet>
   
+  <servlet-mapping>
+  	<servlet-name>MyServlet</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
 </web-app>
