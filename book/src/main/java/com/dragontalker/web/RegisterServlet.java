@@ -16,6 +16,13 @@ public class RegisterServlet extends HttpServlet {
 		String password	= req.getParameter("password");
 		String email	= req.getParameter("email");
 		String code	= req.getParameter("code");
+		
+		if ("abcde".equalsIgnoreCase(code)) {
+			
+		} else {
+			System.out.println("验证码[" + code + "]错误!");
+			req.getRequestDispatcher("/pages/user/register.html").forward(req, resp);
+		}
 	}
 	
 }
