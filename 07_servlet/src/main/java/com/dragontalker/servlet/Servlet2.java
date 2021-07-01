@@ -11,8 +11,14 @@ public class Servlet2 extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		
+		String username = req.getParameter("username");
+		System.out.println("@Servlet2 => check data... => username=" + username);
+		
+		Object key1 = req.getAttribute("key1");
+		System.out.println(">> Approved from Servlet1? " + key1);
+		
+		System.out.println("@Servlet2 => business logic....");
 	}
 
 }

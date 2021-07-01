@@ -7,7 +7,7 @@
 <title>Home</title>
 </head>
 <body>
-	<form action="http://localhost:8080/07_servlet/parameterServlet" method="GET">
+	<form action="http://localhost:8080/07_servlet/servlet1" method="GET">
 		User Name: <input type="text" name="username">
 		
 		<br>
