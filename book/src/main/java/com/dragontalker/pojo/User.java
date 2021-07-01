@@ -2,26 +2,26 @@ package com.dragontalker.pojo;
 
 public class User {
 	
-	private Integer idInteger;
+	private Integer id;
 	private String username;
 	private String password;
 	private String email;
 
 	public User() {}
 
-	public User(Integer idInteger, String username, String password, String email) {
-		this.idInteger = idInteger;
+	public User(Integer id, String username, String password, String email) {
+		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.email = email;
 	}
 
-	public Integer getIdInteger() {
-		return idInteger;
+	public Integer getid() {
+		return id;
 	}
 
-	public void setIdInteger(Integer idInteger) {
-		this.idInteger = idInteger;
+	public void setid(Integer id) {
+		this.id = id;
 	}
 
 	public String getUsername() {
@@ -50,7 +50,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [idInteger=" + idInteger + ", username=" + username + ", password=" + password + ", email=" + email
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email
 				+ "]";
 	}
 	
