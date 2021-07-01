@@ -7,6 +7,6 @@
 <title>Home</title>
 </head>
 <body>
-	<form action="" method="GET"></form>
+	<form action="http://localhost:8080/07_servlet/parameterServlet" method="GET"></form>
 </body>
 </html>
