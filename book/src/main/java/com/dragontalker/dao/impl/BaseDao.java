@@ -2,9 +2,11 @@ package com.dragontalker.dao.impl;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import com.dragontalker.utils.JdbcUtils;
 
@@ -42,6 +44,21 @@ public abstract class BaseDao {
 		
 		return null;
 		
+	}
+	
+	public <T> List<T> queryForList(Class<T> type, String sql, Object ... args) {
+		
+		Connection connection = JdbcUtils.getConnection();
+		
+		try {
+			return queryRunner.query(connection, sql, new BeanListHandler<T>(type), args);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtils.close(connection);
+		}
+		
+		return null;
 	}
 	
 }
