@@ -2,12 +2,11 @@ package com.dragontalker.utils;
 
 import java.io.InputStream;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Properties;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-
-import jdk.internal.dynalink.beans.StaticClass;
 
 public class JdbcUtils {
 	
@@ -46,6 +45,13 @@ public class JdbcUtils {
 	
 	public static void close(Connection conn) {
 		
+		if (conn != null) {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 }
