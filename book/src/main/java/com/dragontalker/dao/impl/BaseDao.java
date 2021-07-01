@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import com.dragontalker.utils.JdbcUtils;
 
@@ -52,6 +53,22 @@ public abstract class BaseDao {
 		
 		try {
 			return queryRunner.query(connection, sql, new BeanListHandler<T>(type), args);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtils.close(connection);
+		}
+		
+		return null;
+		
+	}
+	
+	public Object queryForSingleValue(String sql, Object ... args ) {
+		
+		Connection connection = JdbcUtils.getConnection();
+		
+		try {
+			return queryRunner.query(connection, sql, new ScalarHandler(), args);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
