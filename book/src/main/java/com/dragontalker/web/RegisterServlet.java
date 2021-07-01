@@ -20,8 +20,13 @@ public class RegisterServlet extends HttpServlet {
 		
 		String username	= req.getParameter("username");
 		String password	= req.getParameter("password");
-		String email	= req.getParameter("email");
+		String email = req.getParameter("email");
 		String code	= req.getParameter("code");
+		
+		System.out.println(username);
+		System.out.println(password);
+		System.out.println(email);
+		System.out.println(code);
 		
 		if ("abcde".equalsIgnoreCase(code)) {
 			
