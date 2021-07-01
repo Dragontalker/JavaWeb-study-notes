@@ -41,7 +41,12 @@ public class HelloServlet implements Servlet {
 		HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
 		String method = httpServletRequest.getMethod();
 		
-		System.out.println(">> Method called = " + method);
+		if ("GET".equals(method)) {
+			System.out.println("GET request called");
+		} else if ("POST".equals(method)) {
+			System.out.println("POST request called");
+		}
+
 	}
 
 }
