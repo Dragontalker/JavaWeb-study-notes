@@ -1,9 +1,11 @@
 package com.dragontalker.test;
 
+
 import org.junit.Test;
 
 import com.dragontalker.dao.UserDao;
 import com.dragontalker.dao.impl.UserDaoImpl;
+import com.dragontalker.pojo.User;
 
 public class UserDaoTest {
 
@@ -25,5 +27,12 @@ public class UserDaoTest {
 		} else {
 			System.out.println("查询成功!");
 		}
+	}
+	
+	@Test
+	public void testSaveUser() {
+		UserDao userDao = new UserDaoImpl();
+		int result = userDao.saveUser(new User(null, "richard", "test123", "richard@email.com"));
+		System.out.println("Effected row: " + result);
 	}
 }
