@@ -16,6 +16,15 @@
   <servlet>
   	<servlet-name>HelloServlet</servlet-name>
   	<servlet-class>com.dragontalker.servlet.HelloServlet</servlet-class>
+  	
+  	<init-param>
+  		<param-name>username</param-name>
+  		<param-value>root</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>url</param-name>
+  		<param-value>jdbc:mysql://localhost:3306</param-value>
+  	</init-param>
   </servlet>
   
   <servlet-mapping>
@@ -32,4 +41,5 @@
   	<servlet-name>HelloServlet2</servlet-name>
   	<url-pattern>/hello2</url-pattern>
   </servlet-mapping>
+  
 </web-app>

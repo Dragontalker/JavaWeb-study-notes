@@ -30,9 +30,12 @@ public class HelloServlet implements Servlet {
 	}
 
 	@Override
-	public void init(ServletConfig arg0) throws ServletException {
-		// TODO Auto-generated method stub
-
+	public void init(ServletConfig servletConfig) throws ServletException {
+		
+		System.out.println(">> ServletConfig: servlet-name=" + servletConfig.getServletName());
+		
+		System.out.println(">> Init-param: username=" + servletConfig.getInitParameter("username"));
+		System.out.println(">> Init-param: url=" + servletConfig.getInitParameter("url"));
 	}
 
 	@Override
