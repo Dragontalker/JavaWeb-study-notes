@@ -19,4 +19,13 @@
   	<url-pattern>/requestAPIServlet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>ParameterServlet</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.ParameterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ParameterServlet</servlet-name>
+  	<url-pattern>/parameterServlet</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
