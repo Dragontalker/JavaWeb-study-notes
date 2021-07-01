@@ -22,6 +22,10 @@ public class ContextServlet extends HttpServlet {
 		
 		System.out.println(">> Servlet-context: username=" + username);
 		System.out.println(">> Servlet-context: password=" + password);
+		
+		System.out.println(">> Context-path: " + context.getContextPath());
+		
+		System.out.println(">> Real-path: " + context.getRealPath("/"));
 	}
 	
 	
