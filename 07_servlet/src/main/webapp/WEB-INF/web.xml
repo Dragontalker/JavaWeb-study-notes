@@ -64,4 +64,13 @@
   	<url-pattern>/responseIOServlet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>Response1</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.Response1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Response1</servlet-name>
+  	<url-pattern>/response1</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
