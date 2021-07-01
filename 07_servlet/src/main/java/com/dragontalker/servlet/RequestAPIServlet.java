@@ -15,6 +15,8 @@ public class RequestAPIServlet extends HttpServlet {
 		System.out.println("URI => " + req.getRequestURI());
 		
 		System.out.println("URL => " + req.getRequestURL());
+		
+		System.out.println("Client IP Address => " + req.getRemoteHost());
 	}
 
 	
