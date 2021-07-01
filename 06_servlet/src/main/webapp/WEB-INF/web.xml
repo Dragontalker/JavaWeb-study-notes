@@ -51,4 +51,14 @@
   	<url-pattern>/hello2</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>ContextServlet</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.ContextServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ContextServlet</servlet-name>
+  	<url-pattern>/contextServlet</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
