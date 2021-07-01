@@ -19,8 +19,8 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
 	@Override
 	public int saveUser(User user) {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "insert into `t_user`(`username`, `password`, `email`) values(?,?,?)";
+		return update(sql, user.getUsername(), user.getPassword(), user.getEmail());
 	}
 
 }
