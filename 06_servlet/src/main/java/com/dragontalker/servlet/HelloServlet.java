@@ -39,14 +39,27 @@ public class HelloServlet implements Servlet {
 	public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 		
 		HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+		
 		String method = httpServletRequest.getMethod();
 		
 		if ("GET".equals(method)) {
-			System.out.println("GET request called");
+			doGet();
 		} else if ("POST".equals(method)) {
-			System.out.println("POST request called");
+			doPost();
 		}
 
+	}
+	
+	private void doGet() {
+		System.out.println("GET request called.");
+		System.out.println("GET request called..");
+		System.out.println("GET request called...");
+	}
+	
+	private void doPost() {
+		System.out.println("POST request called.");
+		System.out.println("POST request called..");
+		System.out.println("POST request called...");
 	}
 
 }
