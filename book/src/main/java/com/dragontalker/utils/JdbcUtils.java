@@ -33,7 +33,15 @@ public class JdbcUtils {
 
 	public static Connection getConnection() {
 		
-		return null;
+		Connection conn = null;
+		
+		try {
+			conn = dataSource.getConnection();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return conn;
 	}
 	
 	public static void close(Connection conn) {
