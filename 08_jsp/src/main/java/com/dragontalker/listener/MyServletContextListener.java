@@ -7,14 +7,12 @@ public class MyServletContextListener implements ServletContextListener{
 
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
-		// TODO Auto-generated method stub
-		ServletContextListener.super.contextDestroyed(sce);
+		System.out.println("ServletContext对象被创建了...");
 	}
 
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
-		// TODO Auto-generated method stub
-		ServletContextListener.super.contextInitialized(sce);
+		System.out.println("ServletContext对象被销毁了...");
 	}
 
 	
