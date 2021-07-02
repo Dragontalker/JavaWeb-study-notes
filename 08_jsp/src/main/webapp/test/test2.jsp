@@ -7,13 +7,13 @@
 		<title>Exercise 2</title>
 		<style type="text/css">
 			table {
-				border: 1px red solid;
+				border: 1px black solid;
 				width: 600px;
 				border-collapse: collapse;
 			}
 			td, th{
 				text-align: center;
-				border: 1px red solid;
+				border: 1px black solid;
 			}
 		</style>
 	</head>
