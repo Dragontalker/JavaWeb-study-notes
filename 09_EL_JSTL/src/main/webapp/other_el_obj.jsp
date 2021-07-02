@@ -23,5 +23,8 @@
 		<hr>
 		获取Cookie的名称: ${ cookie.JSESSIONID.name }<br>
 		获取Cookie的值: ${ cookie.JSESSIONID.value }<br>
+		<hr>
+		输出 &lt; Context-param &gt; 中username的值${ initParam.username }<br>
+		输出 &lt; Context-param &gt; 中url的值${ initParam.url }<br>
 	</body>
 </html>
