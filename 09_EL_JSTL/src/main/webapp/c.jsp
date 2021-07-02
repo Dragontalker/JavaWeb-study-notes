@@ -35,18 +35,18 @@
 		
 		<br>
 		
-		输出Person: ${ person.name }
+		输出Person的name属性: ${ person.name }
 		
 		<br>
 		
-		${ person.map }
+		输出Person的map属性:${ person.map }
 		
 		<br>
 		
-		${ person.phone[2] }
+		输出Person的phone属性的第三个值:${ person.phone[2] }
 		
 		<br>
 		
-		${ person.cities }
+		输出Person的cities属性:${ person.cities }
 	</body>
 </html>
