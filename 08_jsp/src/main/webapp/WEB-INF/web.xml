@@ -19,4 +19,13 @@
   	<url-pattern>/printHtml</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>SearchStudentServlet</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.SearchStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SearchStudentServlet</servlet-name>
+  	<url-pattern>/searchStudent</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

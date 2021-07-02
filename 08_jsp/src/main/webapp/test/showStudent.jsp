@@ -21,10 +21,6 @@
 	<body>
 		<%-- 练习二: jsp输出一个表格, 内含10个学生的信息 --%>
 		
-		<%
-			
-		%>
-		
 		<table>
 			<tr>
 				<td>编号</td>
@@ -34,6 +30,8 @@
 				<td>操作</td>
 			</tr>
 		<%
+			List<Student> studentList = (List<Student>) request.getAttribute("studentList");
+		
 			for (Student student : studentList) { %>
 				<tr>
 					<td><%=student.getId() %></td>
