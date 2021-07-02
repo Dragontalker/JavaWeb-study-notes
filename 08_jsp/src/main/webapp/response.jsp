@@ -12,6 +12,11 @@
 	<br>
 	<br>
 	
-	
+	<%
+		response.getWriter().write("resposne输出1: <br>");
+		response.getWriter().write("resposne输出2: <br>");
+		out.write("out输出1: <br>");
+		out.write("out输出2: <br>");
+	%>
 </body>
 </html>
