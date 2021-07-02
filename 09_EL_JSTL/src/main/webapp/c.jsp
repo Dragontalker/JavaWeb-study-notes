@@ -22,6 +22,11 @@
 			cities.add("北京");
 			cities.add("上海");
 			cities.add("深证");
+			
+			Map<String, String> map = new HashMap<>();
+			map.put("key1", "value1");
+			map.put("key2", "value2");
+			map.put("key3", "value3");
 		%>
 		
 		<br>
