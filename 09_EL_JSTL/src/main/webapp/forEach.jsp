@@ -91,14 +91,15 @@
 				<th>电话</th>
 				<th>操作</th>
 			</tr>
-			<c:forEach items="${ requestScope.students }" var="student">
+			<c:forEach begin="2"  end="7" step="2" varStatus="status"
+			items="${ requestScope.students }" var="student">
 				<tr>
 					<td>${ student.id }</td>
 					<td>${ student.username }</td>
 					<td>${ student.password }</td>
 					<td>${ student.age }</td>
 					<td>${ student.phone }</td>
-					<td>修改/删除</td>
+					<td>${ status.current }</td>
 				</tr>
 			</c:forEach>
 		</table>
