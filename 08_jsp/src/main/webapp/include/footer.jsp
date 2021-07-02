@@ -8,5 +8,6 @@
 </head>
 <body>
 	内容更改啦!!!<br>
+	from main.jsp: <%=request.getParameter("username") %>
 </body>
 </html>

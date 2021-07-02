@@ -34,8 +34,11 @@
 	
 	--%>
 	
-	<jsp:include page="/include/footer.jsp" />
+	<jsp:include page="/include/footer.jsp">
+		<jsp:param name="username" value="bbj" />
+		<jsp:param name="password" value="root" />
+	</jsp:include>
 	
-	
+	<jsp:forward page="/scope2.jsp"></jsp:forward>
 </body>
 </html>
