@@ -1,12 +1,12 @@
 <%@ page language="java" 
-         contentType="text/html; charset=ISO-8859-1"
-    	 pageEncoding="ISO-8859-1" 
+         contentType="text/html; charset=UTF-8"
+    	 pageEncoding="UTF-8" 
     	 errorPage="/error500.jsp"
     	 import="java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -31,10 +31,23 @@
 		}
 	%>
 	
-	<%!
-		public static class A() {
-			private Integer id;
-			private String abc = "abc";
+	<%=12  %>
+	<%=12.12  %>
+	<%="我是字符串"  %>
+	<%=request.getAttribute("username")  %>
+	
+	<%
+		int i =12;
+		if (i == 12) {
+			out.println("国哥好帅!");
+		} else {
+			out.println("国哥又骗人了!");
+		}
+	%>
+	
+	<%
+		for (int j = 0; j < 10; j++) {
+			out.println("#" + j);
 		}
 	%>
 </body>
