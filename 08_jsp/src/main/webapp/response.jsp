@@ -14,6 +14,9 @@
 	
 	<%
 		out.write("out输出1: <br>");
+	
+		out.flush();
+		
 		out.write("out输出2: <br>");
 		
 		response.getWriter().write("resposne输出1: <br>");
