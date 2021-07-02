@@ -17,6 +17,8 @@
 		输出请求参数username的值:${ paramValues.username[0] }<br>
 		<hr>
 		输出请求header信息:${ header }<br>
+		<hr>
 		输出请求header中的user-agent信息:${ header['User-Agent'] }<br>
+		输出请求header中的Connection信息:${ header.Connection }<br>
 	</body>
 </html>
