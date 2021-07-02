@@ -57,5 +57,11 @@ public class Student {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", username=" + username + ", password=" + password + ", age=" + age + ", phone="
+				+ phone + "]";
+	}
 	
 }
