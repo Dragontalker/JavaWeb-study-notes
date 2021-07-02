@@ -16,7 +16,11 @@
 				作用: 往域中添加数据
 		
 				域对象.setAttribute(key, value);
-					1. 保存到哪个域
+					1. scape 属性设置保存到哪个域
+						- page表示PageContext域
+						- request表示Request域
+						- session表示Session域
+						- application表示ServletContext域
 					2. key是多少
 					3. value是多少
 		--%>
