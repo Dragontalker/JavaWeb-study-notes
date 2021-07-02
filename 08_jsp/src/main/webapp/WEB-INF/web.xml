@@ -28,4 +28,8 @@
   	<url-pattern>/searchStudent</url-pattern>
   </servlet-mapping>
   
+  <listener>
+  	<listener-class>com.dragontalker.listener.MyServletContextListener</listener-class>
+  </listener>
+  
 </web-app>
