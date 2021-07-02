@@ -8,4 +8,14 @@ public class Student {
 	private Integer age;
 	private String phone;
 
+	public Student() {}
+
+	public Student(Integer id, String username, String password, Integer age, String phone) {
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.age = age;
+		this.phone = phone;
+	}
+	
 }
