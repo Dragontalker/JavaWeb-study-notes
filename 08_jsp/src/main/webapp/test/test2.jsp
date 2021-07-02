@@ -12,6 +12,7 @@
 				border-collapse: collapse;
 			}
 			td, th{
+				text-align: center;
 				border: 1px red solid;
 			}
 		</style>
@@ -29,6 +30,13 @@
 		%>
 		
 		<table>
+			<tr>
+				<td>编号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>电话</td>
+				<td>操作</td>
+			</tr>
 		<%
 			for (Student student : studentList) { %>
 				<tr>
@@ -36,6 +44,7 @@
 					<td><%=student.getName() %></td>
 					<td><%=student.getAge() %></td>
 					<td><%=student.getPhone() %></td>
+					<td> 修改 / 删除 </td>
 				</tr>
 		<%	} %>
 		</table>
