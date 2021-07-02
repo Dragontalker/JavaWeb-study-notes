@@ -1,5 +1,6 @@
 package com.dragontalker.pojo;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -50,6 +51,12 @@ public class Person {
 
 	public void setMap(Map<String, String> map) {
 		this.map = map;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", phone=" + Arrays.toString(phone) + ", cities=" + cities + ", map=" + map
+				+ "]";
 	}
 	
 }
