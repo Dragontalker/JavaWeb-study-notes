@@ -20,5 +20,8 @@
 		<hr>
 		输出请求header中的user-agent信息:${ header['User-Agent'] }<br>
 		输出请求header中的Connection信息:${ header.Connection }<br>
+		<hr>
+		获取Cookie的名称: ${ cookie.JSESSIONID.name }<br>
+		获取Cookie的值: ${ cookie.JSESSIONID.value }<br>
 	</body>
 </html>
