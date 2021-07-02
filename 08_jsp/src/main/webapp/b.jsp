@@ -22,8 +22,13 @@
 			map.put("key1", "value1");
 			map.put("key2", "value2");
 			map.put("key3", "value3");
-	}
-		
+		}
+	%>
+	
+	<%!
+		public int abc() {
+			return 12;
+		}
 	%>
 </body>
 </html>
