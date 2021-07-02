@@ -13,7 +13,6 @@
 		<meta charset="UTF-8">
 		<title>upload.jsp</title>
 	</head>
-	
 	<body>
 		<form action="upload" method="post" enctype="multipart/form-data">
 			用户名： <input type="text" name="username" /> <br>
