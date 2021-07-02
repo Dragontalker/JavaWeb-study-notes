@@ -18,9 +18,19 @@
 		静态包含的特点:
 			1. 静态包含不会翻译被包含的jsp页面
 			2. 静态包含其实是把被包含的jsp页面的代码拷贝到包含的位置执行输出
-	
-	
+			
+		<%@ include file="footer.jsp" %>
 	--%> 
-	<%@ include file="footer.jsp" %>
+	
+	<%--  
+		<jsp:include page="/include/footer.jsp" /> 这是动态包含
+			- page属性是指定你要包含的jsp页面的路径
+			- 动态包含也可以像静态包含一样, 把被包含的内容指定输出到包含位置
+	
+	--%>
+	
+	<jsp:include page="/include/footer.jsp" />
+	
+	
 </body>
 </html>
