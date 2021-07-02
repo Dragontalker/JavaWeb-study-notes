@@ -30,5 +30,12 @@
 			return 12;
 		}
 	%>
+	
+	<%!
+		public static class A() {
+			private Integer id;
+			private String abc = "abc";
+		}
+	%>
 </body>
 </html>
