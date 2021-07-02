@@ -63,6 +63,13 @@
 		<%-- 4. 遍历list集合 --%>
 		<%
 			List<Student> studentList = new ArrayList<Student>();
+		
+			for (int i = 0; i < 10; i++) {
+				int t = i + 1;
+				studentList.add(new Student(t, "userName_" + t, "password_" + i, 18 + i, "phone_" + i));
+			}
+			
+			request.setAttribute("students", studentList);
 		%>
 	</body>
 </html>
