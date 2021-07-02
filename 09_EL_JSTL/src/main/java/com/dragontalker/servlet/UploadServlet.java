@@ -33,6 +33,18 @@ public class UploadServlet extends HttpServlet {
 				
 				// 解析上传的数据, 得到一个表单项FileItem
 				List<FileItem> list = srFileUpload.parseRequest(req);
+				
+				// 循环判断, 每一个表单项, 是普通类型, 还是上传的文件
+				for (FileItem fileItem : list) {
+					
+					if (fileItem.isFormField()) {
+						
+						// 普通表单项
+						System.out.println("表单项的name属性值: " + fileItem.getFieldName());
+						// 参数UTF-8, 解决乱码问题
+						System.out.println("表单项的value属性值: " + fileItem.getString("UTF-8"));
+					}
+				}
 			} catch (FileUploadException e) {
 				e.printStackTrace();
 			}
