@@ -2,7 +2,8 @@
 		 contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
 		 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ page import="java.util.*"%> 
 		 
 <!DOCTYPE html>
 
@@ -40,5 +41,14 @@
 		<c:forEach items="${ requestScope.arr }" var="item">
 			${ item }<br>
 		</c:forEach>
+		
+		<hr>
+		
+		<%
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("key1", "value1");
+			map.put("key2", "value2");
+			map.put("key3", "value3");
+		%>
 	</body>
 </html>
