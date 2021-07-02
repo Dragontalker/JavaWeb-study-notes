@@ -13,6 +13,12 @@
 	</head>
 	
 	<body>
+		<%-- 1. 遍历1到10, 输出 
+			begin属性设置开始的索引
+			end属性设置结束的索引
+		--%>
+		<c:forEach begin="" end="">
 		
+		</c:forEach>
 	</body>
 </html>
