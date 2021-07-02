@@ -27,5 +27,17 @@
 		保存之前: ${ requestScope.abc }<br>
 		<c:set scope="request" var="abc" value="abcValue"/>
 		保存之后: ${ requestScope.abc }<br>
+		
+		<hr>
+		
+		<%--
+			ii. <c:if />
+			 if标签用来做if判断
+			 
+			 test属性表示判断的条件(使用EL表示式输出)
+		--%>
+		<c:if test="${ 12 == 12 }">
+			<h1>12等于12</h1>
+		</c:if>
 	</body>
 </html>
