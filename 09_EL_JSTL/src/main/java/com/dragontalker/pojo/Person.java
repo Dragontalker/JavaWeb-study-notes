@@ -19,5 +19,37 @@ public class Person {
 		this.cities = cities;
 		this.map = map;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String[] getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String[] phone) {
+		this.phone = phone;
+	}
+
+	public List<String> getCities() {
+		return cities;
+	}
+
+	public void setCities(List<String> cities) {
+		this.cities = cities;
+	}
+
+	public Map<String, String> getMap() {
+		return map;
+	}
+
+	public void setMap(Map<String, String> map) {
+		this.map = map;
+	}
 	
 }
