@@ -12,13 +12,13 @@
 	
 	<body>
 		<%-- 
-			request.getScheme() 它可以获取请求的协议
-			request.getServerName() 获取请求的服务器ip或域名
-			request.getServerPort() 获取请求的服务器端口号
-			request.getContextPath() 获取当前工程路径
-			request.getMethod() 获取请求的方式(GET/POST)
-			request.getRemoteHost() 获取客户端的ip地址
-			session.getId() 获取会话的id
+			1. request.getScheme() 它可以获取请求的协议
+			2. request.getServerName() 获取请求的服务器ip或域名
+			3. request.getServerPort() 获取请求的服务器端口号
+			4. request.getContextPath() 获取当前工程路径
+			5. request.getMethod() 获取请求的方式(GET/POST)
+			6. request.getRemoteHost() 获取客户端的ip地址
+			7. session.getId() 获取会话的id
 		--%>
 		1. 协议: ${ pageContext.request.scheme }<br>
 		2. 服务器ip: ${ pageContext.request.serverName }<br>
