@@ -10,5 +10,14 @@ public class Person {
 	private List<String> cities;
 	private Map<String, String> map;
 	
+	public Person() {}
+
+	public Person(String name, String[] phone, List<String> cities, Map<String, String> map) {
+		super();
+		this.name = name;
+		this.phone = phone;
+		this.cities = cities;
+		this.map = map;
+	}
 	
 }
