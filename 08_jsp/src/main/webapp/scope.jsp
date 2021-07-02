@@ -23,5 +23,9 @@
 	request域是否有值: <%=request.getAttribute("key") %><br>
 	session域是否有值: <%=session.getAttribute("key") %><br>
 	application域是否有值: <%=application.getAttribute("key") %><br>
+	
+	<%
+		request.getRequestDispatcher("/scope2.jsp").forward(request, response);
+	%>
 </body>
 </html>
