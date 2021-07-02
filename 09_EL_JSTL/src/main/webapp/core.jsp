@@ -48,10 +48,13 @@
 			
 			choose标签开始选择判断
 			when标签表示每一种判断情况
+			otherwise标签表示剩下的情况
 			
+			<c:choose> <c:when> c:otherwise>标签使用时需要注意的点:
+				1. 标签里不能使用html注释
 		--%>
 		<%
-			request.setAttribute("height", 178);
+			request.setAttribute("height", 158);
 		%>
 		<c:choose>
 			<c:when test="${ requestScope.height > 190 }">
