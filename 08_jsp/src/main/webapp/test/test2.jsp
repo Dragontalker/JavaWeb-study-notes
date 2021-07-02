@@ -7,7 +7,12 @@
 		<title>Exercise 2</title>
 		<style type="text/css">
 			table {
-				width: 700px;
+				border: 1px red solid;
+				width: 600px;
+				border-collapse: collapse;
+			}
+			td, th{
+				border: 1px red solid;
 			}
 		</style>
 	</head>
