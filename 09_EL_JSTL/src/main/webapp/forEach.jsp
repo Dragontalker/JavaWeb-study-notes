@@ -71,5 +71,8 @@
 			
 			request.setAttribute("students", studentList);
 		%>
+		<c:forEach items="${ requestScope.students }" var="student">
+			${ student }<br>
+		</c:forEach>
 	</body>
 </html>
