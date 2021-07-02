@@ -30,12 +30,15 @@
 		
 		<hr>
 		
-		<%-- 2. 遍历objet数组 --%>
+		<%-- 2. 遍历objet数组 
+		
+				items表示遍历的数据源(遍历的集合)
+		--%>
 		<%
 			request.setAttribute("arr", new String[]{"18610541354", "91869999888", "1866668888"});
 		%>
-		<c:forEach>
-		
+		<c:forEach items="${ requestScope.arr }" var="item">
+			${ item }<br>
 		</c:forEach>
 	</body>
 </html>
