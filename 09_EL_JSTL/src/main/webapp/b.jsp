@@ -14,9 +14,8 @@
 		<%
 			pageContext.setAttribute("key", "pageContextValue");
 			request.setAttribute("key", "requestValue");
-			application.setAttribute("key", "applicationValue");
 			session.setAttribute("key", "sessionValue");
-			
+			application.setAttribute("key", "applicationValue");
 		%>
 		
 		<br>
