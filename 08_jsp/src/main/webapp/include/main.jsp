@@ -26,6 +26,11 @@
 		<jsp:include page="/include/footer.jsp" /> 这是动态包含
 			- page属性是指定你要包含的jsp页面的路径
 			- 动态包含也可以像静态包含一样, 把被包含的内容指定输出到包含位置
+			
+		动态包含的特点:
+			1. 动态包含会把包含的jsp页面也翻译称为java代码
+			2. 动态包含底层代码使用如下代码去调用被包含的jsp页面执行输出
+				JspRuntimeLibrary.include(request, response, "/include/footer.jsp", out, false);
 	
 	--%>
 	
