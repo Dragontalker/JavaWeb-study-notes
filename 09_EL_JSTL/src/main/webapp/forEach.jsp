@@ -44,11 +44,17 @@
 		
 		<hr>
 		
+		<%-- 3. 遍历map --%>
 		<%
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("key1", "value1");
 			map.put("key2", "value2");
 			map.put("key3", "value3");
+			
+			request.setAttribute("map", map);
 		%>
+		<c:forEach items="${ requestScope.map }" var="entry">
+			<h1>${ entry.key } === ${ entry.value }</h1><br>
+		</c:forEach>
 	</body>
 </html>
