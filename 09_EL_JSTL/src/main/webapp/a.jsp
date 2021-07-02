@@ -14,10 +14,10 @@
 		<%
 			request.setAttribute("key", "value");
 		%>
-		表达式脚本输出key的值是: <%=request.getAttribute("key") %>
+		表达式脚本输出key的值是: <%=request.getAttribute("key1") %>
 		
 		<br>
 		
-		EL表达式输出key的值是: ${ key }
+		EL表达式输出key的值是: ${ key1 }
 	</body>
 </html>
