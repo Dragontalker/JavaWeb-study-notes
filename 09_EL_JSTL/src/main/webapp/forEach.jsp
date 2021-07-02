@@ -4,6 +4,7 @@
 		 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page import="java.util.*"%> 
+<%@ page import="com.dragontalker.pojo.Student"%> 
 		 
 <!DOCTYPE html>
 
@@ -56,5 +57,12 @@
 		<c:forEach items="${ requestScope.map }" var="entry">
 			<h1>${ entry.key } === ${ entry.value }</h1><br>
 		</c:forEach>
+		
+		<hr>
+		
+		<%-- 4. 遍历list集合 --%>
+		<%
+			List<Student> studentList = new ArrayList<Student>();
+		%>
 	</body>
 </html>
