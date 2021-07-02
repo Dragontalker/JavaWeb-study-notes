@@ -7,10 +7,12 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Day 09</title>
+		<title>a.jsp</title>
 	</head>
 	
 	<body>
-		Day 09: EL / JSTL
+		<%
+			request.setAttribute("key", "value");
+		%>
 	</body>
 </html>
