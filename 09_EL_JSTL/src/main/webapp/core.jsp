@@ -21,8 +21,8 @@
 						- request表示Request域
 						- session表示Session域
 						- application表示ServletContext域
-					2. key是多少
-					3. value是多少
+					2. var属性设置key是多少
+					3. value属性设置value是多少
 		--%>
 		保存之前: ${ requestScope.abc }<br>
 		<c:set />
