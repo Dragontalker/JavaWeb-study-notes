@@ -13,6 +13,8 @@
 	<body>
 		<%-- 
 			request.getScheme() 它可以获取请求的协议
+			request.getServerName() 获取请求的服务器ip或域名
+			request.getServerPort() 获取请求的服务器端口号
 		--%>
 		1. 协议: ${ pageContext.request.scheme }<br>
 		2. 服务器ip: ${ pageContext.request.serverName }<br>
