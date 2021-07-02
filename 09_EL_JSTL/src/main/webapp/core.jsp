@@ -25,7 +25,7 @@
 					3. value属性设置value是多少
 		--%>
 		保存之前: ${ requestScope.abc }<br>
-		<c:set />
+		<c:set scope="request" var="abc" value="abcValue"/>
 		保存之后: ${ requestScope.abc }<br>
 	</body>
 </html>
