@@ -1,4 +1,4 @@
-<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.*"%>
 <%@page import="com.dragontalker.pojo.Person"%>
 <%@ page language="java" 
 		 contentType="text/html; charset=UTF-8"
@@ -16,7 +16,7 @@
 		<%
 			Person person = new Person();
 			person.setName("国哥好帅");
-			person.setPhone(new String[]{"18610541354", "18688886666", "18699997888"};
+			person.setPhone(new String[]{"18610541354", "18688886666", "18699997888"});
 			
 			List<String> cities = new ArrayList<String>();
 			cities.add("北京");
