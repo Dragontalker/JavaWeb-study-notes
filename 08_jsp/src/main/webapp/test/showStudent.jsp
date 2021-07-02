@@ -22,11 +22,7 @@
 		<%-- 练习二: jsp输出一个表格, 内含10个学生的信息 --%>
 		
 		<%
-			List<Student> studentList = new ArrayList<Student>();
-			for (int i = 0; i < 10; i++) {
-				int t = i + 1;
-				studentList.add(new Student(t, "name_" + t, 18 + t, "phone_" + t));
-			}
+			
 		%>
 		
 		<table>
