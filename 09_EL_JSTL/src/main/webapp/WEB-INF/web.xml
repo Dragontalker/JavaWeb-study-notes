@@ -18,4 +18,13 @@
   	<param-name>url</param-name>
   	<param-value>jdbc:mysql:///test</param-value>
   </context-param>
+  
+  <servlet>
+  	<servlet-name>UploadServlet</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UploadServlet</servlet-name>
+  	<url-pattern>/upload</url-pattern>
+  </servlet-mapping>
 </web-app>
