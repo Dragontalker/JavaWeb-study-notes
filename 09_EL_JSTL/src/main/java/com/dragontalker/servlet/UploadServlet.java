@@ -1,5 +1,6 @@
 package com.dragontalker.servlet;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -47,10 +48,12 @@ public class UploadServlet extends HttpServlet {
 						
 						// 上传的文件
 						System.out.println("表单项的name属性值: " + fileItem.getFieldName());
-						System.out.println("上传的文件名: " + fileItem.getString("UTF-8"));
+						System.out.println("上传的文件名: " + fileItem.getName());
+						
+						fileItem.write(new File("d:\\" + fileItem.getName()));
 					}
 				}
-			} catch (FileUploadException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			
