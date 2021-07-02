@@ -11,6 +11,7 @@
 	</head>
 	
 	<body>
-		${ param }
+		输出请求参数username的值: ${ param.username }<br>
+		输出请求参数password的值: ${ param.password }<br>
 	</body>
 </html>
