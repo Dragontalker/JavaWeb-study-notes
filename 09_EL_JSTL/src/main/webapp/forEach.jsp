@@ -12,6 +12,17 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>forEach.jsp</title>
+		<style type="text/css">
+			table {
+				width: 500px;
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			th, td {
+				text-align: center;
+				border: 1px solid black;
+			}
+		</style>
 	</head>
 	
 	<body>
@@ -71,8 +82,25 @@
 			
 			request.setAttribute("students", studentList);
 		%>
-		<c:forEach items="${ requestScope.students }" var="student">
-			${ student }<br>
-		</c:forEach>
+		<table>
+			<tr>
+				<th>编号</th>
+				<th>用户名</th>
+				<th>密码</th>
+				<th>年龄</th>
+				<th>电话</th>
+				<th>操作</th>
+			</tr>
+			<c:forEach items="${ requestScope.students }" var="student">
+				<tr>
+					<td>${ student.id }</td>
+					<td>${ student.username }</td>
+					<td>${ student.password }</td>
+					<td>${ student.age }</td>
+					<td>${ student.phone }</td>
+					<td>修改/删除</td>
+				</tr>
+			</c:forEach>
+		</table>
 	</body>
 </html>
