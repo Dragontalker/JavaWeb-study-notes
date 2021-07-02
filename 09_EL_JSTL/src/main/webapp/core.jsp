@@ -51,7 +51,8 @@
 			otherwise标签表示剩下的情况
 			
 			<c:choose> <c:when> c:otherwise>标签使用时需要注意的点:
-				1. 标签里不能使用html注释
+				1. 标签里不能使用html注释, 要使用jsp注释
+				2. when标签的父标签一定要是<c:choose>标签
 		--%>
 		<%
 			request.setAttribute("height", 158);
