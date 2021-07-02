@@ -14,7 +14,7 @@
 		<%
 			request.setAttribute("key", "value");
 		%>
-		表达式脚本输出key的值是: <%=request.getAttribute("key1") %>
+		表达式脚本输出key的值是: <%=request.getAttribute("key1")==null? "":request.getAttribute("key1") %>
 		
 		<br>
 		
