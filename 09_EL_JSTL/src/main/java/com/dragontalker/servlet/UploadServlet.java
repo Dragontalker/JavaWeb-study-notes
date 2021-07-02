@@ -43,6 +43,11 @@ public class UploadServlet extends HttpServlet {
 						System.out.println("表单项的name属性值: " + fileItem.getFieldName());
 						// 参数UTF-8, 解决乱码问题
 						System.out.println("表单项的value属性值: " + fileItem.getString("UTF-8"));
+					} else {
+						
+						// 上传的文件
+						System.out.println("表单项的name属性值: " + fileItem.getFieldName());
+						System.out.println("上传的文件名: " + fileItem.getString("UTF-8"));
 					}
 				}
 			} catch (FileUploadException e) {
