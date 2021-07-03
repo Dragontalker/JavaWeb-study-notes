@@ -27,6 +27,7 @@ public class UserServlet extends HttpServlet {
 							HttpServletRequest.class, 
 							HttpServletResponse.class);
 			
+			method.invoke(this, req, resp);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
