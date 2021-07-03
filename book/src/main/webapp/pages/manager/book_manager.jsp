@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -29,17 +30,9 @@
 					<td>销量</td>
 					<td>库存</td>
 					<td colspan="2">操作</td>
-				</tr>		
-				<tr>
-					<td>时间简史</td>
-					<td>20.00</td>
-					<td>霍金</td>
-					<td>200</td>
-					<td>400</td>
-					<td><a href="book_edit.jsp">修改</a></td>
-					<td><a href="#">删除</a></td>
-				</tr>	
+				</tr>
 				
+				<c:forEach />		
 				<tr>
 					<td>时间简史</td>
 					<td>20.00</td>
@@ -49,26 +42,7 @@
 					<td><a href="book_edit.jsp">修改</a></td>
 					<td><a href="#">删除</a></td>
 				</tr>	
-				
-				<tr>
-					<td>时间简史</td>
-					<td>20.00</td>
-					<td>霍金</td>
-					<td>200</td>
-					<td>400</td>
-					<td><a href="book_edit.jsp">修改</a></td>
-					<td><a href="#">删除</a></td>
-				</tr>	
-				
-				<tr>
-					<td>时间简史</td>
-					<td>20.00</td>
-					<td>霍金</td>
-					<td>200</td>
-					<td>400</td>
-					<td><a href="book_edit.jsp">修改</a></td>
-					<td><a href="#">删除</a></td>
-				</tr>	
+					
 				
 				<tr>
 					<td></td>
