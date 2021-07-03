@@ -14,8 +14,14 @@ public class BookDaoTest {
 	
 	@Test
 	public void testAddBook() {
-		Book book = new Book(null, "国哥为什么这么帅!", "191125", new BigDecimal(9999), 110000, 0, null);
+		Book book = new Book(null, "GuoGeHaoShuai", "191125", new BigDecimal(9999), 110000, 0, null);
 		bookdao.addBook(book);
+	}
+	
+	@Test
+	public void testUpdateBook() {
+		Book book = new Book(21, "TaJiaDouKeYiZheMeShuai", "191125", new BigDecimal(9999), 110000, 0, null);
+		bookdao.updateBook(book);
 	}
 
 }

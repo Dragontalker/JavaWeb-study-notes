@@ -10,7 +10,7 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 	@Override
 	public int addBook(Book book) {
 		String sql = "insert into t_book(`name` , `author` , `price` , `sales` , `stock` , `img_path`) values(?,?,?,?,?,?)";
-		Object[] args = {book.getName(), book.getAuthor(), book.getPrice(), book.getSales(), book.getSales(), book.getStock(), book.getImgPath()};
+		Object[] args = {book.getName(), book.getAuthor(), book.getPrice(), book.getSales(), book.getStock(), book.getImgPath()};
 		return update(sql, args);
 	}
 
@@ -22,8 +22,8 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 
 	@Override
 	public int updateBook(Book book) {
-		String sql = "update t_book set `name`= ? , `author`=? , `price`=? , `sales`=? , `stock`=? , `img_path`=?";
-		Object[] args = {book.getName(), book.getAuthor(), book.getPrice(), book.getSales(), book.getSales(), book.getStock(), book.getImgPath()};
+		String sql = "update t_book set `name`= ? , `author`=? , `price`=? , `sales`=? , `stock`=? , `img_path`=? where id = ?";
+		Object[] args = {book.getName(), book.getAuthor(), book.getPrice(), book.getSales(), book.getStock(), book.getImgPath(),  book.getId()};
 		return update(sql, args);
 	}
 
