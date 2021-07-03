@@ -1,5 +1,5 @@
 package com.dragontalker.dao;
 
-public class BookDao {
+public interface BookDao {
 
 }
