@@ -21,7 +21,11 @@ public class BookServlet extends BaseServlet {
 	}
 	
 	protected void list(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// 1. 通过BookService查询全部图书
 		
+		// 2. 把全部图书保存到Request域中
+		
+		// 3. 请求妆发到/pages/manager/book_manager.jsp页面
 	}
 
 }
