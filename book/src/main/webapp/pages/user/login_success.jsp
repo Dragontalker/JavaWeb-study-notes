@@ -1,25 +1,28 @@
-<%@ page language="java" 
-    contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>尚硅谷会员注册页面</title>
-<base href="http://localhost:8080/book/">
-<link type="text/css" rel="stylesheet" href="static/css/style.css" >
-<style type="text/css">
-	h1 {
-		text-align: center;
-		margin-top: 200px;
-	}
+
+	<head>
 	
-	h1 a {
-		color:red;
-	}
-</style>
-</head>
-<body>
+		<meta charset="UTF-8">
+		<title>尚硅谷会员注册页面</title>
+		<base href="http://localhost:8080/book/">
+		<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+		<style type="text/css">
+			h1 {
+				text-align: center;
+				margin-top: 200px;
+			}
+			
+			h1 a {
+				color:red;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+	
 		<div id="header">
 				<img class="logo_img" alt="" src="static/img/logo.gif" >
 				<%@ include file="/pages/common/login_success_menu.jsp" %>
@@ -36,5 +39,7 @@
 				尚硅谷书城.Copyright &copy;2015
 			</span>
 		</div>
-</body>
+		
+	</body>
+	
 </html>
