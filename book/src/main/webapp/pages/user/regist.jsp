@@ -120,7 +120,7 @@
 									<input type="hidden" name="action" value="regist">
 									<label>用户名称：</label>
 									<input class="itxt" type="text" placeholder="请输入用户名"
-										   value="${requestScope.username}"
+										   value="${ requestScope.username }"
 										   autocomplete="off" tabindex="1" name="username" id="username" />
 									<br />
 									<br />
@@ -136,8 +136,8 @@
 									<br />
 									<label>电子邮件：</label>
 									<input class="itxt" type="text" placeholder="请输入邮箱地址"
-										   value="${requestScope.email}"
-										   autocomplete="off" tabindex="1" name="email" id="email" />
+										   autocomplete="off" tabindex="1" name="email" id="email"
+										   value="${ requestScope.email }" />
 									<br />
 									<br />
 									<label>验证码：</label>
