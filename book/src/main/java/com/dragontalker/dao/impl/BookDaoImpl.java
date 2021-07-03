@@ -9,8 +9,14 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 
 	@Override
 	public int addBook(Book book) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		String sql = "insert into t_book(`name` , `author` , `price` , `sales` , `stock` , `img_path`) values(?,?,?,?,?,?)";
+		
+		Object[] args = {book.getName(), book.getAuthor(), book.getPrice(), 
+				book.getSales(), book.getSales(), book.getStock(), book.getImgPath()};
+		
+		return update(sql, args);
+		
 	}
 
 	@Override
