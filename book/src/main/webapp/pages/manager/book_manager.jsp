@@ -32,17 +32,17 @@
 					<td colspan="2">操作</td>
 				</tr>
 				
-				<c:forEach />		
-				<tr>
-					<td>时间简史</td>
-					<td>20.00</td>
-					<td>霍金</td>
-					<td>200</td>
-					<td>400</td>
-					<td><a href="book_edit.jsp">修改</a></td>
-					<td><a href="#">删除</a></td>
-				</tr>	
-					
+				<c:forEach items="${ requestScope.books }" var="book">		
+					<tr>
+						<td>${ book.name }</td>
+						<td>${ book.price }</td>
+						<td>${ book.author }</td>
+						<td>${ book.sales }</td>
+						<td>${ book.stock }</td>
+						<td><a href="pages/manager/book_edit.jsp">修改</a></td>
+						<td><a href="#">删除</a></td>
+					</tr>	
+				</c:forEach>	
 				
 				<tr>
 					<td></td>
@@ -51,7 +51,7 @@
 					<td></td>
 					<td></td>
 					<td></td>
-					<td><a href="book_edit.jsp">添加图书</a></td>
+					<td><a href="pages/manager/book_edit.jsp">添加图书</a></td>
 				</tr>	
 			</table>
 		</div>
