@@ -35,8 +35,8 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 
 	@Override
 	public List<Book> queryBooks() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select `id`, `name` , `author` , `price` , `sales` , `stock` , `img_path` imgPath from t_book";
+		return queryForList(Book.class, sql);
 	}
 
 }
