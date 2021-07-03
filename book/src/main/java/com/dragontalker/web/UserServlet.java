@@ -1,6 +1,7 @@
 package com.dragontalker.web;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,12 +21,11 @@ public class UserServlet extends HttpServlet {
 		
 		String action = req.getParameter("action");
 		
-		if ("login".equals(action)) {
-	        login(req, resp);
-		} else if ("regist".equals(action)) {
-			regist(req, resp);
-			
-		}
+		try {
+			Method method = this.getClass().getDeclaredMethod(action);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 	}
 
 	protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
