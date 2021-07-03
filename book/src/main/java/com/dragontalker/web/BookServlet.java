@@ -10,13 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.dragontalker.pojo.Book;
 import com.dragontalker.service.BookService;
 import com.dragontalker.service.impl.BookServiceImpl;
+import com.dragontalker.utils.WebUltis;
 
 public class BookServlet extends BaseServlet {
 	
 	private BookService bookService = new BookServiceImpl();
 
 	protected void add(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		Book book = WebUltis.copyParamToBean(req.getParameterMap(), new Book());
+		bookService.addBook(book);
+		resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=list");
 	}
 	
 	protected void delete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
