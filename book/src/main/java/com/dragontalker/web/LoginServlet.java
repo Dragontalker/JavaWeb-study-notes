@@ -23,17 +23,19 @@ public class LoginServlet extends HttpServlet {
 		
 		if (userService.existsUsername(username)) {
 			
-			if (userService.login(new User(null, username, password, null)) != null ) {
+			User loginUser = userService.login(new User(null, username, password, null));
+			
+			if (loginUser != null ) {
 				System.out.println("登录成功!");
-				req.getRequestDispatcher("/pages/user/login_success.html").forward(req, resp);
+				req.getRequestDispatcher("/pages/user/login_success.jsp").forward(req, resp);
 			} else {
 				System.out.println("密码错误!");
-				req.getRequestDispatcher("/pages/user/login.html").forward(req, resp);
+				req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
 			}
 			
 		} else {
 			System.out.println("用户名[" + username +"]不存在!");
-			req.getRequestDispatcher("/pages/user/login.html").forward(req, resp);
+			req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
 		}
 	}
 
