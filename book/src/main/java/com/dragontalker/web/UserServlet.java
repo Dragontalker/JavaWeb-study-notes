@@ -17,7 +17,7 @@ public class UserServlet extends BaseServlet {
 
 	protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		User user = (User) WebUltis.copyParamToBean(req.getParameterMap(), new User());
+		User user = WebUltis.copyParamToBean(req.getParameterMap(), new User());
 
         User loginUser = userService.login(user);
 
@@ -34,7 +34,7 @@ public class UserServlet extends BaseServlet {
 	
 	protected void regist(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		User user = (User) WebUltis.copyParamToBean(req.getParameterMap(), new User());
+		User user = WebUltis.copyParamToBean(req.getParameterMap(), new User());
 		
 		String code	= req.getParameter("code");
 		

@@ -8,7 +8,7 @@ import org.apache.commons.beanutils.BeanUtils;
 
 public class WebUltis {
 
-	public static Object copyParamToBean(Map map, Object bean) {
+	public static <T> T copyParamToBean(Map map, T bean) {
 		
 		try {
 			
