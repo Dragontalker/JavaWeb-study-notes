@@ -2,6 +2,10 @@ package com.dragontalker.test;
 
 import java.lang.reflect.Method;
 
+import org.apache.jasper.compiler.NewlineReductionServletWriter;
+
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
 public class UserServletTest {
 	
 	public void login() {
@@ -28,6 +32,9 @@ public class UserServletTest {
 			Method method = UserServletTest.class.getDeclaredMethod(action);
 			
 			System.out.println(method);
+			
+			method.invoke(new UserServletTest());
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
