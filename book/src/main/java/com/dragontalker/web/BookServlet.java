@@ -8,10 +8,20 @@ import javax.servlet.http.HttpServletResponse;
 
 public class BookServlet extends BaseServlet {
 
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doPost(req, resp);
+	protected void add(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+	
+	protected void delete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			
+	}
+	
+	protected void update(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+	
+	protected void list(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
 	}
 
 	
