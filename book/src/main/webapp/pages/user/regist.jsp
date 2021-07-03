@@ -6,8 +6,9 @@
 	
 		<meta charset="UTF-8">
 		<title>尚硅谷会员注册页面</title>
-		<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
-		<script type="text/javascript" src="../../static/script/jquery-1.7.2.js"></script>
+		
+		<%@ include file="/pages/common/head.jsp%>
+		
 		<script type="text/javascript">
 			// 页面加载完成之后
 			$(function () {
