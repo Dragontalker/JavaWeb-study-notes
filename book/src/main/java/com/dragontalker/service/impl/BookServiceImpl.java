@@ -13,14 +13,12 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public void addBook(Book book) {
-		// TODO Auto-generated method stub
-
+		bookDao.addBook(book);
 	}
 
 	@Override
-	public void deleteBook(Book book) {
-		// TODO Auto-generated method stub
-
+	public void deleteBookById(Integer id) {
+		bookDao.deleteBookById(id);
 	}
 
 	@Override
