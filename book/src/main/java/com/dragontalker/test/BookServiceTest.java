@@ -21,4 +21,9 @@ public class BookServiceTest {
 	public void testUpdateBook() {
 		bookService.updateBook(new Book(22, "SheHuiWoGuoGe, RenHenHuaBuDuo", "1125", new BigDecimal(100000), 0, 11111, null));
 	}
+	
+	@Test
+	public void testQueryBookById() {
+		System.out.println(bookService.queryBookById(22));
+	}
 }
