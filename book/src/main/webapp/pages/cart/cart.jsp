@@ -6,13 +6,19 @@
 <head>
 <meta charset="UTF-8">
 <title>购物车</title>
-<base href="http://localhost:8080/BookStore02/">
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
+<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+<base href="http://localhost:8080/book/">
+<style type="text/css">
+	h1 {
+		text-align: center;
+		margin-top: 200px;
+	}
+</style>
 </head>
 <body>
 	
 	<div id="header">
-			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
+			<img class="logo_img" alt="" src="static/img/logo.gif" >
 			<span class="wel_word">购物车</span>
 			<div>
 				<span>欢迎<span class="um_span">韩总</span>光临尚硅谷书城</span>
