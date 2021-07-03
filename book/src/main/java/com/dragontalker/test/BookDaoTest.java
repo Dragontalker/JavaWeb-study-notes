@@ -28,5 +28,12 @@ public class BookDaoTest {
 	public void testQueryBookById() {
 		System.out.println(bookdao.queryBookById(21));
 	}
+	
+	@Test
+	public void testQueryBooks() {
+		for (Book book : bookdao.queryBooks()) {
+			System.out.println(book);
+		}
+	}
 
 }
