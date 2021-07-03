@@ -21,28 +21,10 @@ public class UserServlet extends HttpServlet {
 		String action = req.getParameter("action");
 		
 		if ("login".equals(action)) {
-			
-	        String username = req.getParameter("username");
-	        String password = req.getParameter("password");
-
-	        User loginUser = userService.login(new User(null, username, password, null));
-
-	        if (loginUser == null) {
-	        	
-	            req.setAttribute("msg","用户或密码错误！");
-	            req.setAttribute("username", username);
-	            
-	            req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
-	            
-	        } else {
-	        	
-	            req.getRequestDispatcher("/pages/user/login_success.jsp").forward(req, resp);
-	            
-	        }
+	        login(req, resp);
 		} else if ("regist".equals(action)) {
+			regist(req, resp);
 			
-			
-		}
 		}
 	}
 
@@ -54,16 +36,12 @@ public class UserServlet extends HttpServlet {
         User loginUser = userService.login(new User(null, username, password, null));
 
         if (loginUser == null) {
-        	
             req.setAttribute("msg","用户或密码错误！");
             req.setAttribute("username", username);
-            
             req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
             
         } else {
-        	
             req.getRequestDispatcher("/pages/user/login_success.jsp").forward(req, resp);
-            
         }
 		
 	}
@@ -78,12 +56,9 @@ public class UserServlet extends HttpServlet {
 		if ("abcde".equalsIgnoreCase(code)) {
 			
 			if (userService.existsUsername(username)) {
-				
-				req.setAttribute("msg", "验证码错误!");
+				req.setAttribute("msg", "用户名已存在!");
 				req.setAttribute("username", username);
 				req.setAttribute("email", email);
-				
-				System.out.println("用户名[" + username +"]已存在!");
 				req.getRequestDispatcher("/pages/user/regist.jsp").forward(req, resp);
 			} else {
 				userService.registerUser(new User(null, username, password, email));
@@ -91,12 +66,9 @@ public class UserServlet extends HttpServlet {
 			}
 			
 		} else {
-
 			req.setAttribute("msg", "验证码错误!");
 			req.setAttribute("username", username);
 			req.setAttribute("email", email);
-			
-			System.out.println("验证码[" + code + "]错误!");
 			req.getRequestDispatcher("/pages/user/regist.jsp").forward(req, resp);
 		}
 	}
