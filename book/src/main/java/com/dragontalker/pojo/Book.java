@@ -16,14 +16,15 @@ public class Book {
 
 	public Book(Integer id, String name, String author, BigDecimal price, Integer sales, Integer stock,
 			String imgPath) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.author = author;
 		this.price = price;
 		this.sales = sales;
 		this.stock = stock;
-		this.imgPath = imgPath;
+		if (imgPath != null && "".equals(imgPath)) {
+			this.imgPath = imgPath;
+		}
 	}
 
 	public Integer getId() {
