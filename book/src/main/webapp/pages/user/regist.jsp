@@ -1,9 +1,9 @@
-<%@ page language="java" 
-    contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 	<head>
+	
 		<meta charset="UTF-8">
 		<title>尚硅谷会员注册页面</title>
 		<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
@@ -86,15 +86,18 @@
 			});
 
 		</script>
-	<style type="text/css">
-		.login_form{
-			height:420px;
-			margin-top: 25px;
-		}
-
-	</style>
+		<style type="text/css">
+			.login_form{
+				height:420px;
+				margin-top: 25px;
+			}
+	
+		</style>
+		
 	</head>
+	
 	<body>
+	
 		<div id="login_header">
 			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
 		</div>
@@ -152,5 +155,7 @@
 				尚硅谷书城.Copyright &copy;2015
 			</span>
 		</div>
+		
 	</body>
+	
 </html>
