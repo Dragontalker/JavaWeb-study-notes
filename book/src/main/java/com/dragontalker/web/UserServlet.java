@@ -22,7 +22,12 @@ public class UserServlet extends HttpServlet {
 		String action = req.getParameter("action");
 		
 		try {
-			Method method = this.getClass().getDeclaredMethod(action);
+			Method method = this.getClass()
+					.getDeclaredMethod(action, 
+							HttpServletRequest.class, 
+							HttpServletResponse.class);
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
