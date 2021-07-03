@@ -23,5 +23,10 @@ public class BookDaoTest {
 		Book book = new Book(21, "TaJiaDouKeYiZheMeShuai", "191125", new BigDecimal(9999), 110000, 0, null);
 		bookdao.updateBook(book);
 	}
+	
+	@Test
+	public void testQueryBookById() {
+		System.out.println(bookdao.queryBookById(21));
+	}
 
 }
