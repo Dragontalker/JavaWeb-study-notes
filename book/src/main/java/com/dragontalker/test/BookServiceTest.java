@@ -26,4 +26,11 @@ public class BookServiceTest {
 	public void testQueryBookById() {
 		System.out.println(bookService.queryBookById(22));
 	}
+	
+	@Test
+	public void testQueryBooks() {
+		for (Book book : bookService.queryBooks()) {
+			System.out.println(book);
+		}
+	}
 }
