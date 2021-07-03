@@ -2,6 +2,7 @@ package com.dragontalker.web;
 
 import java.io.IOException;
 
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,6 +35,11 @@ public class RegisterServlet extends HttpServlet {
 			}
 			
 		} else {
+			// 把回显信息, 保存到request域中
+			req.setAttribute("msg", "验证码错误!");
+			req.setAttribute("username", username);
+			req.setAttribute("email", email);
+			
 			System.out.println("验证码[" + code + "]错误!");
 			req.getRequestDispatcher("/pages/user/regist.html").forward(req, resp);
 		}
