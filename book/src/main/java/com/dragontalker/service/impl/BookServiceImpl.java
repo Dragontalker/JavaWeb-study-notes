@@ -2,10 +2,14 @@ package com.dragontalker.service.impl;
 
 import java.util.List;
 
+import com.dragontalker.dao.BookDao;
+import com.dragontalker.dao.impl.BookDaoImpl;
 import com.dragontalker.pojo.Book;
 import com.dragontalker.service.BookService;
 
 public class BookServiceImpl implements BookService {
+	
+	private BookDao bookDao = new BookDaoImpl();
 
 	@Override
 	public void addBook(Book book) {
