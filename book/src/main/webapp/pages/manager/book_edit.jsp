@@ -36,7 +36,8 @@
 		</div>
 		
 		<div id="main">
-			<form action="book_manager.jsp">
+			<form action="manager/bookServlet" method="POST">
+				<input type="hidden" name="action" value="add" />
 				<table>
 					<tr>
 						<td>名称</td>
