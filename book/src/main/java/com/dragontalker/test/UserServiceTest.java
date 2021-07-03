@@ -6,7 +6,7 @@ import com.dragontalker.pojo.User;
 import com.dragontalker.service.UserService;
 import com.dragontalker.service.impl.UserServiceImpl;
 
-public class UserDaoImplTest {
+public class UserServiceTest {
 	
 	UserService userService = new UserServiceImpl();
 
