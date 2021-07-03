@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
 	<head>
-	
 		<meta charset="UTF-8">
 		<title>尚硅谷会员注册页面</title>
-		
-		<%@ include file="/pages/common/head.jsp" %>
-		
+
+		<%-- 静态包含 base标签、css样式、jQuery文件 --%>
+		<%@ include file="/pages/common/head.jsp"%>
+
+
 		<script type="text/javascript">
 			// 页面加载完成之后
 			$(function () {
@@ -87,18 +87,15 @@
 			});
 
 		</script>
-		<style type="text/css">
-			.login_form{
-				height:420px;
-				margin-top: 25px;
-			}
-	
-		</style>
-		
+	<style type="text/css">
+		.login_form{
+			height:420px;
+			margin-top: 25px;
+		}
+
+	</style>
 	</head>
-	
 	<body>
-	
 		<div id="login_header">
 			<img class="logo_img" alt="" src="static/img/logo.gif" >
 		</div>
@@ -114,12 +111,16 @@
 						<div class="login_box">
 							<div class="tit">
 								<h1>注册尚硅谷会员</h1>
-								<span class="errorMsg"></span>
+								<span class="errorMsg">
+									${ requestScope.msg }
+								</span>
 							</div>
 							<div class="form">
-								<form action="../../register" method="POST">
+								<form action="registerServlet" method="post">
+									<input type="hidden" name="action" value="regist">
 									<label>用户名称：</label>
 									<input class="itxt" type="text" placeholder="请输入用户名"
+										   value="${requestScope.username}"
 										   autocomplete="off" tabindex="1" name="username" id="username" />
 									<br />
 									<br />
@@ -135,12 +136,13 @@
 									<br />
 									<label>电子邮件：</label>
 									<input class="itxt" type="text" placeholder="请输入邮箱地址"
+										   value="${requestScope.email}"
 										   autocomplete="off" tabindex="1" name="email" id="email" />
 									<br />
 									<br />
 									<label>验证码：</label>
-									<input class="itxt" type="text" style="width: 150px;", name="code", id="code"/>
-									<img alt="" src="../../static/img/code.bmp" style="float: right; margin-right: 40px">
+									<input class="itxt" type="text" name="code" style="width: 150px;" id="code" />
+									<img alt="" src="static/img/code.bmp" style="float: right; margin-right: 40px">
 									<br />
 									<br />
 									<input type="submit" value="注册" id="sub_btn" />
@@ -151,9 +153,10 @@
 					</div>
 				</div>
 			</div>
-		
-		<%@ include file="/pages/common/footer.jsp" %>
-		
+
+		<%--静态包含页脚内容--%>
+		<%@include file="/pages/common/footer.jsp"%>
+
+
 	</body>
-	
 </html>
