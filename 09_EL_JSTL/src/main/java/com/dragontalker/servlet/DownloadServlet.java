@@ -29,6 +29,9 @@ public class DownloadServlet extends HttpServlet {
 		// 获取响应的输出流
 		OutputStream outputStream = resp.getOutputStream();
 		
+		// 读取输入流中全部的数据, 输出给输出流, 输出给客户端
+		IOUtils.copy(resourceAStream, outputStream);
+		
 	}
 	
 	
