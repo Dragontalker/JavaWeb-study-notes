@@ -1,10 +1,8 @@
 package com.dragontalker.web;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -12,11 +10,9 @@ import com.dragontalker.pojo.User;
 import com.dragontalker.service.UserService;
 import com.dragontalker.service.impl.UserServiceImpl;
 
-public class UserServlet extends HttpServlet {
+public class UserServlet extends BaseServlet {
 	
 	private UserService userService = new UserServiceImpl();
-
-	
 
 	protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
