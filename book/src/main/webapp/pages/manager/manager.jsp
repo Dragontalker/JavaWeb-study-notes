@@ -34,11 +34,7 @@
 			<h1>欢迎管理员进入后台管理系统</h1>
 		</div>
 		
-		<div id="bottom">
-			<span>
-				尚硅谷书城.Copyright &copy;2015
-			</span>
-		</div>
+		<%@ include file="/pages/common/footer.jsp" %>
 		
 	</body>
 	
