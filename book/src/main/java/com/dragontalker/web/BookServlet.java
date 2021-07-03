@@ -23,7 +23,9 @@ public class BookServlet extends BaseServlet {
 	}
 	
 	protected void delete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-			
+		String id = req.getParameter("id");
+		int i = Integer.parseInt(id);
+		bookService.deleteBookById(i);
 	}
 	
 	protected void update(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
