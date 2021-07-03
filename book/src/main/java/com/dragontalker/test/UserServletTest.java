@@ -1,5 +1,7 @@
 package com.dragontalker.test;
 
+import java.lang.reflect.Method;
+
 public class UserServletTest {
 	
 	public void login() {
@@ -16,6 +18,20 @@ public class UserServletTest {
 	
 	public void updateUserAndPassword() {
 		System.out.println(">> updateUserAndPassword() called...");
+	}
+	
+	public static void main(String[] args) {
+		
+		String action = "login";
+		
+		try {
+			Method method = UserServletTest.class.getDeclaredMethod(action);
+			
+			System.out.println(method);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		
 	}
 	
 }
