@@ -17,14 +17,14 @@ public class UserServlet extends BaseServlet {
 
 	protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
+		User user = new User();
+		WebUltis.copyParamToBean(req, user);
 
-        User loginUser = userService.login(new User(null, username, password, null));
+        User loginUser = userService.login(user);
 
         if (loginUser == null) {
             req.setAttribute("msg","用户或密码错误！");
-            req.setAttribute("username", username);
+            req.setAttribute("username", user.getUsername());
             req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
             
         } else {
@@ -48,7 +48,7 @@ public class UserServlet extends BaseServlet {
 				req.setAttribute("email", user.getEmail());
 				req.getRequestDispatcher("/pages/user/regist.jsp").forward(req, resp);
 			} else {
-				userService.registerUser(new User(null, user.getUsername(), user.getPassword(), user.getEmail()));
+				userService.registerUser(user);
 				req.getRequestDispatcher("/pages/user/regist_success.jsp").forward(req, resp);
 			}
 			
