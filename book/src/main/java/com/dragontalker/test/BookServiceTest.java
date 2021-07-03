@@ -16,4 +16,9 @@ public class BookServiceTest {
 	public void testAddBook() {
 		bookService.addBook(new Book(null, "GuoGeZaiShou, TianXiaWoYou", "1125", new BigDecimal(100000), 11125, 0, null));
 	}
+	
+	@Test
+	public void testUpdateBook() {
+		bookService.updateBook(new Book(22, "SheHuiWoGuoGe, RenHenHuaBuDuo", "1125", new BigDecimal(100000), 0, 11111, null));
+	}
 }
