@@ -6,8 +6,8 @@
 	
 		<meta charset="UTF-8">
 		<title>尚硅谷会员登录页面</title>
-		<base href="http://localhost:8080/book/">
-		<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+		
+		<%@ include file="/pages/common/head.jsp%>
 		
 	</head>
 	
