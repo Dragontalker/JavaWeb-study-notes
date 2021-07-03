@@ -27,6 +27,11 @@ public class RegisterServlet extends HttpServlet {
 		if ("abcde".equalsIgnoreCase(code)) {
 			
 			if (userService.existsUsername(username)) {
+				// 把回显信息, 保存到request域中
+				req.setAttribute("msg", "验证码错误!");
+				req.setAttribute("username", username);
+				req.setAttribute("email", email);
+				
 				System.out.println("用户名[" + username +"]已存在!");
 				req.getRequestDispatcher("/pages/user/regist.html").forward(req, resp);
 			} else {
