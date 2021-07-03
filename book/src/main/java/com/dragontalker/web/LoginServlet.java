@@ -2,6 +2,7 @@ package com.dragontalker.web;
 
 import java.io.IOException;
 
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,12 +26,15 @@ public class LoginServlet extends HttpServlet {
 			
 			User loginUser = userService.login(new User(null, username, password, null));
 			
-			if (loginUser != null ) {
-				System.out.println("登录成功!");
-				req.getRequestDispatcher("/pages/user/login_success.jsp").forward(req, resp);
-			} else {
-				System.out.println("密码错误!");
+			if (loginUser == null ) {
+				// 把错误信息, 和回显的表单项信息, 保存到request域中
+				req.setAttribute("msg", "用户名或密码错误!");
+				req.setAttribute("username", username);
+				// 跳回登录页面
 				req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
+			} else {
+				
+				req.getRequestDispatcher("/pages/user/login_success.jsp").forward(req, resp);
 			}
 			
 		} else {
