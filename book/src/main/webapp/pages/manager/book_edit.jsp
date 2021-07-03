@@ -7,7 +7,7 @@
 		<meta charset="UTF-8">
 		<title>编辑图书</title>
 		
-		<%@ include file="/pages/common/head.jsp%>
+		<%@ include file="/pages/common/head.jsp" %>
 		
 		<style type="text/css">
 			h1 {

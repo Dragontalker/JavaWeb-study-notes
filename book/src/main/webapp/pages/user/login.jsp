@@ -7,7 +7,7 @@
 		<meta charset="UTF-8">
 		<title>尚硅谷会员登录页面</title>
 		
-		<%@ include file="/pages/common/head.jsp%>
+		<%@ include file="/pages/common/head.jsp" %>
 		
 	</head>
 	

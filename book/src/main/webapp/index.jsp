@@ -6,7 +6,7 @@
 	
 		<meta charset="UTF-8">
 		<title>书城首页</title>
-		<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+		<%@ include file="/pages/common/head.jsp" %>
 	</head>
 	
 	<body>

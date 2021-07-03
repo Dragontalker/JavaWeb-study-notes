@@ -7,14 +7,14 @@
 		<meta charset="UTF-8">
 		<title>图书管理</title>
 		
-		<%@ include file="/pages/common/head.jsp%>
+		<%@ include file="/pages/common/head.jsp" %>
 		
 	</head>
 	
 	<body>
 		
 		<div id="header">
-				<img class="logo_img" alt="" src="../../static/img/logo.gif" >
+				<img class="logo_img" alt="" src="static/img/logo.gif" >
 				<span class="wel_word">图书管理系统</span>
 				<div>
 					<a href="book_manager.jsp">图书管理</a>
