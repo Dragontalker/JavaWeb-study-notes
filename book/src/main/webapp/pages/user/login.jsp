@@ -32,7 +32,7 @@
 							</div>
 							<div class="msg_cont">
 								<b></b>
-								<span class="errorMsg">请输入用户名和密码</span>
+								<span class="errorMsg"><%=request.getAttribute("msg") %></span>
 							</div>
 							<div class="form">
 								<form action="login" method="POST">
