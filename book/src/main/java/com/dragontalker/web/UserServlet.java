@@ -14,7 +14,11 @@ public class UserServlet extends HttpServlet {
 		
 		String action = req.getParameter("action");
 		
-		System.out.println(action);
+		if ("login".equals(action)) {
+			
+		} else if ("regist".equals(action)) {
+			
+		}
 	}
 
 }
