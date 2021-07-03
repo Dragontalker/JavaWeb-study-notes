@@ -33,4 +33,9 @@ public class BookServiceTest {
 			System.out.println(book);
 		}
 	}
+	
+	@Test
+	public void testDeleteBookById() {
+		bookService.deleteBookById(23);
+	}
 }
