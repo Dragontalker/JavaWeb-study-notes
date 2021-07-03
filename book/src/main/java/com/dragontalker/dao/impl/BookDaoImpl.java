@@ -22,8 +22,9 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 
 	@Override
 	public int updateBook(Book book) {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "update t_book set `name`= ? , `author`=? , `price`=? , `sales`=? , `stock`=? , `img_path`=?";
+		Object[] args = {book.getName(), book.getAuthor(), book.getPrice(), book.getSales(), book.getSales(), book.getStock(), book.getImgPath()};
+		return update(sql, args);
 	}
 
 	@Override
