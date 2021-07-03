@@ -35,5 +35,10 @@ public class BookDaoTest {
 			System.out.println(book);
 		}
 	}
+	
+	@Test
+	public void testDeleteBookById() {
+		bookdao.deleteBookById(21);
+	}
 
 }
