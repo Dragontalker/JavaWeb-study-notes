@@ -20,15 +20,6 @@
   </servlet-mapping>
   
   <servlet>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<servlet-class>com.dragontalker.web.LoginServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<url-pattern>/loginServlet</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
   	<servlet-name>UserServlet</servlet-name>
   	<servlet-class>com.dragontalker.web.UserServlet</servlet-class>
   </servlet>
