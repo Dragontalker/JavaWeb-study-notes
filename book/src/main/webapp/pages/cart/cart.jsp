@@ -6,8 +6,9 @@
 	
 		<meta charset="UTF-8">
 		<title>购物车</title>
-		<link type="text/css" rel="stylesheet" href="static/css/style.css" >
-		<base href="http://localhost:8080/book/">
+		
+		<%@ include file="/pages/common/head.jsp%>
+		
 		<style type="text/css">
 			h1 {
 				text-align: center;
