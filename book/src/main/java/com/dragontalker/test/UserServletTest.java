@@ -14,5 +14,8 @@ public class UserServletTest {
 		System.out.println(">> updateUser() called...");
 	}
 	
-
+	public void updateUserAndPassword() {
+		System.out.println(">> updateUserAndPassword() called...");
+	}
+	
 }
