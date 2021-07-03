@@ -9,20 +9,15 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 
 	@Override
 	public int addBook(Book book) {
-		
 		String sql = "insert into t_book(`name` , `author` , `price` , `sales` , `stock` , `img_path`) values(?,?,?,?,?,?)";
-		
-		Object[] args = {book.getName(), book.getAuthor(), book.getPrice(), 
-				book.getSales(), book.getSales(), book.getStock(), book.getImgPath()};
-		
+		Object[] args = {book.getName(), book.getAuthor(), book.getPrice(), book.getSales(), book.getSales(), book.getStock(), book.getImgPath()};
 		return update(sql, args);
-		
 	}
 
 	@Override
 	public int deleteBookById(Integer id) {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "delete from t_book where id = ?";
+		return update(sql, id);
 	}
 
 	@Override
