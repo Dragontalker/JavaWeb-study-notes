@@ -41,6 +41,10 @@ public class BookServiceImpl implements BookService {
 	public Page<Book> page(Integer pageNo, Integer pageSize) {
 		Page<Book> page = new Page();
 		
+		// 设置当前页码
+		page.setP
+		
+		
 		return page;
 	}
 

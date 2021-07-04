@@ -45,11 +45,19 @@ public class Page<T> {
 		this.pageTotalCount = pageTotalCount;
 	}
 
-	public List<T> getitems() {
+	public Integer getPageSize() {
+		return pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+	}
+
+	public List<T> getItems() {
 		return items;
 	}
 
-	public void setitems(List<T> items) {
+	public void setItems(List<T> items) {
 		this.items = items;
 	}
 
