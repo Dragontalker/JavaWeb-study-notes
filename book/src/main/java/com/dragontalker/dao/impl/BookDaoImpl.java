@@ -52,4 +52,16 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 		return queryForList(Book.class, sql, begin, pageSize);
 	}
 
+	@Override
+	public Integer queryForPageTotalCountByPrice(Integer min, Integer max) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Book> queryForPageItemsByPrice(Integer begin, Integer pageSize, Integer min, Integer max) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
