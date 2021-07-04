@@ -26,8 +26,10 @@ public class BookServlet extends BaseServlet {
 		Page<Book> page = bookService.page(pageNo, pageSize);
 		
 		// 3. 保存Page对象到Request域中
+		req.setAttribute("page", page);
 		
 		// 4. 请求转发到pages/manager/book_manager.jsp
+		req.getRequestDispatcher("/pages/manager/book_manager.jsp").forward(req, resp);
 	}
 
 	protected void add(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
