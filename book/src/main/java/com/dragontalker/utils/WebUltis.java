@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.beanutils.BeanUtils;
 
+import com.alibaba.druid.util.ListDG.Edge;
+
 public class WebUltis {
 
 	public static <T> T copyParamToBean(Map map, T bean) {
@@ -22,10 +24,17 @@ public class WebUltis {
 	}
 	
 	public static int parseInt(String strInt, int defaultValue) {
+		
 		try {
-			return Integer.parseInt(strInt);
+			
+			if (strInt != null) {
+				return Integer.parseInt(strInt);
+			} else {
+				return defaultValue;
+			}
+			
 		} catch (Exception e) {
-			System.out.println(">> 检测到空值输入...");
+			e.printStackTrace();
 		}
 		
 		return defaultValue;
