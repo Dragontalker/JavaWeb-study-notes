@@ -10,15 +10,15 @@ public class Page {
 	private Integer pageTotal;
 	private Integer pageSize = PAGE_SIZE;
 	private Integer pageTotalCount;
-	private List<Book> books;
+	private List<Book> items;
 	
 	public Page() {}
 
-	public Page(Integer pageNo, Integer pageTotal, Integer pageTotalCount, List<Book> books) {
+	public Page(Integer pageNo, Integer pageTotal, Integer pageTotalCount, List<Book> items) {
 		this.pageNo = pageNo;
 		this.pageTotal = pageTotal;
 		this.pageTotalCount = pageTotalCount;
-		this.books = books;
+		this.items = items;
 	}
 
 	public Integer getPageNo() {
@@ -45,18 +45,18 @@ public class Page {
 		this.pageTotalCount = pageTotalCount;
 	}
 
-	public List<Book> getBooks() {
-		return books;
+	public List<Book> getitems() {
+		return items;
 	}
 
-	public void setBooks(List<Book> books) {
-		this.books = books;
+	public void setitems(List<Book> items) {
+		this.items = items;
 	}
 
 	@Override
 	public String toString() {
 		return "Page [pageNo=" + pageNo + ", pageTotal=" + pageTotal + ", pageSize=" + pageSize + ", pageTotalCount="
-				+ pageTotalCount + ", books=" + books + "]";
+				+ pageTotalCount + ", items=" + items + "]";
 	}
 	
 }
