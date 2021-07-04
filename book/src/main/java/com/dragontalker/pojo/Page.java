@@ -2,7 +2,7 @@ package com.dragontalker.pojo;
 
 import java.util.List;
 
-public class Page {
+public class Page<T> {
 	
 	public static final Integer PAGE_SIZE = 4;
 	
@@ -10,11 +10,11 @@ public class Page {
 	private Integer pageTotal;
 	private Integer pageSize = PAGE_SIZE;
 	private Integer pageTotalCount;
-	private List<Book> items;
+	private List<T> items;
 	
 	public Page() {}
 
-	public Page(Integer pageNo, Integer pageTotal, Integer pageTotalCount, List<Book> items) {
+	public Page(Integer pageNo, Integer pageTotal, Integer pageTotalCount, List<T> items) {
 		this.pageNo = pageNo;
 		this.pageTotal = pageTotal;
 		this.pageTotalCount = pageTotalCount;
@@ -45,11 +45,11 @@ public class Page {
 		this.pageTotalCount = pageTotalCount;
 	}
 
-	public List<Book> getitems() {
+	public List<T> getitems() {
 		return items;
 	}
 
-	public void setitems(List<Book> items) {
+	public void setitems(List<T> items) {
 		this.items = items;
 	}
 
