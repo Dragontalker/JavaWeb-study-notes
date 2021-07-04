@@ -45,7 +45,7 @@ public class ClientBookServlet extends BaseServlet {
 		int max = WebUltis.parseInt("max", min);
 		
 		// 2. 调用BookService.page(pageNo, pageSize): Page对象
-		Page<Book> page = bookService.page(pageNo, pageSize);
+		Page<Book> page = bookService.pageById(pageNo, pageSize, min, max);
 		
 		page.setUrl("client/bookServlet?action=page");
 		
