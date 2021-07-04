@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dragontalker.pojo.Book;
+import com.dragontalker.pojo.Page;
 import com.dragontalker.service.BookService;
 import com.dragontalker.service.impl.BookServiceImpl;
 import com.dragontalker.utils.WebUltis;
@@ -18,6 +19,8 @@ public class BookServlet extends BaseServlet {
 	
 	protected void page(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// 1. 获取请求的参数 pageNo 和 pageSize
+		int pageNo = WebUltis.parseInt(req.getParameter("pageNo"), 1);
+		int pageSize = WebUltis.parseInt(req.getParameter("pageSize"), Page.PAGE_SIZE);
 		
 		// 2. 调用BookService.page(pageNo, pageSize): Page对象
 		
