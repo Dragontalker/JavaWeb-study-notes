@@ -29,11 +29,11 @@
   </servlet-mapping>
   
   <servlet>
-  	<servlet-name>ClientServlet</servlet-name>
-  	<servlet-class>com.dragontalker.web.ClientServlet</servlet-class>
+  	<servlet-name>ClientBookServlet</servlet-name>
+  	<servlet-class>com.dragontalker.web.ClientBookServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>ClientServlet</servlet-name>
+  	<servlet-name>ClientBookServlet</servlet-name>
   	<url-pattern>/client/bookServlet</url-pattern>
   </servlet-mapping>
 </web-app>
