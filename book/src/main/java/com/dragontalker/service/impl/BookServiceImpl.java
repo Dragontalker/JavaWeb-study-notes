@@ -87,7 +87,7 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public Page<Book> pageById(Integer pageNo, Integer pageSize, Integer min, Integer max) {
-Page<Book> page = new Page<>();
+		Page<Book> page = new Page<>();
 		
 		// 求总记录数
 		Integer pageTotalCount = bookDao.queryForPageTotalCountByPrice(min, max);
