@@ -8,8 +8,6 @@ import com.dragontalker.pojo.Book;
 import com.dragontalker.pojo.Page;
 import com.dragontalker.service.BookService;
 
-import jdk.management.resource.internal.TotalResourceContext;
-
 public class BookServiceImpl implements BookService {
 	
 	private BookDao bookDao = new BookDaoImpl();
