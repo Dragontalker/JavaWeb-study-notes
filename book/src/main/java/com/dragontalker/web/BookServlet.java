@@ -30,8 +30,6 @@ public class BookServlet extends BaseServlet {
 	
 	protected void update(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Book book = WebUltis.copyParamToBean(req.getParameterMap(), new Book());
-		int id = WebUltis.parseInt(req.getParameter("id"), 0);
-		book.setId(id);
 		bookService.updateBook(book);
 		resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=list");
 	}
