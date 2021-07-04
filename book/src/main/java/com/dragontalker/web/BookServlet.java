@@ -15,6 +15,8 @@ import com.dragontalker.utils.WebUltis;
 
 public class BookServlet extends BaseServlet {
 	
+	private static final long serialVersionUID = 2479212881642826003L;
+	
 	private BookService bookService = new BookServiceImpl();
 	
 	protected void page(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

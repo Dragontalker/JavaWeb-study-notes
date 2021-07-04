@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 public abstract class BaseServlet extends HttpServlet {
 
-    @Override
+	private static final long serialVersionUID = 5479884431620497060L;
+
+	@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
     }

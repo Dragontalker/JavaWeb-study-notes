@@ -2,15 +2,11 @@ package com.dragontalker.utils;
 
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.beanutils.BeanUtils;
-
-import com.alibaba.druid.util.ListDG.Edge;
 
 public class WebUltis {
 
-	public static <T> T copyParamToBean(Map map, T bean) {
+	public static <T> T copyParamToBean(Map<?, ?> map, T bean) {
 		
 		try {
 			

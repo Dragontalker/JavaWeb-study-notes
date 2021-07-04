@@ -13,6 +13,8 @@ import com.dragontalker.utils.WebUltis;
 
 public class UserServlet extends BaseServlet {
 	
+	private static final long serialVersionUID = -1282119026810269713L;
+	
 	private UserService userService = new UserServiceImpl();
 
 	protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
