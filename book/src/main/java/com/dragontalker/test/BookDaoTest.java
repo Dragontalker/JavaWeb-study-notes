@@ -1,12 +1,15 @@
 package com.dragontalker.test;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import org.junit.Test;
 
+import com.alibaba.druid.sql.dialect.postgresql.ast.stmt.PGSelectQueryBlock.ForClause;
 import com.dragontalker.dao.BookDao;
 import com.dragontalker.dao.impl.BookDaoImpl;
 import com.dragontalker.pojo.Book;
+import com.dragontalker.pojo.Page;
 
 public class BookDaoTest {
 	
@@ -44,6 +47,14 @@ public class BookDaoTest {
 	@Test
 	public void testQueryForPageCount() {
 		System.out.println(bookdao.queryForPageTotalCount());
+	}
+	
+	@Test
+	public void testQueryForPageItems() {
+		List<Book> items = bookdao.queryForPageItems(8, Page.PAGE_SIZE);
+		for (Book book : items) {
+			System.out.println(book);
+		}
 	}
 
 }
