@@ -80,21 +80,15 @@
 				
 				<c:choose>
 					<c:when test="${ requestScope.page.pageTotal <= 5 }">
-						<c:forEach begin="1" end="${ requestScope.page.pageTotal }" var="i">
-							<c:if test="${ i == requestScope.page.pageNo }">
-								${ i }
-							</c:if>
-							<c:if test="${ i != requestScope.page.pageNo }">
-								<a href="manager/bookServlet?action=page&pageNo=${ i }&pageSize=4">${ i }</a>
-							</c:if>
-						</c:forEach>
+						<c:set var="begin" value="1" />
+						<c:set var="end" value=" ${ requestScope.page.pageTotal }" />
 					</c:when>
 					
 					<c:when test="${ requestScope.page.pageTotal > 5 }">
 						<c:choose>
-							<c:when test="${ request.page.pageNo }">
+							<c:when test="${ request.page.pageNo <= 3}">
 								<c:set var="begin" value="1" />
-								<c:set var="end" value=" ${ requestScope.page.pageTotal }" />
+								<c:set var="end" value="5" />
 							</c:when>
 							
 							<c:when test="${ request.page.pageNo >= request.page.pageTotal - 3 }">
