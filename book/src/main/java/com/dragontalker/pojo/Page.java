@@ -20,5 +20,37 @@ public class Page {
 		this.pageTotalCount = pageTotalCount;
 		this.books = books;
 	}
+
+	public Integer getPageNo() {
+		return pageNo;
+	}
+
+	public void setPageNo(Integer pageNo) {
+		this.pageNo = pageNo;
+	}
+
+	public Integer getPageTotal() {
+		return pageTotal;
+	}
+
+	public void setPageTotal(Integer pageTotal) {
+		this.pageTotal = pageTotal;
+	}
+
+	public Integer getPageTotalCount() {
+		return pageTotalCount;
+	}
+
+	public void setPageTotalCount(Integer pageTotalCount) {
+		this.pageTotalCount = pageTotalCount;
+	}
+
+	public List<Book> getBooks() {
+		return books;
+	}
+
+	public void setBooks(List<Book> books) {
+		this.books = books;
+	}
 	
 }
