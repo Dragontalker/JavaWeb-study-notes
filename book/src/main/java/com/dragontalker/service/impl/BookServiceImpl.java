@@ -63,8 +63,11 @@ public class BookServiceImpl implements BookService {
 		page.setPageTotal(pageTotal);
 		
 		Integer begin = (pageNo - 1) * pageSize;
+		// 求当前页数据
 		List<Book> items = bookDao.queryForPageItems(begin, pageSize);
-
+		// 设置当前页数据
+		page.setItems(items);
+		
 		return page;
 	}
 
