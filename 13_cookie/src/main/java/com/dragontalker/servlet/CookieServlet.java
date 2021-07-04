@@ -36,5 +36,14 @@ public class CookieServlet extends BaseServlet {
     		resp.getWriter().write("找到了需要的Cookie");
     	}
     }
+    
+    protected void updateCookie(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	
+    	Cookie cookie = new Cookie("key1", "newValue1");
+ 
+    	resp.addCookie(cookie);
+    	
+    	resp.getWriter().write("Cookie已经修改好了");
+    }
 
 }
