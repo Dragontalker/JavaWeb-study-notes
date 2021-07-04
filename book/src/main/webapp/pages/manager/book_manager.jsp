@@ -98,14 +98,8 @@
 							</c:when>
 							
 							<c:when test="${ request.page.pageNo >= request.page.pageTotal - 3 }">
-								<c:forEach begin="${ request.page.pageTotal - 4 }" end="${ request.page.pageTotal }" var="i">
-									<c:if test="${ i == requestScope.page.pageNo }">
-										${ i }
-									</c:if>
-									<c:if test="${ i != requestScope.page.pageNo }">
-										<a href="manager/bookServlet?action=page&pageNo=${ i }&pageSize=4">${ i }</a>
-									</c:if>
-								</c:forEach>
+								<c:set var="begin" value="${ request.page.pageTotal - 4 }" />
+								<c:set var="end" value="${ request.page.pageTotal }" />
 							</c:when>
 							
 							<c:otherwise>
