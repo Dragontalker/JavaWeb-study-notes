@@ -36,7 +36,7 @@
 		</div>
 		
 		<div id="main">
-			<form action="manager/bookServlet" method="POST">
+			<form action="manager/bookServlet?action=update" method="POST">
 				<input type="hidden" name="action" value="add" />
 				<table>
 					<tr>
