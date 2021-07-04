@@ -86,7 +86,7 @@
 								${ i }
 							</c:if>
 							<c:if test="${ i != requestScope.page.pageNo }">
-								<a href="manager/bookServlet?action=page$pageNo=${ i }">${ i }</a>
+								<a href="manager/bookServlet?action=page&pageNo=${ i }&pageSize=4">${ i }</a>
 							</c:if>
 						</c:forEach>
 						
