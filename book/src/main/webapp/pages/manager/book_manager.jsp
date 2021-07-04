@@ -73,45 +73,45 @@
 			</table>
 			
 			<div id="page_nav">
-				<c:if test="${ requestScope.page.pageNo > 1 }" >
-					<a href="manager/bookServlet?action=page&pageNo=1&pageSize=4">首页</a>
-					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageNo - 1 }&pageSize=4">上一页</a>
-				</c:if>
+				<c:if test="${requestScope.page.pageNo > 1}">
+			        <a href="${ requestScope.page.url }&pageNo=1">首页</a>
+			        <a href="${ requestScope.page.url }&pageNo=${requestScope.page.pageNo-1}">上一页</a>
+			    </c:if>
 				
 				<c:choose>
 					<c:when test="${ requestScope.page.pageTotal <= 5 }">
-						<c:set var="begin" value="1" />
-						<c:set var="end" value=" ${ requestScope.page.pageTotal }" />
-					</c:when>
+			            <c:set var="begin" value="1"/>
+			            <c:set var="end" value="${requestScope.page.pageTotal}"/>
+			        </c:when>
 					
 					<c:when test="${ requestScope.page.pageTotal > 5 }">
 						<c:choose>
-							<c:when test="${ requestScope.page.pageNo <= 3}">
-								<c:set var="begin" value="1" />
-								<c:set var="end" value="5" />
-							</c:when>
+							<c:when test="${requestScope.page.pageNo <= 3}">
+			                    <c:set var="begin" value="1"/>
+			                    <c:set var="end" value="5"/>
+			                </c:when>
 							
-							<c:when test="${ requestScope.page.pageNo >= requestScope.page.pageTotal - 3 }">
-								<c:set var="begin" value="${ requestScope.page.pageTotal - 4 }" />
-								<c:set var="end" value="${ requestScope.page.pageTotal }" />
-							</c:when>
-							
-							<c:otherwise>
-								<c:set var="begin" value="${ requestScope.page.pageNo - 2 }" />
-								<c:set var="end" value="${ requestScope.page.pageNo + 2 }" />
-							</c:otherwise>
+							<c:when test="${requestScope.page.pageNo > requestScope.page.pageTotal-3}">
+			                    <c:set var="begin" value="${requestScope.page.pageTotal-4}"/>
+			                    <c:set var="end" value="${requestScope.page.pageTotal}"/>
+			                </c:when>
+										
+							 <c:otherwise>
+			                    <c:set var="begin" value="${requestScope.page.pageNo-2}"/>
+			                    <c:set var="end" value="${requestScope.page.pageNo+2}"/>
+			                </c:otherwise>
 						</c:choose>
 					</c:when>
 				</c:choose>
 				
-				<c:forEach begin="${ begin }" end="${ end }" var="i">
-					<c:if test="${ i == requestScope.page.pageNo }">
-						${ i }
-					</c:if>
-					<c:if test="${ i != requestScope.page.pageNo }">
-						<a href="manager/bookServlet?action=page&pageNo=${ i }&pageSize=4">${ i }</a>
-					</c:if>
-				</c:forEach>
+				<c:forEach begin="${begin}" end="${end}" var="i">
+			        <c:if test="${i == requestScope.page.pageNo}">
+			            【${i}】
+			        </c:if>
+			        <c:if test="${i != requestScope.page.pageNo}">
+			            <a href="${ requestScope.page.url }&pageNo=${i}">${i}</a>
+			        </c:if>
+			    </c:forEach>
 
 				<c:if test="${ requestScope.page.pageNo < requestScope.page.pageTotal }">
 					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageNo + 1 }&pageSize=4">下一页</a>
