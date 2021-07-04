@@ -33,7 +33,7 @@ public class CookieServlet extends BaseServlet {
     	Cookie myCookie = CookieUltis.findCookie("key1", cookies);
     	
     	if (myCookie != null) {
-    		System.out.println("找到了需要的Cookie");
+    		resp.getWriter().write("找到了需要的Cookie");
     	}
     }
 
