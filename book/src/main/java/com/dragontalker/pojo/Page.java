@@ -6,12 +6,20 @@ public class Page<T> {
 	
 	public static final Integer PAGE_SIZE = 4;
 	
-	private Integer pageNo;
 	private Integer pageTotal;
+	private Integer pageNo;
 	private Integer pageSize = PAGE_SIZE;
 	private Integer pageTotalCount;
 	private List<T> items;
 
+	public Integer getPageTotal() {
+		return pageTotal;
+	}
+
+	public void setPageTotal(Integer pageTotal) {
+		this.pageTotal = pageTotal;
+	}
+	
 	public Integer getPageNo() {
 		return pageNo;
 	}
@@ -21,19 +29,11 @@ public class Page<T> {
 			pageNo = 1;
 		}
 		
-		if (pageNo > pageTotal) {
-			pageNo = pageTotal;
+		if (pageNo > this.pageTotal) {
+			pageNo = this.pageTotal;
 		}
 		
 		this.pageNo = pageNo;
-	}
-
-	public Integer getPageTotal() {
-		return pageTotal;
-	}
-
-	public void setPageTotal(Integer pageTotal) {
-		this.pageTotal = pageTotal;
 	}
 
 	public Integer getPageTotalCount() {

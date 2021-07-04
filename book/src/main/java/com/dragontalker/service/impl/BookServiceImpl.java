@@ -41,9 +41,6 @@ public class BookServiceImpl implements BookService {
 	public Page<Book> page(Integer pageNo, Integer pageSize) {
 		Page<Book> page = new Page<>();
 		
-		// 设置每页显示的数量
-		page.setPageSize(pageSize);
-		
 		// 求总记录数
 		Integer pageTotalCount = bookDao.queryForPageTotalCount();
 		
@@ -56,13 +53,16 @@ public class BookServiceImpl implements BookService {
 			pageTotal++;
 		}
 		
-		// 设置当前页码
-		page.setPageNo(pageNo);
-		
 		// 设置总页码
 		page.setPageTotal(pageTotal);
 		
-		Integer begin = (pageNo - 1) * pageSize;
+		// 设置每页显示的数量
+		page.setPageSize(pageSize);
+		
+		// 设置当前页码
+		page.setPageNo(pageNo);
+		
+		Integer begin = (page.getPageNo() - 1) * pageSize;
 		// 求当前页数据
 		List<Book> items = bookDao.queryForPageItems(begin, pageSize);
 		// 设置当前页数据

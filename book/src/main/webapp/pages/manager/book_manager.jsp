@@ -76,11 +76,24 @@
 				<c:if test="${ requestScope.page.pageNo > 1 }" >
 					<a href="manager/bookServlet?action=page&pageNo=1&pageSize=4">首页</a>
 					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageNo - 1 }&pageSize=4">上一页</a>
-					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageNo - 1 }&pageSize=4">${ requestScope.page.pageNo - 1 }</a>
 				</c:if>
-				【${ requestScope.page.pageNo }】
+				
+				<c:choose>
+					<c:when test="${ requestScope.page.pageTotal <= 5 }">
+						
+						<c:forEach begin="1" end="${ requestScope.page.pageTotal }" var="i">
+							<c:if test="${ i == requestScope.page.pageNo }">
+								${ i }
+							</c:if>
+							<c:if test="${ i != requestScope.page.pageNo }">
+								<a href="manager/bookServlet?action=page$pageNo=${ i }">${ i }</a>
+							</c:if>
+						</c:forEach>
+						
+					</c:when>
+				</c:choose>
+
 				<c:if test="${ requestScope.page.pageNo < requestScope.page.pageTotal }">
-					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageNo + 1 }&pageSize=4">${ requestScope.page.pageNo + 1 }</a>
 					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageNo + 1 }&pageSize=4">下一页</a>
 					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageTotal }&pageSize=4">末页</a>
 				</c:if>
