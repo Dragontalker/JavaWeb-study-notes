@@ -103,7 +103,27 @@
 								</c:forEach>
 							</c:when>
 							
+							<c:when test="${ request.page.pageNo >= request.page.pageTotal - 3 }">
+								<c:forEach begin="${ request.page.pageTotal - 4 }" end="${ request.page.pageTotal }" var="i">
+									<c:if test="${ i == requestScope.page.pageNo }">
+										${ i }
+									</c:if>
+									<c:if test="${ i != requestScope.page.pageNo }">
+										<a href="manager/bookServlet?action=page&pageNo=${ i }&pageSize=4">${ i }</a>
+									</c:if>
+								</c:forEach>
+							</c:when>
 							
+							<c:otherwise>
+								<c:forEach begin="${ request.page.pageNo - 2 }" end="${ request.page.pageNo + 2 }" var="i">
+									<c:if test="${ i == requestScope.page.pageNo }">
+										${ i }
+									</c:if>
+									<c:if test="${ i != requestScope.page.pageNo }">
+										<a href="manager/bookServlet?action=page&pageNo=${ i }&pageSize=4">${ i }</a>
+									</c:if>
+								</c:forEach>
+							</c:otherwise>
 						</c:choose>
 					</c:when>
 				</c:choose>
