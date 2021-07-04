@@ -56,5 +56,20 @@ public class CookieServlet extends BaseServlet {
     	
     	resp.getWriter().write("默认生命周期");
     }
+    
+    protected void deleteNow(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	
+    	Cookie[] cookies = req.getCookies();
+    	
+    	Cookie cookie = CookieUltis.findCookie("defaultLife", cookies);
+    	
+    	if (cookie != null) {
+    		cookie.setMaxAge(0);
+        	
+        	resp.addCookie(cookie);
+    	}
+    	
+    	resp.getWriter().write("Cookie立刻删除");
+    }
 
 }
