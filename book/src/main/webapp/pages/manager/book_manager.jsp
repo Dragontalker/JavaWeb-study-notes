@@ -93,14 +93,8 @@
 					<c:when test="${ requestScope.page.pageTotal > 5 }">
 						<c:choose>
 							<c:when test="${ request.page.pageNo }">
-								<c:forEach begin="1" end="5" var="i">
-									<c:if test="${ i == requestScope.page.pageNo }">
-										${ i }
-									</c:if>
-									<c:if test="${ i != requestScope.page.pageNo }">
-										<a href="manager/bookServlet?action=page&pageNo=${ i }&pageSize=4">${ i }</a>
-									</c:if>
-								</c:forEach>
+								<c:set var="begin" value="1" />
+								<c:set var="end" value=" ${ requestScope.page.pageTotal }" />
 							</c:when>
 							
 							<c:when test="${ request.page.pageNo >= request.page.pageTotal - 3 }">
@@ -127,6 +121,15 @@
 						</c:choose>
 					</c:when>
 				</c:choose>
+				
+				<c:forEach begin="${ request.page.pageNo - 2 }" end="${ request.page.pageNo + 2 }" var="i">
+					<c:if test="${ i == requestScope.page.pageNo }">
+						${ i }
+					</c:if>
+					<c:if test="${ i != requestScope.page.pageNo }">
+						<a href="manager/bookServlet?action=page&pageNo=${ i }&pageSize=4">${ i }</a>
+					</c:if>
+				</c:forEach>
 
 				<c:if test="${ requestScope.page.pageNo < requestScope.page.pageTotal }">
 					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageNo + 1 }&pageSize=4">下一页</a>
