@@ -39,4 +39,16 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 		return queryForList(Book.class, sql);
 	}
 
+	@Override
+	public Integer queryForPageTotalCount() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Book> queryForPageItems(Integer begin, Integer pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
