@@ -84,8 +84,18 @@
 					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageNo + 1 }&pageSize=4">下一页</a>
 					<a href="manager/bookServlet?action=page&pageNo=${ requestScope.page.pageTotal }&pageSize=4">末页</a>
 				</c:if>
-				共${ requestScope.page.pageTotal }页，${ requestScope.page.pageTotalCount }条记录 到第<input value="${ requestScope.page.pageNo }" name="pn" id="pn_input"/>页
-				<input type="button" value="确定">
+				共${ requestScope.page.pageTotal }页，${ requestScope.page.pageTotalCount }条记录 
+				到第<input value="${ requestScope.page.pageNo }" name="pn" id="pn_input"/>页
+				<input id="searchPageBtn" type="button" value="确定">
+				
+					<script type="text/javascript">
+						$(function () {
+							$("#searchPageBtn").click(function () {
+								var pageNo = $("#pn_input").val();								
+								location.href = "${ pageScope.basePath }manager/bookServlet?action=page&pageNo=" + pageNo + "&pageSize=4";
+							});
+						});
+					</script>
 			</div>
 		</div>
 		
