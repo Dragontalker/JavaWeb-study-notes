@@ -103,14 +103,8 @@
 							</c:when>
 							
 							<c:otherwise>
-								<c:forEach begin="${ request.page.pageNo - 2 }" end="${ request.page.pageNo + 2 }" var="i">
-									<c:if test="${ i == requestScope.page.pageNo }">
-										${ i }
-									</c:if>
-									<c:if test="${ i != requestScope.page.pageNo }">
-										<a href="manager/bookServlet?action=page&pageNo=${ i }&pageSize=4">${ i }</a>
-									</c:if>
-								</c:forEach>
+								<c:set var="begin" value="${ request.page.pageNo - 2 }" />
+								<c:set var="end" value="${ request.page.pageNo + 2 }" />
 							</c:otherwise>
 						</c:choose>
 					</c:when>
