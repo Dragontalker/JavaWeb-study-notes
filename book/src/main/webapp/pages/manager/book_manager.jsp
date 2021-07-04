@@ -9,6 +9,16 @@
 		<title>图书管理</title>
 		
 		<%@ include file="/pages/common/head.jsp" %>
+		<script type="text/javascript">
+			$(function() {
+				
+				$("a.deleteClass").click(function() {
+					
+					return confirm("Delete the selected book?");
+				})
+			})
+		</script>
+		
 		
 	</head>
 	
@@ -40,7 +50,7 @@
 						<td>${ book.sales }</td>
 						<td>${ book.stock }</td>
 						<td><a href="pages/manager/book_edit.jsp">修改</a></td>
-						<td><a href="manager/bookServlet?action=delete&id=${ book.id }">删除</a></td>
+						<td><a class="deleteClass" href="manager/bookServlet?action=delete&id=${ book.id }">删除</a></td>
 					</tr>	
 				</c:forEach>	
 				
