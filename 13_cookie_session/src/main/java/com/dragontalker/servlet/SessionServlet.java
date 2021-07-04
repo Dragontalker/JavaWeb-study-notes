@@ -23,12 +23,13 @@ public class SessionServlet extends BaseServlet {
 	
 	protected void setAttribute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-	
+		req.getSession().setAttribute("key1", "value1");
 	}
 	
 	protected void getAttribute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		
+		Object key1 = req.getSession().getAttribute("key1");
+		resp.getWriter().write("从Session中取出key1的数值是: " + key1);
 	}
 
 }
