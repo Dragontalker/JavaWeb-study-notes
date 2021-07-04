@@ -36,8 +36,9 @@
 		</div>
 		
 		<div id="main">
-			<form action="manager/bookServlet?action=update&id=${ requestScope.book.id }" method="POST">
+			<form action="manager/bookServlet">
 				<input type="hidden" name="action" value="${ empty requestScope.book ? "add" : "update" }" />
+				<input type="hidden" name="id" value="${ requestScope.book.id }" />
 				<table>
 					<tr>
 						<td>名称</td>
