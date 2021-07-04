@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.alibaba.druid.sql.dialect.postgresql.ast.stmt.PGSelectQueryBlock.ForClause;
 import com.dragontalker.dao.BookDao;
 import com.dragontalker.dao.impl.BookDaoImpl;
 import com.dragontalker.pojo.Book;
