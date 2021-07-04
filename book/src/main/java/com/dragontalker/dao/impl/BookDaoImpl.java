@@ -41,8 +41,9 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 
 	@Override
 	public Integer queryForPageTotalCount() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select count(*) from t_book";
+		Number count = (Number) queryForSingleValue(sql);
+		return count.intValue();
 	}
 
 	@Override
