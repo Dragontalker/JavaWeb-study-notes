@@ -48,8 +48,8 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 
 	@Override
 	public List<Book> queryForPageItems(Integer begin, Integer pageSize) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select `id`, `name` , `author` , `price` , `sales` , `stock` , `img_path` imgPath from t_book limit ?, ?";
+		return queryForList(Book.class, sql, begin, pageSize);
 	}
 
 }
