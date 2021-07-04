@@ -45,6 +45,7 @@ public class BookServlet extends BaseServlet {
 		int id = WebUltis.parseInt(req.getParameter("id"), 0);
 		Book book = bookService.queryBookById(id);
 		req.setAttribute("book", book);
+		req.getRequestDispatcher("/pages/manager/book_edit.jsp").forward(req, resp);
 	}
 
 }
