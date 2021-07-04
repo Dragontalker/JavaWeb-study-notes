@@ -112,7 +112,7 @@ Page<Book> page = new Page<>();
 		
 		Integer begin = (page.getPageNo() - 1) * pageSize;
 		// 求当前页数据
-		List<Book> items = bookDao.queryForPageItems(begin, pageSize);
+		List<Book> items = bookDao.queryForPageItemsByPrice(begin, pageSize, min, max);
 		// 设置当前页数据
 		page.setItems(items);
 		
