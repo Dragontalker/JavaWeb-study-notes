@@ -25,7 +25,7 @@ public class WebUltis {
 		try {
 			return Integer.parseInt(strInt);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(">> 检测到空值输入...");
 		}
 		
 		return defaultValue;
