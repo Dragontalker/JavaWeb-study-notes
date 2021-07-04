@@ -54,8 +54,9 @@ public class BookDaoImpl extends BaseDao implements BookDao {
 
 	@Override
 	public Integer queryForPageTotalCountByPrice(Integer min, Integer max) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select count(*) from t_book where price between ? and ?";
+		Number count = (Number) queryForSingleValue(sql, min, max);
+		return count.intValue();
 	}
 
 	@Override
