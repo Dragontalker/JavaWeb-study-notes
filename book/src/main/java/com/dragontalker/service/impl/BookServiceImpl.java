@@ -58,6 +58,9 @@ public class BookServiceImpl implements BookService {
 		if (pageTotalCount % pageSize > 0) {
 			pageTotal++;
 		}
+		
+		// 设置总页码
+		page.setPageTotal(pageTotal);
 
 		return page;
 	}
