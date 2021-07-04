@@ -25,7 +25,7 @@ public class BookServlet extends BaseServlet {
 		// 2. 调用BookService.page(pageNo, pageSize): Page对象
 		Page<Book> page = bookService.page(pageNo, pageSize);
 		
-		page.setUrl("manager/bookService?action=page");
+		page.setUrl("manager/bookServlet?action=page");
 		
 		// 3. 保存Page对象到Request域中
 		req.setAttribute("page", page);

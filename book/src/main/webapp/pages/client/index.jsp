@@ -75,6 +75,7 @@
 			
 			
 			<div id="page_nav">
+				${ requestScope.page.url }
 				<c:if test="${requestScope.page.pageNo > 1}">
 			        <a href="client/bookServlet?action=page&pageNo=1&pageSize=4">首页</a>
 			        <a href="client/bookServlet?action=page&pageNo=${requestScope.page.pageNo-1}&pageSize=4">上一页</a>
