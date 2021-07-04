@@ -40,5 +40,11 @@ public class BookServlet extends BaseServlet {
         //3、请求转发到/pages/manager/book_manager.jsp页面
         req.getRequestDispatcher("/pages/manager/book_manager.jsp").forward(req,resp);
     }
+	
+	protected void getBook(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		int id = WebUltis.parseInt(req.getParameter("id"), 0);
+		Book book = bookService.queryBookById(id);
+		req.setAttribute("book", book);
+	}
 
 }
