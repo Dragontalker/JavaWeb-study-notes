@@ -50,11 +50,11 @@ public class ClientBookServlet extends BaseServlet {
 		StringBuilder stringBuilder = new StringBuilder("client/bookServlet?action=pageByPrice");
 		
 		if (req.getParameter("min") != null) {
-			stringBuilder.append("$min=").append(req.getParameter("min"));
+			stringBuilder.append("&min=").append(req.getParameter("min"));
 		}
 		
 		if (req.getParameter("max") != null) {
-			stringBuilder.append("$max=").append(req.getParameter("max"));
+			stringBuilder.append("&max=").append(req.getParameter("max"));
 		}
 		
 		page.setUrl(stringBuilder.toString());
