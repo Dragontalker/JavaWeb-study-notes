@@ -31,5 +31,12 @@ public class SessionServlet extends BaseServlet {
 		Object key1 = req.getSession().getAttribute("key1");
 		resp.getWriter().write("从Session中取出key1的数值是: " + key1);
 	}
+	
+	protected void defaultLife(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		int maxInactiveInterval = req.getSession().getMaxInactiveInterval();
+		
+		resp.getWriter().write("Session的默认超时时常为: " + maxInactiveInterval + "秒");
+	}
 
 }
