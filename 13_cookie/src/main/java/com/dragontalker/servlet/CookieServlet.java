@@ -45,5 +45,16 @@ public class CookieServlet extends BaseServlet {
     	
     	resp.getWriter().write("Cookie已经修改好了");
     }
+    
+    protected void defaultLife(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	
+    	Cookie cookie = new Cookie("defaultLife", "defaultLife");
+    	
+    	cookie.setMaxAge(-1);
+ 
+    	resp.addCookie(cookie);
+    	
+    	resp.getWriter().write("默认生命周期");
+    }
 
 }
