@@ -123,14 +123,14 @@
 				到第<input value="${ requestScope.page.pageNo }" name="pn" id="pn_input"/>页
 				<input id="searchPageBtn" type="button" value="确定">
 				
-					<script type="text/javascript">
-						$(function () {
-							$("#searchPageBtn").click(function () {
-								var pageNo = $("#pn_input").val();								
-								location.href = "${ pageScope.basePath }${ requestScope.page.url }&pageNo=" + pageNo + "&pageSize=4";
-							});
+				<script type="text/javascript">
+					$(function () {
+						$("#searchPageBtn").click(function () {
+							var pageNo = $("#pn_input").val();								
+							location.href = "${ pageScope.basePath }${ requestScope.page.url }&pageNo=" + pageNo + "&pageSize=4";
 						});
-					</script>
+					});
+				</script>
 			</div>
 		
 		</div>
