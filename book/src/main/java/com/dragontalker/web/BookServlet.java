@@ -35,19 +35,19 @@ public class BookServlet extends BaseServlet {
 	protected void add(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Book book = WebUltis.copyParamToBean(req.getParameterMap(), new Book());
 		bookService.addBook(book);
-		resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=list");
+		resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=page");
 	}
 	
 	protected void delete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int id = WebUltis.parseInt(req.getParameter("id"), 0);
 		bookService.deleteBookById(id);
-		resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=list");
+		resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=page");
 	}
 	
 	protected void update(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Book book = WebUltis.copyParamToBean(req.getParameterMap(), new Book());
 		bookService.updateBook(book);
-		resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=list");
+		resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=page");
 	}
 	
 	protected void list(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
