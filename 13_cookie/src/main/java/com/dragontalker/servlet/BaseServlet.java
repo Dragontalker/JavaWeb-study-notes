@@ -21,6 +21,8 @@ public abstract class BaseServlet extends HttpServlet {
         // 解决post请求中文乱码问题
         // 一定要在获取请求参数之前调用才有效
         req.setCharacterEncoding("UTF-8");
+        
+        resp.setContentType("text/html; charset=UTF-8");
 
         String action = req.getParameter("action");
         try {

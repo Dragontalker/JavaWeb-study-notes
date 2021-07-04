@@ -12,7 +12,7 @@
   
   <servlet>
   	<servlet-name>CookieServlet</servlet-name>
-  	<servlet-class>com.dragontalker.servlet.CookiServlet</servlet-class>
+  	<servlet-class>com.dragontalker.servlet.CookieServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>CookieServlet</servlet-name>
