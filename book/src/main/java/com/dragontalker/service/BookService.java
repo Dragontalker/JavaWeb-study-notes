@@ -3,6 +3,7 @@ package com.dragontalker.service;
 import java.util.List;
 
 import com.dragontalker.pojo.Book;
+import com.dragontalker.pojo.Page;
 
 public interface BookService {
 
@@ -15,4 +16,6 @@ public interface BookService {
 	public Book queryBookById(Integer id);
 	
 	public List<Book> queryBooks();
+
+	public Page<Book> page(Integer pageNo, Integer pageSize);
 }

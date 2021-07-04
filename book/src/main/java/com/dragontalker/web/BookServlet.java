@@ -23,6 +23,7 @@ public class BookServlet extends BaseServlet {
 		int pageSize = WebUltis.parseInt(req.getParameter("pageSize"), Page.PAGE_SIZE);
 		
 		// 2. 调用BookService.page(pageNo, pageSize): Page对象
+		Page<Book> page = bookService.page(pageNo, pageSize);
 		
 		// 3. 保存Page对象到Request域中
 		
