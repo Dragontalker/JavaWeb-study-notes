@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import org.junit.Test;
 
 import com.dragontalker.pojo.Book;
+import com.dragontalker.pojo.Page;
 import com.dragontalker.service.BookService;
 import com.dragontalker.service.impl.BookServiceImpl;
 
@@ -37,5 +38,10 @@ public class BookServiceTest {
 	@Test
 	public void testDeleteBookById() {
 		bookService.deleteBookById(23);
+	}
+	
+	@Test
+	public void testPage() {
+		System.out.println(bookService.page(1, Page.PAGE_SIZE));
 	}
 }
