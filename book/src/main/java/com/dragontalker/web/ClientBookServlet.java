@@ -41,13 +41,23 @@ public class ClientBookServlet extends BaseServlet {
 		// 1. 获取请求的参数 pageNo 和 pageSize
 		int pageNo = WebUltis.parseInt(req.getParameter("pageNo"), 1);
 		int pageSize = WebUltis.parseInt(req.getParameter("pageSize"), Page.PAGE_SIZE);
-		int min = WebUltis.parseInt("min", 0);
-		int max = WebUltis.parseInt("max", min);
+		int min = WebUltis.parseInt(req.getParameter("min"), 0);
+		int max = WebUltis.parseInt(req.getParameter("max"), Integer.MAX_VALUE);
 		
 		// 2. 调用BookService.page(pageNo, pageSize): Page对象
-		Page<Book> page = bookService.pageById(pageNo, pageSize, min, max);
+		Page<Book> page = bookService.pageByPrice(pageNo, pageSize, min, max);
 		
-		page.setUrl("client/bookServlet?action=pageByPrice");
+		StringBuilder stringBuilder = new StringBuilder("client/bookServlet?action=pageByPrice");
+		
+		if (req.getParameter("min") != null) {
+			stringBuilder.append("$min=").append(req.getParameter("min"));
+		}
+		
+		if (req.getParameter("max") != null) {
+			stringBuilder.append("$max=").append(req.getParameter("max"));
+		}
+		
+		page.setUrl(stringBuilder.toString());
 		
 		// 3. 保存Page对象到Request域中
 		req.setAttribute("page", page);
