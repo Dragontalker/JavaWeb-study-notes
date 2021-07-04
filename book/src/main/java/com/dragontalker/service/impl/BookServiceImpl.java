@@ -5,6 +5,7 @@ import java.util.List;
 import com.dragontalker.dao.BookDao;
 import com.dragontalker.dao.impl.BookDaoImpl;
 import com.dragontalker.pojo.Book;
+import com.dragontalker.pojo.Page;
 import com.dragontalker.service.BookService;
 
 public class BookServiceImpl implements BookService {
@@ -34,6 +35,12 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public List<Book> queryBooks() {
 		return bookDao.queryBooks();
+	}
+
+	@Override
+	public Page<Book> page(Integer pageNo, Integer pageSize) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
