@@ -87,8 +87,36 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public Page<Book> pageById(Integer pageNo, Integer pageSize, Integer min, Integer max) {
-		// TODO Auto-generated method stub
-		return null;
+Page<Book> page = new Page<>();
+		
+		// 求总记录数
+		Integer pageTotalCount = bookDao.queryForPageTotalCountByPrice(min, max);
+		
+		// 设置总记录数
+		page.setPageTotalCount(pageTotalCount);
+		
+		// 求总页数
+		Integer pageTotal = pageTotalCount / pageSize;
+		if (pageTotalCount % pageSize > 0) {
+			pageTotal++;
+		}
+		
+		// 设置总页码
+		page.setPageTotal(pageTotal);
+		
+		// 设置每页显示的数量
+		page.setPageSize(pageSize);
+		
+		// 设置当前页码
+		page.setPageNo(pageNo);
+		
+		Integer begin = (page.getPageNo() - 1) * pageSize;
+		// 求当前页数据
+		List<Book> items = bookDao.queryForPageItems(begin, pageSize);
+		// 设置当前页数据
+		page.setItems(items);
+		
+		return page;
 	}
 
 }
