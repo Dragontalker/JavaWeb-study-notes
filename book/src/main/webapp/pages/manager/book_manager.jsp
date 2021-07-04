@@ -71,6 +71,18 @@
 					<td><a href="pages/manager/book_edit.jsp">添加图书</a></td>
 				</tr>	
 			</table>
+			
+			<div id="page_nav">
+				<a href="#">首页</a>
+				<a href="#">上一页</a>
+				<a href="#">3</a>
+				【4】
+				<a href="#">5</a>
+				<a href="#">下一页</a>
+				<a href="#">末页</a>
+				共10页，30条记录 到第<input value="4" name="pn" id="pn_input"/>页
+				<input type="button" value="确定">
+			</div>
 		</div>
 		
 		<%@ include file="/pages/common/footer.jsp" %>
