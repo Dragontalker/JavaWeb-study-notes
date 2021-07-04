@@ -39,8 +39,9 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public Page<Book> page(Integer pageNo, Integer pageSize) {
-		// TODO Auto-generated method stub
-		return null;
+		Page<Book> page = new Page();
+		
+		return page;
 	}
 
 }
