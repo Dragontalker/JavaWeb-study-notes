@@ -38,5 +38,14 @@ public class SessionServlet extends BaseServlet {
 		
 		resp.getWriter().write("Session的默认超时时常为: " + maxInactiveInterval + "秒");
 	}
+	
+	protected void life3(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		HttpSession session = req.getSession();
+		
+		session.setMaxInactiveInterval(3);
+		
+		resp.getWriter().write("当前Session已经设置为3秒超时");
+	}
 
 }
