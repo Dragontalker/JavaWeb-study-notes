@@ -11,4 +11,14 @@ public class Page {
 	private Integer pageSize = PAGE_SIZE;
 	private Integer pageTotalCount;
 	private List<Book> books;
+	
+	public Page() {}
+
+	public Page(Integer pageNo, Integer pageTotal, Integer pageTotalCount, List<Book> books) {
+		this.pageNo = pageNo;
+		this.pageTotal = pageTotal;
+		this.pageTotalCount = pageTotalCount;
+		this.books = books;
+	}
+	
 }
