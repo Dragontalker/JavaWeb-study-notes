@@ -23,9 +23,9 @@ public class BookServlet extends BaseServlet {
 	}
 	
 	protected void delete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id = req.getParameter("id");
-		int i = Integer.parseInt(id);
-		bookService.deleteBookById(i);
+		int id = WebUltis.parseInt(req.getParameter("id"), 0);
+		bookService.deleteBookById(id);
+		resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=list");
 	}
 	
 	protected void update(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

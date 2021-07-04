@@ -23,7 +23,7 @@ public class WebUltis {
 	
 	public static int parseInt(String strInt, int defaultValue) {
 		try {
-			return Integer.parseInt(strInt, defaultValue);
+			return Integer.parseInt(strInt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
