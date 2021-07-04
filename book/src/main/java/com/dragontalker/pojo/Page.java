@@ -11,21 +11,20 @@ public class Page<T> {
 	private Integer pageSize = PAGE_SIZE;
 	private Integer pageTotalCount;
 	private List<T> items;
-	
-	public Page() {}
-
-	public Page(Integer pageNo, Integer pageTotal, Integer pageTotalCount, List<T> items) {
-		this.pageNo = pageNo;
-		this.pageTotal = pageTotal;
-		this.pageTotalCount = pageTotalCount;
-		this.items = items;
-	}
 
 	public Integer getPageNo() {
 		return pageNo;
 	}
 
 	public void setPageNo(Integer pageNo) {
+		if (pageNo < 1) {
+			pageNo = 1;
+		}
+		
+		if (pageNo > pageTotal) {
+			pageNo = pageTotal;
+		}
+		
 		this.pageNo = pageNo;
 	}
 

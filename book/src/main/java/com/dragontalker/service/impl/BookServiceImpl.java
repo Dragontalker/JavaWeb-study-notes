@@ -56,14 +56,6 @@ public class BookServiceImpl implements BookService {
 			pageTotal++;
 		}
 		
-		if (pageNo < 1) {
-			pageNo = 1;
-		}
-		
-		if (pageNo > pageTotal) {
-			pageNo = pageTotal;
-		}
-		
 		// 设置当前页码
 		page.setPageNo(pageNo);
 		
