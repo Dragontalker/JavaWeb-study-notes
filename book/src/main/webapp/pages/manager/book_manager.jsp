@@ -76,11 +76,11 @@
 				<a href="#">首页</a>
 				<a href="#">上一页</a>
 				<a href="#">3</a>
-				【4】
+				【${ requestScope.page.pageNo }】
 				<a href="#">5</a>
 				<a href="#">下一页</a>
 				<a href="#">末页</a>
-				共10页，30条记录 到第<input value="4" name="pn" id="pn_input"/>页
+				共${ requestScope.page.pageTotal }页，${ requestScope.page.pageTotalCount }条记录 到第<input value="4" name="pn" id="pn_input"/>页
 				<input type="button" value="确定">
 			</div>
 		</div>
