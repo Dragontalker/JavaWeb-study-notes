@@ -73,10 +73,11 @@
 				</c:forEach>
 			</div>
 			
+			<%@include file="/pages/common/page_nav.jsp" %>
 		
 		</div>
 		
-		<%@ include file="/pages/common/footer.jsp" %>
+		<%@include file="/pages/common/footer.jsp" %>
 		
 	</body>
 	
