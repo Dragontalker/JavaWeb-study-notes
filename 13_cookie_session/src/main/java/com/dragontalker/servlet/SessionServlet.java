@@ -16,6 +16,19 @@ public class SessionServlet extends BaseServlet {
 		boolean isNew = session.isNew();
 		
 		String id = session.getId();
+		
+		resp.getWriter().write("得到的Session, 它的id是: " + id + " <br/>");
+		resp.getWriter().write("这个Session是否是新创建的: " + isNew + " <br/>");
+	}
+	
+	protected void setAttribute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	
+	}
+	
+	protected void getAttribute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
 	}
 
 }
