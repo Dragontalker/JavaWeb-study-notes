@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>13_cookie</display-name>
+  <display-name>13_cookie_session</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,22 +9,20 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-  	<servlet-name>CookieServlet</servlet-name>
-  	<servlet-class>com.dragontalker.servlet.CookieServlet</servlet-class>
+    <servlet-name>CookieServlet</servlet-name>
+    <servlet-class>com.dragontalker.servlet.CookieServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>CookieServlet</servlet-name>
-  	<url-pattern>/cookieServlet</url-pattern>
+    <servlet-name>CookieServlet</servlet-name>
+    <url-pattern>/cookieServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<servlet-class>com.dragontalker.servlet.LoginServlet</servlet-class>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.dragontalker.servlet.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<url-pattern>/loginServlet</url-pattern>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
   </servlet-mapping>
 </web-app>
