@@ -52,5 +52,11 @@ public class Page {
 	public void setBooks(List<Book> books) {
 		this.books = books;
 	}
+
+	@Override
+	public String toString() {
+		return "Page [pageNo=" + pageNo + ", pageTotal=" + pageTotal + ", pageSize=" + pageSize + ", pageTotalCount="
+				+ pageTotalCount + ", books=" + books + "]";
+	}
 	
 }
