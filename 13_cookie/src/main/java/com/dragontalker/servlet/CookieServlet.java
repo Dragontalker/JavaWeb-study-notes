@@ -71,5 +71,27 @@ public class CookieServlet extends BaseServlet {
     	
     	resp.getWriter().write("Cookie立刻删除");
     }
+    
+    protected void life3600(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	
+    	Cookie cookie = new Cookie("life3600", "life3600");
+    	
+    	cookie.setMaxAge(60 * 60);
+    	
+        resp.addCookie(cookie);
+    	
+    	resp.getWriter().write("Cookie存活一小时");
+    }
+    
+    protected void testPath(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	
+    	Cookie cookie = new Cookie("path1", "path1");
+    	
+    	cookie.setPath(req.getContextPath() +"/abc");
+    	
+        resp.addCookie(cookie);
+    	
+    	resp.getWriter().write("Cookie的路径为/13_cookie/abc");
+    }
 
 }
