@@ -41,9 +41,6 @@ public class BookServiceImpl implements BookService {
 	public Page<Book> page(Integer pageNo, Integer pageSize) {
 		Page<Book> page = new Page<>();
 		
-		// 设置当前页码
-		page.setPageNo(pageNo);
-		
 		// 设置每页显示的数量
 		page.setPageSize(pageSize);
 		
@@ -58,6 +55,17 @@ public class BookServiceImpl implements BookService {
 		if (pageTotalCount % pageSize > 0) {
 			pageTotal++;
 		}
+		
+		if (pageNo < 1) {
+			pageNo = 1;
+		}
+		
+		if (pageNo > pageTotal) {
+			pageNo = pageTotal;
+		}
+		
+		// 设置当前页码
+		page.setPageNo(pageNo);
 		
 		// 设置总页码
 		page.setPageTotal(pageTotal);
