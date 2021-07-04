@@ -55,5 +55,10 @@ public class BookDaoTest {
 			System.out.println(book);
 		}
 	}
+	
+	@Test
+	public void testQueryForPageCountByPrice() {
+		System.out.println(bookdao.queryForPageTotalCountByPrice(10, 50));
+	}
 
 }
