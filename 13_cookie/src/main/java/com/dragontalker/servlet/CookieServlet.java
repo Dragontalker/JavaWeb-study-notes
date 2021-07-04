@@ -7,6 +7,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.dragontalker.utils.CookieUltis;
+
 public class CookieServlet extends BaseServlet {
 
 	private static final long serialVersionUID = 3530097617786374562L;
@@ -28,8 +30,10 @@ public class CookieServlet extends BaseServlet {
     	
     	Cookie[] cookies = req.getCookies();
     	
-    	for (Cookie cookie : cookies) {
-    		resp.getWriter().write("Cookie[" + cookie.getName() + "=" + cookie.getValue() + "] <br/>");
+    	Cookie myCookie = CookieUltis.findCookie("key1", cookies);
+    	
+    	if (myCookie != null) {
+    		System.out.println("找到了需要的Cookie");
     	}
     }
 
