@@ -11,6 +11,15 @@ public class Page<T> {
 	private Integer pageSize = PAGE_SIZE;
 	private Integer pageTotalCount;
 	private List<T> items;
+	private String url;
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
 	public Integer getPageTotal() {
 		return pageTotal;
@@ -62,8 +71,8 @@ public class Page<T> {
 
 	@Override
 	public String toString() {
-		return "Page [pageNo=" + pageNo + ", pageTotal=" + pageTotal + ", pageSize=" + pageSize + ", pageTotalCount="
-				+ pageTotalCount + ", items=" + items + "]";
+		return "Page [pageTotal=" + pageTotal + ", pageNo=" + pageNo + ", pageSize=" + pageSize + ", pageTotalCount="
+				+ pageTotalCount + ", items=" + items + ", url=" + url + "]";
 	}
-	
+
 }
