@@ -18,8 +18,6 @@ public class ClientBookServlet extends BaseServlet {
 	
 	protected void page(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		System.out.println("经过了前台的ClientBookServlet程序");
-		
 		// 1. 获取请求的参数 pageNo 和 pageSize
 		int pageNo = WebUltis.parseInt(req.getParameter("pageNo"), 1);
 		int pageSize = WebUltis.parseInt(req.getParameter("pageSize"), Page.PAGE_SIZE);
