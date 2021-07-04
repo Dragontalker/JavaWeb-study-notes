@@ -40,5 +40,10 @@ public class BookDaoTest {
 	public void testDeleteBookById() {
 		bookdao.deleteBookById(21);
 	}
+	
+	@Test
+	public void testQueryForPageCount() {
+		System.out.println(bookdao.queryForPageTotalCount());
+	}
 
 }
