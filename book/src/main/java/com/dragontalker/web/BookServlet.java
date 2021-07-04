@@ -15,6 +15,16 @@ import com.dragontalker.utils.WebUltis;
 public class BookServlet extends BaseServlet {
 	
 	private BookService bookService = new BookServiceImpl();
+	
+	protected void page(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// 1. 获取请求的参数 pageNo 和 pageSize
+		
+		// 2. 调用BookService.page(pageNo, pageSize): Page对象
+		
+		// 3. 保存Page对象到Request域中
+		
+		// 4. 请求转发到pages/manager/book_manager.jsp
+	}
 
 	protected void add(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Book book = WebUltis.copyParamToBean(req.getParameterMap(), new Book());
