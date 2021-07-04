@@ -19,7 +19,7 @@
 					<a href="pages/user/login.jsp">登录</a> | 
 					<a href="pages/user/regist.jsp">注册</a> &nbsp;&nbsp;
 					<a href="pages/cart/cart.jsp">购物车</a>
-					<a href="pages/manager/manager.jsp">后台管理</a>
+					<a href="pages/client/client.jsp">后台管理</a>
 				</div>
 		</div>
 		<div id="main">
@@ -74,19 +74,63 @@
 			</div>
 			
 			
-				
-			
-			
 			<div id="page_nav">
-				<a href="#">首页</a>
-				<a href="#">上一页</a>
-				<a href="#">3</a>
-				【4】
-				<a href="#">5</a>
-				<a href="#">下一页</a>
-				<a href="#">末页</a>
-				共10页，30条记录 到第<input value="4" name="pn" id="pn_input"/>页
-				<input type="button" value="确定">
+				<c:if test="${requestScope.page.pageNo > 1}">
+			        <a href="client/bookServlet?action=page&pageNo=1&pageSize=4">首页</a>
+			        <a href="client/bookServlet?action=page&pageNo=${requestScope.page.pageNo-1}&pageSize=4">上一页</a>
+			    </c:if>
+				
+				<c:choose>
+					<c:when test="${ requestScope.page.pageTotal <= 5 }">
+			            <c:set var="begin" value="1"/>
+			            <c:set var="end" value="${requestScope.page.pageTotal}"/>
+			        </c:when>
+					
+					<c:when test="${ requestScope.page.pageTotal > 5 }">
+						<c:choose>
+							<c:when test="${requestScope.page.pageNo <= 3}">
+			                    <c:set var="begin" value="1"/>
+			                    <c:set var="end" value="5"/>
+			                </c:when>
+							
+							<c:when test="${requestScope.page.pageNo > requestScope.page.pageTotal-3}">
+			                    <c:set var="begin" value="${requestScope.page.pageTotal-4}"/>
+			                    <c:set var="end" value="${requestScope.page.pageTotal}"/>
+			                </c:when>
+										
+							 <c:otherwise>
+			                    <c:set var="begin" value="${requestScope.page.pageNo-2}"/>
+			                    <c:set var="end" value="${requestScope.page.pageNo+2}"/>
+			                </c:otherwise>
+						</c:choose>
+					</c:when>
+				</c:choose>
+				
+				<c:forEach begin="${begin}" end="${end}" var="i">
+			        <c:if test="${i == requestScope.page.pageNo}">
+			            【${i}】
+			        </c:if>
+			        <c:if test="${i != requestScope.page.pageNo}">
+			            <a href="client/bookServlet?action=page&pageNo=${i}&pageSize=4">${i}</a>
+			        </c:if>
+			    </c:forEach>
+
+				<c:if test="${ requestScope.page.pageNo < requestScope.page.pageTotal }">
+					<a href="client/bookServlet?action=page&pageNo=${ requestScope.page.pageNo + 1 }&pageSize=4">下一页</a>
+					<a href="client/bookServlet?action=page&pageNo=${ requestScope.page.pageTotal }&pageSize=4">末页</a>
+				</c:if>
+				共${ requestScope.page.pageTotal }页，${ requestScope.page.pageTotalCount }条记录 
+				到第<input value="${ requestScope.page.pageNo }" name="pn" id="pn_input"/>页
+				<input id="searchPageBtn" type="button" value="确定">
+				
+					<script type="text/javascript">
+						$(function () {
+							$("#searchPageBtn").click(function () {
+								var pageNo = $("#pn_input").val();								
+								location.href = "${ pageScope.basePath }client/bookServlet?action=page&pageNo=" + pageNo + "&pageSize=4";
+							});
+						});
+					</script>
 			</div>
 		
 		</div>
