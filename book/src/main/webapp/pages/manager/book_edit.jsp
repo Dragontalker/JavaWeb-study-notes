@@ -36,9 +36,9 @@
 		</div>
 		
 		<div id="main">
-			<form action="manager/bookServlet">
+			<form action="manager/bookServlet" method="GET">
 				<input type="hidden" name="pageNo" value="${ param.pageNo }" />
-				<input type="hidden" name="action" value="${ empty requestScope.book ? "add" : "update" }" />
+				<input type="hidden" name="action" value="${ empty param.id ? "add" : "update" }" />
 				<input type="hidden" name="id" value="${ requestScope.book.id }" />
 				<table>
 					<tr>

@@ -18,4 +18,6 @@ public interface BookService {
 	public List<Book> queryBooks();
 
 	public Page<Book> page(Integer pageNo, Integer pageSize);
+	
+	public Integer getPageTotal(Integer pageSize);
 }

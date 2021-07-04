@@ -44,4 +44,9 @@ public class BookServiceTest {
 	public void testPage() {
 		System.out.println(bookService.page(1, Page.PAGE_SIZE));
 	}
+	
+	@Test
+	public void testGetPageTotal() {
+		System.out.println(bookService.getPageTotal(4));
+	}
 }

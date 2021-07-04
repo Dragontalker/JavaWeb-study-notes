@@ -8,6 +8,8 @@ import com.dragontalker.pojo.Book;
 import com.dragontalker.pojo.Page;
 import com.dragontalker.service.BookService;
 
+import jdk.management.resource.internal.TotalResourceContext;
+
 public class BookServiceImpl implements BookService {
 	
 	private BookDao bookDao = new BookDaoImpl();
@@ -69,6 +71,20 @@ public class BookServiceImpl implements BookService {
 		page.setItems(items);
 		
 		return page;
+	}
+
+	@Override
+	public Integer getPageTotal(Integer pageSize) {
+		// 求总记录数
+		Integer pageTotalCount = bookDao.queryForPageTotalCount();
+		
+		// 求总页数
+		Integer pageTotal = pageTotalCount / pageSize;
+		if (pageTotalCount % pageSize > 0) {
+			pageTotal++;
+		}
+		
+		return pageTotal;
 	}
 
 }
