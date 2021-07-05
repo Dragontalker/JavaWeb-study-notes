@@ -35,6 +35,10 @@ public class OrderServiceImpl implements OrderService {
 			
 			orderItemDao.saveOrderItem(orderItem);
 		}
+		
+		cart.clear();
+		
+		return orderId;
 	
 	}
 
