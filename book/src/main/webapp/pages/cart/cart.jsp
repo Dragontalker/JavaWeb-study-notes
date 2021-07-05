@@ -51,7 +51,7 @@
 							<td>${ entry.value.count }</td>
 							<td>${ entry.value.price }</td>
 							<td>${ entry.value.totalPrice }</td>
-							<td><a href="#">删除</a></td>
+							<td><a href="cartServlet?action=deleteItem&id=${ entry.value.id }">删除</a></td>
 						</tr>
 					</c:forEach>
 				</c:if>
