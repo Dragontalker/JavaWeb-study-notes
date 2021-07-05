@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class Cart {
 	
-	private BigDecimal totalPrice;
 	private Map<Integer, CartItem> items = new LinkedHashMap<Integer, CartItem>();
 	
 	public void addItem(CartItem cartItem) {
@@ -53,11 +52,10 @@ public class Cart {
 	}
 	
 	public BigDecimal getTotalPrice() {
+		
+		BigDecimal totalPrice = new BigDecimal(0);
+		
 		return totalPrice;
-	}
-	
-	public void setTotalPrice(BigDecimal totalPrice) {
-		this.totalPrice = totalPrice;
 	}
 	
 	public Map<Integer, CartItem> getItems() {
@@ -70,7 +68,7 @@ public class Cart {
 
 	@Override
 	public String toString() {
-		return "Cart [totalPrice=" + totalPrice + ", items=" + items + "]";
+		return "Cart [items=" + items + "]";
 	}
 
 }
