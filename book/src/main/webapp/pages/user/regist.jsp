@@ -143,7 +143,7 @@
 									<label>验证码：</label>
 									<input class="itxt" type="text" placeholder="请输入验证码"
 											name="code" style="width: 125px;" id="code" />
-									<img alt="" src="kaptcha.jpg" style="float: right; margin-right: 40px; width: 120px; height: 40px">
+									<img id="code_img" alt="" src="kaptcha.jpg" style="float: right; margin-right: 40px; width: 120px; height: 40px">
 									<br />
 									<br />
 									<input type="submit" value="注册" id="sub_btn" />
