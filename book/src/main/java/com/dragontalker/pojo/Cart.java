@@ -46,10 +46,6 @@ public class Cart {
 		return totalCount;
 	}
 	
-	public void setTotalCount(Integer totalCount) {
-		this.totalCount = totalCount;
-	}
-	
 	public BigDecimal getTotalPrice() {
 		return totalPrice;
 	}
