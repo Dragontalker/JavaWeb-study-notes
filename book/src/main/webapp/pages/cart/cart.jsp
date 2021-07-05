@@ -77,7 +77,10 @@
 					<c:forEach items="${ sessionScope.cart.items }" var="entry">
 						<tr>
 							<td>${ entry.value.name }</td>
-							<td>${ entry.value.count }</td>
+							<td>
+								<input style="width: 20px;" class="updateCount"
+									type="text" value="${ entry.value.count }"/>
+							</td>
 							<td>${ entry.value.price }</td>
 							<td>${ entry.value.totalPrice }</td>
 							<td><a class="deleteItem" href="cartServlet?action=deleteItem&id=${ entry.value.id }">删除</a></td>

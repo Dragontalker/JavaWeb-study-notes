@@ -59,5 +59,9 @@ public class CartServlet extends BaseServlet {
 			resp.sendRedirect(req.getHeader("Referer"));
 		}
 	}
+	
+	protected void updateCount(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
 
 }
