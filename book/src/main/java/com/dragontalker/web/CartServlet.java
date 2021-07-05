@@ -62,6 +62,15 @@ public class CartServlet extends BaseServlet {
 	
 	protected void updateCount(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		int id = WebUltis.parseInt(req.getParameter("bookId"), 0);
+		int count = WebUltis.parseInt(req.getParameter("count"), 1);
+		
+		Cart cart = (Cart) req.getSession().getAttribute("cart");
+		
+		if (cart != null) {
+			cart.updateCount(id,  count);
+			resp.sendRedirect(req.getHeader("Referer"));
+		}
 	}
 
 }

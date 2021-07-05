@@ -78,7 +78,7 @@
 						<tr>
 							<td>${ entry.value.name }</td>
 							<td>
-								<input style="width: 20px;" class="updateCount"
+								<input style="width: 20px;" class="updateCount" bookId="${ entry.value.id }" }
 									type="text" value="${ entry.value.count }"/>
 							</td>
 							<td>${ entry.value.price }</td>
