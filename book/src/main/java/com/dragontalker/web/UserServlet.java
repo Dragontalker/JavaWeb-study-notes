@@ -38,11 +38,15 @@ public class UserServlet extends BaseServlet {
 	
 	protected void regist(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+		String token = (String) req.getSession().getAttribute("KAPTCHA_SESSION_KEY");
+		
+		req.getSession().removeAttribute("KAPTCHA_SESSION_KEY");
+		
 		User user = WebUltis.copyParamToBean(req.getParameterMap(), new User());
 		
 		String code	= req.getParameter("code");
 		
-		if ("abcde".equalsIgnoreCase(code)) {
+		if (token != null && token.equalsIgnoreCase(code)) {
 			
 			if (userService.existsUsername(user.getUsername())) {
 				req.setAttribute("msg", "用户名已存在!");
