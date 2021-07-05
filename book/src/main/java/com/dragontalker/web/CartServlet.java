@@ -31,6 +31,7 @@ public class CartServlet extends BaseServlet {
 		
 		if (cart == null) {
 			cart = new Cart();
+			req.getSession().setAttribute("cart", cart);
 		}
 		
 		cart.addItem(cartItem);
