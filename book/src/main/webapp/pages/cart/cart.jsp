@@ -38,24 +38,32 @@
 					<td>操作</td>
 				</tr>	
 				
-				<c:forEach items="${ sessionScope.cart.items }" var="entry">
-					<tr>
-						<td>${ entry.value.name }</td>
-						<td>${ entry.value.count }</td>
-						<td>${ entry.value.price }</td>
-						<td>${ entry.value.totalPrice }</td>
-						<td><a href="#">删除</a></td>
-					</tr>
-				</c:forEach>	
+				<c:if test="${ empty sessionScope.cart.items }">
+					
+				</c:if>
+				
+				<c:if test="${ not empty sessionScope.cart.items }">
+					<c:forEach items="${ sessionScope.cart.items }" var="entry">
+						<tr>
+							<td>${ entry.value.name }</td>
+							<td>${ entry.value.count }</td>
+							<td>${ entry.value.price }</td>
+							<td>${ entry.value.totalPrice }</td>
+							<td><a href="#">删除</a></td>
+						</tr>
+					</c:forEach>
+				</c:if>
+					
 			</table>
 			
-			<div class="cart_info">
-				<span class="cart_span">购物车中共有<span class="b_count">4</span>件商品</span>
-				<span class="cart_span">总金额<span class="b_price">90.00</span>元</span>
-				<span class="cart_span"><a href="#">清空购物车</a></span>
-				<span class="cart_span"><a href="pages/cart/checkout.jsp">去结账</a></span>
-			</div>
-		
+			<c:if test="${ not empty sessionScope.cart.items }">
+				<div class="cart_info">
+					<span class="cart_span">购物车中共有<span class="b_count">${ sessionScope.cart.totalCount }</span>件商品</span>
+					<span class="cart_span">总金额<span class="b_price">${ sessionScope.cart.totalPrice }</span>元</span>
+					<span class="cart_span"><a href="#">清空购物车</a></span>
+					<span class="cart_span"><a href="pages/cart/checkout.jsp">去结账</a></span>
+				</div>
+			</c:if>
 		</div>
 		
 		<%@ include file="/pages/common/footer.jsp" %>
