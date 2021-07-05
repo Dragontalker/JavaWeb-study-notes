@@ -12,7 +12,7 @@
 		<script type="text/javascript">
 			$(functin () {
 				$("button.addToCart").click(function () {
-					
+					location.href = "http://localhost:8080/book/cartServlet?action=addItem";
 				});
 			});
 		</script>
