@@ -22,19 +22,19 @@ public class Order {
 		this.userId = userId;
 	}
 
-	public String getorderId() {
+	public String getOrderId() {
 		return orderId;
 	}
 
-	public void setorderId(String orderId) {
+	public void setOrderId(String orderId) {
 		this.orderId = orderId;
 	}
 
-	public Date getcreateTime() {
+	public Date getCreateTime() {
 		return createTime;
 	}
 
-	public void setcreateTime(Date createTime) {
+	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
 
