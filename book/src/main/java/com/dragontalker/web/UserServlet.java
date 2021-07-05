@@ -61,5 +61,9 @@ public class UserServlet extends BaseServlet {
 			req.getRequestDispatcher("/pages/user/regist.jsp").forward(req, resp);
 		}
 	}
+	
+	protected void logout(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
 
 }
