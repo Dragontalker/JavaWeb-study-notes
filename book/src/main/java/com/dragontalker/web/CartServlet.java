@@ -6,11 +6,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.dragontalker.utils.WebUltis;
+
 public class CartServlet extends BaseServlet {
 
 	protected void addItem(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		System.out.println("加入购物车...");
+		int id = WebUltis.parseInt(req.getParameter("id"), 0);
+		
+		System.out.println(id);
 	}
 
 	
