@@ -39,7 +39,13 @@
 				</tr>	
 				
 				<c:if test="${ empty sessionScope.cart.items }">
-					
+					<tr>
+						<td>亲, 当前购物车为空!</td>
+						<td>${ entry.value.count }</td>
+						<td>${ entry.value.price }</td>
+						<td>${ entry.value.totalPrice }</td>
+						<td><a href="#">删除</a></td>
+					</tr>
 				</c:if>
 				
 				<c:if test="${ not empty sessionScope.cart.items }">
