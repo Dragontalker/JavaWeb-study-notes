@@ -74,7 +74,7 @@
 								<span class="sp2">${ book.stock }</span>
 							</div>
 							<div class="book_add">
-								<button>加入购物车</button>
+								<button class="addToCart">加入购物车</button>
 							</div>
 						</div>
 					</div>
