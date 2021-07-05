@@ -9,13 +9,16 @@
 		<title>书城首页</title>
 		<%@ include file="/pages/common/head.jsp" %>
 		
-		<script type="text/javascript">
-			$(functin () {
+		<Script type="text/javascript">
+			$(function () {
+				// 给加入购物车按钮绑定单击事件
 				$("button.addToCart").click(function () {
+	
 					location.href = "http://localhost:8080/book/cartServlet?action=addItem";
+	
 				});
 			});
-		</script>
+	</Script>
 	</head>
 	
 	<body>
