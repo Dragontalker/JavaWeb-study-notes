@@ -6,6 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration;
+
 import com.dragontalker.pojo.Book;
 import com.dragontalker.pojo.Cart;
 import com.dragontalker.pojo.CartItem;
@@ -65,10 +67,16 @@ public class CartServlet extends BaseServlet {
 		int id = WebUltis.parseInt(req.getParameter("bookId"), 0);
 		int count = WebUltis.parseInt(req.getParameter("count"), 1);
 		
+		System.out.println(id);
+		System.out.println(count);
+		
 		Cart cart = (Cart) req.getSession().getAttribute("cart");
+		
+		System.out.println(cart);
 		
 		if (cart != null) {
 			cart.updateCount(id,  count);
+			System.out.println(cart);
 			resp.sendRedirect(req.getHeader("Referer"));
 		}
 	}

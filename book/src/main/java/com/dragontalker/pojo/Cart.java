@@ -30,15 +30,14 @@ public class Cart {
 		items.clear();
 	}
 	
-	public void updateCount(Integer id, Integer count) {
-		
-		CartItem cartItem = items.get(id);
-		
-		if (cartItem != null) {
-			cartItem.setCount(count);
-			cartItem.setTotalPrice(cartItem.getPrice().multiply(new BigDecimal(cartItem.getCount())));
-		}
-	}
+	public void updateCount(Integer id,Integer count) {
+        // 先查看购物车中是否有此商品。如果有，修改商品数量，更新总金额
+        CartItem cartItem = items.get(id);
+        if (cartItem != null) {
+            cartItem.setCount(count);// 修改商品数量
+            cartItem.setTotalPrice( cartItem.getPrice().multiply(new BigDecimal( cartItem.getCount() )) ); // 更新总金额
+        }
+    }
 	
 	public Integer getTotalCount() {
 		
