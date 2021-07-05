@@ -40,6 +40,10 @@ public class CartServlet extends BaseServlet {
 		
 		resp.sendRedirect(req.getHeader("Referer"));
 	}
-
 	
+	protected void deleteItem(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
+	}
+
 }
