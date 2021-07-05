@@ -6,6 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.dragontalker.pojo.Book;
+import com.dragontalker.pojo.Cart;
+import com.dragontalker.pojo.CartItem;
 import com.dragontalker.service.BookService;
 import com.dragontalker.service.impl.BookServiceImpl;
 import com.dragontalker.utils.WebUltis;
@@ -18,7 +21,16 @@ public class CartServlet extends BaseServlet {
 		
 		int id = WebUltis.parseInt(req.getParameter("id"), 0);
 		
-		System.out.println(id);
+		Book book = bookService.queryBookById(id);
+		
+		CartItem cartItem = new CartItem(book.getId(), book.getName(), 1, book.getPrice(), book.getPrice());
+		
+		Cart cart = new Cart();
+		cart.addItem(cartItem);
+		
+		System.out.println(cart);
+		
+		resp.sendRedirect(req.getContextPath());
 	}
 
 	
