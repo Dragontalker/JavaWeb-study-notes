@@ -27,7 +27,7 @@
 		
 		<div id="main">
 			
-			<h1>你的订单已结算，订单号为${ requestScope.orderId }</h1>
+			<h1>你的订单已结算，订单号为${ sessionScope.orderId }</h1>
 			
 		
 		</div>
