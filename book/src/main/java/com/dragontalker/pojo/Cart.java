@@ -26,10 +26,12 @@ public class Cart {
 	
 	public void deleteItem(Integer id) {
 		
+		items.remove(id);
 	}
 	
 	public void clear() {
 		
+		items.clear();
 	}
 	
 	public void updateCount(Integer id, Integer count) {
