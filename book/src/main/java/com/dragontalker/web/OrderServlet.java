@@ -34,10 +34,10 @@ public class OrderServlet extends BaseServlet{
 		
 		String orderId = orderService.createOrder(cart, userId);
 		
-		req.setAttribute("orderId", orderId);
+		req.getSession().setAttribute("orderId", orderId);
 		
 		// 请求妆发到/pages/cart/checkout.jsp
-		req.getRequestDispatcher("/pages/cart/checkout.jsp").forward(req, resp);
+		resp.sendRedirect(req.getContextPath() +"/pages/cart/checkout.jsp");
 	}
 
 	
