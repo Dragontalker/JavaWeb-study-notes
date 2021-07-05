@@ -61,5 +61,11 @@ public class Order {
 	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
+
+	@Override
+	public String toString() {
+		return "Order [order_id=" + order_id + ", create_time=" + create_time + ", price=" + price + ", status="
+				+ status + ", userId=" + userId + "]";
+	}
 	
 }
