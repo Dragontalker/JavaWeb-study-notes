@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -35,30 +36,20 @@
 					<td>单价</td>
 					<td>金额</td>
 					<td>操作</td>
-				</tr>		
-				<tr>
+				</tr>	
+				
+				<c:forEach items="${ session.cart.items } var="entry">
+					<tr>
 					<td>时间简史</td>
 					<td>2</td>
 					<td>30.00</td>
 					<td>60.00</td>
 					<td><a href="#">删除</a></td>
-				</tr>	
+				</tr>
+				</c:forEach>	
+					
 				
-				<tr>
-					<td>母猪的产后护理</td>
-					<td>1</td>
-					<td>10.00</td>
-					<td>10.00</td>
-					<td><a href="#">删除</a></td>
-				</tr>	
-				
-				<tr>
-					<td>百年孤独</td>
-					<td>1</td>
-					<td>20.00</td>
-					<td>20.00</td>
-					<td><a href="#">删除</a></td>
-				</tr>		
+					
 				
 			</table>
 			
