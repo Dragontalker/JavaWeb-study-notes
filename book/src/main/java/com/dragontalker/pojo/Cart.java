@@ -55,6 +55,10 @@ public class Cart {
 		
 		BigDecimal totalPrice = new BigDecimal(0);
 		
+		for (Map.Entry<Integer, CartItem> entry : items.entrySet()) {
+			totalPrice = totalPrice.add(entry.getValue().getTotalPrice());
+		}
+		
 		return totalPrice;
 	}
 	
