@@ -12,4 +12,14 @@ public class Order {
 	private Integer status = 0;
 	private Integer userId;
 	
+	public Order() {}
+
+	public Order(String order_id, Date create_time, BigDecimal price, Integer status, Integer userId) {
+		this.order_id = order_id;
+		this.create_time = create_time;
+		this.price = price;
+		this.status = status;
+		this.userId = userId;
+	}
+	
 }
