@@ -32,7 +32,7 @@ public class CartTest {
 	}
 	
 	@Test
-	public void clear() {
+	public void testClear() {
 		Cart cart = new Cart();
 		cart.addItem(new CartItem(1, "java从入门到精通", 1, new BigDecimal(1000), new BigDecimal(1000)));
 		cart.addItem(new CartItem(1, "java从入门到精通", 1, new BigDecimal(1000), new BigDecimal(1000)));
@@ -43,6 +43,16 @@ public class CartTest {
 		System.out.println(cart);
 	}
 
-
+	@Test
+	public void testUpdateCount() {
+		Cart cart = new Cart();
+		cart.addItem(new CartItem(1, "java从入门到精通", 1, new BigDecimal(1000), new BigDecimal(1000)));
+		cart.addItem(new CartItem(1, "java从入门到精通", 1, new BigDecimal(1000), new BigDecimal(1000)));
+		cart.addItem(new CartItem(2, "数据结构与算法", 1, new BigDecimal(100), new BigDecimal(100)));
+		
+		cart.updateCount(1, 10);
+		
+		System.out.println(cart);
+	}
 
 }
