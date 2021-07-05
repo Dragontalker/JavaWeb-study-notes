@@ -14,6 +14,18 @@ public class Cart {
 		items.add(cartItem);
 	}
 	
+	public void deleteItem(Integer id) {
+		
+	}
+	
+	public void clear() {
+		
+	}
+	
+	public void updateCount(Integer id, Integer count) {
+		
+	}
+	
 	public Integer getTotalCount() {
 		return totalCount;
 	}
