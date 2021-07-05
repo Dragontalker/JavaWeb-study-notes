@@ -63,11 +63,7 @@ public class UserServlet extends BaseServlet {
 	}
 	
 	protected void logout(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		System.out.println("logout...");
-		
 		req.getSession().invalidate();
-		
 		resp.sendRedirect(req.getContextPath());
 	}
 
