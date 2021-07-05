@@ -14,7 +14,14 @@ public class Cart {
 	
 	public void addItem(CartItem cartItem) {
 		
-		for (CartItem item: items)
+		CartItem item = items.get(cartItem.getId());
+		
+		if (item == null) {
+			items.put(cartItem.getId(), cartItem);
+		} else {
+			item.setCount(item.getCount() + 1);
+			item.setTotalPrice(item.getPrice().multiply(new BigDecimal(item.getCount())));
+		}
 	}
 	
 	public void deleteItem(Integer id) {
@@ -45,11 +52,11 @@ public class Cart {
 		this.totalPrice = totalPrice;
 	}
 	
-	public List<CartItem> getItems() {
+	public Map<Integer, CartItem> getItems() {
 		return items;
 	}
 	
-	public void setItems(List<CartItem> items) {
+	public void setItems(Map<Integer, CartItem> items) {
 		this.items = items;
 	}
 
