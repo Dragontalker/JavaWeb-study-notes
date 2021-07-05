@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class Cart {
 	
-	private Integer totalCount;
 	private BigDecimal totalPrice;
 	private Map<Integer, CartItem> items = new LinkedHashMap<Integer, CartItem>();
 	
@@ -43,6 +42,13 @@ public class Cart {
 	}
 	
 	public Integer getTotalCount() {
+		
+		Integer totalCount = 0;
+		
+		for (Map.Entry<Integer, CartItem> entry : items.entrySet()) {
+			totalCount +=entry.getValue().getCount();
+		}
+		
 		return totalCount;
 	}
 	
@@ -64,7 +70,7 @@ public class Cart {
 
 	@Override
 	public String toString() {
-		return "Cart [totalCount=" + totalCount + ", totalPrice=" + totalPrice + ", items=" + items + "]";
+		return "Cart [totalPrice=" + totalPrice + ", items=" + items + "]";
 	}
-	
+
 }
