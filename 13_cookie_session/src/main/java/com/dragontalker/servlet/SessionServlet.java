@@ -47,5 +47,14 @@ public class SessionServlet extends BaseServlet {
 		
 		resp.getWriter().write("当前Session已经设置为3秒超时");
 	}
+	
+	protected void deleteNow(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		HttpSession session = req.getSession();
+		
+		session.invalidate();
+		
+		resp.getWriter().write("Session已设置为超时");
+	}
 
 }
