@@ -10,7 +10,7 @@ public class CartServlet extends BaseServlet {
 
 	protected void addItem(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		System.err.println("加入购物车...");
+		System.out.println("加入购物车...");
 	}
 
 	

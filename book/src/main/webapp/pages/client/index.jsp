@@ -13,9 +13,8 @@
 			$(function () {
 				// 给加入购物车按钮绑定单击事件
 				$("button.addToCart").click(function () {
-	
-					location.href = "http://localhost:8080/book/cartServlet?action=addItem";
-	
+					var bookId = $(this).attr("bookId");
+					location.href = "http://localhost:8080/book/cartServlet?action=addItem&id=" + bookId;
 				});
 			});
 	</Script>
@@ -85,7 +84,7 @@
 								<span class="sp2">${ book.stock }</span>
 							</div>
 							<div class="book_add">
-								<button class="addToCart">加入购物车</button>
+								<button bookid="${ book.id }" class="addToCart">加入购物车</button>
 							</div>
 						</div>
 					</div>
