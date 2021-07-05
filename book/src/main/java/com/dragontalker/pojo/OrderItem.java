@@ -10,4 +10,18 @@ public class OrderItem {
 	private BigDecimal price;
 	private BigDecimal totalPrice;
 	private String orderId;
+	
+	public OrderItem() {
+
+	}
+
+	public OrderItem(Integer id, String name, Integer count, BigDecimal price, BigDecimal totalPrice, String orderId) {
+		this.id = id;
+		this.name = name;
+		this.count = count;
+		this.price = price;
+		this.totalPrice = totalPrice;
+		this.orderId = orderId;
+	}
+	
 }
