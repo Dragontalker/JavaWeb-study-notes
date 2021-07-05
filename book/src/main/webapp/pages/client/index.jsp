@@ -8,6 +8,14 @@
 		<meta charset="UTF-8">
 		<title>书城首页</title>
 		<%@ include file="/pages/common/head.jsp" %>
+		
+		<script type="text/javascript">
+			$(functin () {
+				$("button.addToCart").click(function () {
+					
+				});
+			});
+		</script>
 	</head>
 	
 	<body>
