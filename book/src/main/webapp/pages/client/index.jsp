@@ -58,7 +58,7 @@
 						</div>
 					</c:if>
 					
-					<c:if test="${ empty sessionScope.cart.items }">
+					<c:if test="${ not empty sessionScope.cart.items }">
 						<span>您的购物车中有${ sessionScope.cart.totalCount }件商品</span>
 						<div>
 							您刚刚将<span style="color: red">${ sessionScope.lastName }</span>加入到了购物车中
