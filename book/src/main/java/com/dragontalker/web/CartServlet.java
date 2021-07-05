@@ -27,7 +27,12 @@ public class CartServlet extends BaseServlet {
 		
 		CartItem cartItem = new CartItem(book.getId(), book.getName(), 1, book.getPrice(), book.getPrice());
 		
-		Cart cart = new Cart();
+		Cart cart = (Cart) req.getSession().getAttribute("cart"); 
+		
+		if (cart == null) {
+			cart = new Cart();
+		}
+		
 		cart.addItem(cartItem);
 		
 		System.out.println(cart);
