@@ -10,6 +10,10 @@ public class Cart {
 	private BigDecimal totalPrice;
 	private List<CartItem> items = new ArrayList<CartItem>();
 	
+	public void addItem(CartItem cartItem) {
+		items.add(cartItem);
+	}
+	
 	public Integer getTotalCount() {
 		return totalCount;
 	}
