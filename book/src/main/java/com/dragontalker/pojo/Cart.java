@@ -2,16 +2,19 @@ package com.dragontalker.pojo;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Cart {
 	
 	private Integer totalCount;
 	private BigDecimal totalPrice;
-	private List<CartItem> items = new ArrayList<CartItem>();
+	private Map<Integer, CartItem> items = new LinkedHashMap<Integer, CartItem>();
 	
 	public void addItem(CartItem cartItem) {
-		items.add(cartItem);
+		
+		for (CartItem item: items)
 	}
 	
 	public void deleteItem(Integer id) {
