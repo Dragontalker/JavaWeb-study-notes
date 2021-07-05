@@ -29,6 +29,8 @@ public class UserServlet extends BaseServlet {
             req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
             
         } else {
+        	req.getSession().setAttribute("user", loginUser);
+        	
             req.getRequestDispatcher("/pages/user/login_success.jsp").forward(req, resp);
         }
 		
