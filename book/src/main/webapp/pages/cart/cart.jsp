@@ -40,11 +40,7 @@
 				
 				<c:if test="${ empty sessionScope.cart.items }">
 					<tr>
-						<td>亲, 当前购物车为空!</td>
-						<td>${ entry.value.count }</td>
-						<td>${ entry.value.price }</td>
-						<td>${ entry.value.totalPrice }</td>
-						<td><a href="#">删除</a></td>
+						<td colspan="5"><a href="index.jsp">亲, 当前购物车为空! 快跟小伙伴们去浏览商品吧!!!</a></td>
 					</tr>
 				</c:if>
 				
