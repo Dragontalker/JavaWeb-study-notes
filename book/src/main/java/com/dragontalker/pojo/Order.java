@@ -5,8 +5,8 @@ import java.util.Date;
 
 public class Order {
 
-	private String order_id;
-	private Date create_time;
+	private String orderId;
+	private Date createTime;
 	private BigDecimal price;
 	// 0未发货, 1已发货, 2已签收
 	private Integer status = 0;
@@ -14,28 +14,28 @@ public class Order {
 	
 	public Order() {}
 
-	public Order(String order_id, Date create_time, BigDecimal price, Integer status, Integer userId) {
-		this.order_id = order_id;
-		this.create_time = create_time;
+	public Order(String orderId, Date createTime, BigDecimal price, Integer status, Integer userId) {
+		this.orderId = orderId;
+		this.createTime = createTime;
 		this.price = price;
 		this.status = status;
 		this.userId = userId;
 	}
 
-	public String getOrder_id() {
-		return order_id;
+	public String getorderId() {
+		return orderId;
 	}
 
-	public void setOrder_id(String order_id) {
-		this.order_id = order_id;
+	public void setorderId(String orderId) {
+		this.orderId = orderId;
 	}
 
-	public Date getCreate_time() {
-		return create_time;
+	public Date getcreateTime() {
+		return createTime;
 	}
 
-	public void setCreate_time(Date create_time) {
-		this.create_time = create_time;
+	public void setcreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
 	public BigDecimal getPrice() {
@@ -64,7 +64,7 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order [order_id=" + order_id + ", create_time=" + create_time + ", price=" + price + ", status="
+		return "Order [orderId=" + orderId + ", createTime=" + createTime + ", price=" + price + ", status="
 				+ status + ", userId=" + userId + "]";
 	}
 	
