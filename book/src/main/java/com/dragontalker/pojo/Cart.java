@@ -1,9 +1,7 @@
 package com.dragontalker.pojo;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Cart {
@@ -36,6 +34,12 @@ public class Cart {
 	
 	public void updateCount(Integer id, Integer count) {
 		
+		CartItem cartItem = items.get(id);
+		
+		if (cartItem != null) {
+			cartItem.setCount(count);
+			cartItem.setTotalPrice(cartItem.getPrice().multiply(new BigDecimal(cartItem.getCount())));
+		}
 	}
 	
 	public Integer getTotalCount() {
