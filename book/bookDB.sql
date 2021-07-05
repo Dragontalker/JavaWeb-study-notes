@@ -26,7 +26,7 @@ CREATE TABLE t_book(
     `sales` INT,
     `stock` INT,
     `img_path` VARCHAR(200)
-);
+)CHAR SET='utf8';
 
 insert into t_book(`id` , `name` , `author` , `price` , `sales` , `stock` , `img_path`) 
 values
@@ -87,3 +87,26 @@ values(null , '人月神话' , '刚哥' , 88.15 , 20 , 80 , 'static/img/default.
 
 ## 查看表内容
 select id,name,author,price,sales,stock,img_path from t_book;
+
+DROP TABLE IF EXISTS t_order;
+
+CREATE TABLE t_order(
+	`order_id` VARCHAR(50) PRIMARY KEY,
+    `create_time` DATETIME,
+    `price` DECIMAL(11, 2),
+    `status` INT,
+    `user_id` INT,
+    FOREIGN KEY(`user_id`) REFERENCES t_user(`id`)
+);
+
+DROP TABLE IF EXISTS t_order_item;
+
+CREATE TABLE t_order_item(
+	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(100),
+    `count` INT,
+    `price` DECIMAL(11, 2),
+    `total_price` DECIMAL(11, 2),
+    `order_id` VARCHAR(50),
+    FOREIGN KEY(`order_id`) REFERENCES t_order(`order_id`)
+);
