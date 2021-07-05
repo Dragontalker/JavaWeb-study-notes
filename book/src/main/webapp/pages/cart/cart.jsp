@@ -17,6 +17,35 @@
 			}
 		</style>
 		
+		<script type="text/javascript">
+			$(function () {
+				// 给 【删除】绑定单击事件
+				$("a.deleteItem").click(function () {
+					return confirm("你确定要删除【" + $(this).parent().parent().find("td:first").text() +"】吗?")
+				});
+				// 给清空购物车绑定单击事件
+				$("#clearCart").click(function () {
+					return confirm("你确定要清空购物车吗?");
+				})
+				// 给输入框绑定 onchange内容发生改变事件
+				$(".updateCount").change(function () {
+					// 获取商品名称
+					var name = $(this).parent().parent().find("td:first").text();
+					var id = $(this).attr('bookId');
+					// 获取商品数量
+					var count = this.value;
+					if ( confirm("你确定要将【" + name + "】商品修改数量为：" + count + " 吗?") ) {
+						//发起请求。给服务器保存修改
+						location.href = "http://localhost:8080/book/cartServlet?action=updateCount&count="+count+"&id="+id;
+					} else {
+						// defaultValue属性是表单项Dom对象的属性。它表示默认的value属性值。
+						this.value = this.defaultValue;
+					}
+				});
+
+			});
+		</script>
+		
 	</head>
 	
 	<body>
@@ -51,7 +80,7 @@
 							<td>${ entry.value.count }</td>
 							<td>${ entry.value.price }</td>
 							<td>${ entry.value.totalPrice }</td>
-							<td><a href="cartServlet?action=deleteItem&id=${ entry.value.id }">删除</a></td>
+							<td><a class="deleteItem" href="cartServlet?action=deleteItem&id=${ entry.value.id }">删除</a></td>
 						</tr>
 					</c:forEach>
 				</c:if>
