@@ -15,6 +15,8 @@ import com.dragontalker.utils.WebUltis;
 
 public class CartServlet extends BaseServlet {
 	
+	private static final long serialVersionUID = -6470408799619109744L;
+	
 	private BookService bookService = new BookServiceImpl();
 
 	protected void addItem(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

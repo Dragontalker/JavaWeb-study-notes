@@ -84,7 +84,7 @@
 								<span class="sp2">${ book.stock }</span>
 							</div>
 							<div class="book_add">
-								<button bookid="${ book.id }" class="addToCart">加入购物车</button>
+								<button bookId="${ book.id }" class="addToCart">加入购物车</button>
 							</div>
 						</div>
 					</div>
