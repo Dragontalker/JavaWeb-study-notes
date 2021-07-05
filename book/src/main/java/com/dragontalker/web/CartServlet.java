@@ -36,6 +36,8 @@ public class CartServlet extends BaseServlet {
 		
 		cart.addItem(cartItem);
 		
+		req.getSession().setAttribute("lastName", cartItem.getName());
+		
 		resp.sendRedirect(req.getHeader("Referer"));
 	}
 	
