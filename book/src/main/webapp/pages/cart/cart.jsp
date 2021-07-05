@@ -38,19 +38,15 @@
 					<td>操作</td>
 				</tr>	
 				
-				<c:forEach items="${ session.cart.items } var="entry">
+				<c:forEach items="${ sessionScope.cart.items }" var="entry">
 					<tr>
-					<td>时间简史</td>
-					<td>2</td>
-					<td>30.00</td>
-					<td>60.00</td>
-					<td><a href="#">删除</a></td>
-				</tr>
+						<td>${ entry.value.name }</td>
+						<td>${ entry.value.count }</td>
+						<td>${ entry.value.price }</td>
+						<td>${ entry.value.totalPrice }</td>
+						<td><a href="#">删除</a></td>
+					</tr>
 				</c:forEach>	
-					
-				
-					
-				
 			</table>
 			
 			<div class="cart_info">
