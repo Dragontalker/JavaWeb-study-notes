@@ -43,7 +43,14 @@ public class CartServlet extends BaseServlet {
 	
 	protected void deleteItem(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		int id = WebUltis.parseInt(req.getParameter("id"), 0);
 		
+		Cart cart = (Cart) req.getSession().getAttribute("cart");
+		
+		if (cart != null) {
+			cart.deleteItem(id);
+			resp.sendRedirect(req.getHeader("Referer"));
+		}
 	}
 
 }
