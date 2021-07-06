@@ -46,4 +46,9 @@ public class JsonTest {
 		System.out.println(personListFromJson);
 	}
 	
+	@Test
+	public void test3() {
+		
+	}
+	
 }
