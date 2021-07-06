@@ -29,7 +29,7 @@
   </filter>
   <filter-mapping>
   	<filter-name>Filter1</filter-name>
-  	<url-pattern>/admin/*</url-pattern>
+  	<url-pattern>/target.jsp</url-pattern>
   </filter-mapping>
   
   <filter>
@@ -38,7 +38,7 @@
   </filter>
   <filter-mapping>
   	<filter-name>Filter2</filter-name>
-  	<url-pattern>/admin/*</url-pattern>
+  	<url-pattern>/target.jsp</url-pattern>
   </filter-mapping>
   
   <servlet>
