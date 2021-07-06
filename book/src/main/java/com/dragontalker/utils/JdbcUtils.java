@@ -52,6 +52,24 @@ public class JdbcUtils {
 	}
 	
 	public static void commitAndClose() {
+		Connection connection = conns.get();
+		
+		if (connection != null) {
+			
+			try {
+				connection.commit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					connection.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		conns.remove();
 		
 	}
 	
