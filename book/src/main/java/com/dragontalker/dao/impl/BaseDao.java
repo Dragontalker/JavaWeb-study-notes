@@ -17,6 +17,8 @@ public abstract class BaseDao {
 	
 	public int update(String sql, Object ...args) {
 		
+		System.out.println("BaseDao程序在[" + Thread.currentThread().getName() + "]中...");
+		
 		Connection connection = JdbcUtils.getConnection();
 		
 		try {
