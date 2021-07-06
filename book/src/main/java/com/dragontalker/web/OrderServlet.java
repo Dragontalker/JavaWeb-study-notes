@@ -30,6 +30,8 @@ public class OrderServlet extends BaseServlet{
 			return;
 		}
 		
+		System.out.println("OrderServlet程序在[" + Thread.currentThread().getName() + "]中...");
+		
 		Integer userId = loginUser.getId();
 		
 		String orderId = orderService.createOrder(cart, userId);
