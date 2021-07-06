@@ -8,6 +8,10 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
+import com.dragontalker.utils.JdbcUtils;
+
+
+
 public class TransactionFilter implements Filter {
 
 	@Override
@@ -18,7 +22,10 @@ public class TransactionFilter implements Filter {
 		
 		try {
 			filterChain.doFilter(servletRequest, servletResponse);
+			
+			JdbcUtils.commitAndClose();
 		} catch (Exception e) {
+			JdbcUtils.rollbackAndClose();
 			e.printStackTrace();
 		}
 	}
