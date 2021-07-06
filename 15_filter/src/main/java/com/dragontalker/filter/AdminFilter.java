@@ -11,9 +11,11 @@ import javax.servlet.ServletResponse;
 public class AdminFilter implements Filter {
 
 	@Override
-	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
-			throws IOException, ServletException {
-		// TODO Auto-generated method stub
+	public void doFilter(ServletRequest servletRequest, 
+			ServletResponse servletResponse, 
+			FilterChain filterChain) 
+					throws IOException, ServletException {
+		
 
 	}
 
