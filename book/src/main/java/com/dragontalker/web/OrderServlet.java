@@ -10,6 +10,7 @@ import com.dragontalker.pojo.Cart;
 import com.dragontalker.pojo.User;
 import com.dragontalker.service.OrderService;
 import com.dragontalker.service.impl.OrderServiceImpl;
+import com.dragontalker.utils.JdbcUtils;
 
 public class OrderServlet extends BaseServlet{
 
@@ -37,7 +38,10 @@ public class OrderServlet extends BaseServlet{
 		String orderId = null;
 		try {
 			orderId = orderService.createOrder(cart, userId);
+			
+			JdbcUtils.commitAndClose();
 		} catch (Exception e) {
+			JdbcUtils.rollbackAndClose();
 			e.printStackTrace();
 		}
 		
