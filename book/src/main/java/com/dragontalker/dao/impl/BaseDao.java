@@ -25,9 +25,7 @@ public abstract class BaseDao {
 			return queryRunner.update(connection, sql, args);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			JdbcUtils.close(connection);
-		}
+		} 
 		
 		return -1;
 		
@@ -41,9 +39,7 @@ public abstract class BaseDao {
 			return queryRunner.query(connection, sql, new BeanHandler<T>(type), args);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			JdbcUtils.close(connection);
-		}
+		} 
 		
 		return null;
 		
@@ -57,9 +53,7 @@ public abstract class BaseDao {
 			return queryRunner.query(connection, sql, new BeanListHandler<T>(type), args);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			JdbcUtils.close(connection);
-		}
+		} 
 		
 		return null;
 		
@@ -73,8 +67,6 @@ public abstract class BaseDao {
 			return queryRunner.query(connection, sql, new ScalarHandler(), args);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			JdbcUtils.close(connection);
 		}
 		
 		return null;
