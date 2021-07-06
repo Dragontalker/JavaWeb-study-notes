@@ -9,6 +9,7 @@ import com.dragontalker.dao.OrderItemDao;
 import com.dragontalker.dao.impl.BookDaoImpl;
 import com.dragontalker.dao.impl.OrderDaoImpl;
 import com.dragontalker.dao.impl.OrderItemDaoImpl;
+import com.dragontalker.pojo.Book;
 import com.dragontalker.pojo.Cart;
 import com.dragontalker.pojo.CartItem;
 import com.dragontalker.pojo.Order;
@@ -37,6 +38,11 @@ public class OrderServiceImpl implements OrderService {
 			OrderItem orderItem = new OrderItem(null, cartItem.getName(), cartItem.getCount(), cartItem.getPrice(), cartItem.getTotalPrice(), orderId);
 			
 			orderItemDao.saveOrderItem(orderItem);
+			
+			Book book = bookDao.queryBookById(cartItem.getId());
+			book.setSales(book.getSales() + cartItem.getCount());
+			book.setStock( book.getStock() - cartItem.getCount());
+			bookDao.updateBook(book);
 		}
 		
 		cart.clear();
