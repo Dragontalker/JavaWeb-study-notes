@@ -63,4 +63,13 @@
   	<servlet-name>OrderServlet</servlet-name>
   	<url-pattern>/orderServlet</url-pattern>
   </servlet-mapping>
+  
+  <filter>
+  	<filter-name>ManagerFilter</filter-name>
+  	<filter-class>com.dragontalker.filter.ManagerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>ManagerFilter</filter-name>
+  	<url-pattern>/pages/manager/*</url-pattern>
+  </filter-mapping>
 </web-app>
