@@ -39,6 +39,8 @@ public class JsonTest {
 		String personListJsonString = gson.toJson(personList);
 		
 		System.out.println(personListJsonString);
+		
+		List<Person> personListFromJson = gson.fromJson(personListJsonString, List<Person.class>);
 	}
 	
 }
