@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
 		String password = req.getParameter("password");
 		
 		if ("wzg168".equals(username) && "123456".equals(password)) {
-			req.setAttribute("user", username);
+			req.getSession().setAttribute("user", username);
 			resp.getWriter().write("Login Successful!");
 		} else {
 			req.getRequestDispatcher("/login.jsp").forward(req, resp);

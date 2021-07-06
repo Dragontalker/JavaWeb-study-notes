@@ -24,11 +24,13 @@ public class AdminFilter implements Filter {
 		
 		Object user = session.getAttribute("user");
 		
+		System.out.println(user);
+		
 		if (user == null) {
 			servletRequest.getRequestDispatcher("/login.jsp").forward(servletRequest, servletResponse);
 			return;
 		} else {
-			filterChain.doFilter(httpServletRequest, servletResponse);
+			filterChain.doFilter(servletRequest, servletResponse);
 		}
 				
 	}

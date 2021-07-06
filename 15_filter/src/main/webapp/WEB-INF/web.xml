@@ -21,7 +21,7 @@
   
   <servlet>
   	<servlet-name>LoginServlet</servlet-name>
-  	<servlet-class>com.dragontalker.filter.LoginServlet</servlet-class>
+  	<servlet-class>com.dragontalker.servlet.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
