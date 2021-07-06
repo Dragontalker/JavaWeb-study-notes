@@ -3,8 +3,10 @@ package com.dragontalker.service.impl;
 import java.util.Date;
 import java.util.Map;
 
+import com.dragontalker.dao.BookDao;
 import com.dragontalker.dao.OrderDao;
 import com.dragontalker.dao.OrderItemDao;
+import com.dragontalker.dao.impl.BookDaoImpl;
 import com.dragontalker.dao.impl.OrderDaoImpl;
 import com.dragontalker.dao.impl.OrderItemDaoImpl;
 import com.dragontalker.pojo.Cart;
@@ -17,6 +19,7 @@ public class OrderServiceImpl implements OrderService {
 	
 	private OrderDao orderDao = new OrderDaoImpl();
 	private OrderItemDao orderItemDao = new OrderItemDaoImpl();
+	private BookDao bookDao = new BookDaoImpl();
 
 	@Override
 	public String createOrder(Cart cart, Integer userId) {
