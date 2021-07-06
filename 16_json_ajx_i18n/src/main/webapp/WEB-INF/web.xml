@@ -9,4 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>AjaxServlet</servlet-name>
+  	<servlet-class>com.dragontalker.servlet.AjaxServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AjaxServlet</servlet-name>
+  	<url-pattern>/ajaxServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
