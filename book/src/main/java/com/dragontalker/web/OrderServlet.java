@@ -10,7 +10,6 @@ import com.dragontalker.pojo.Cart;
 import com.dragontalker.pojo.User;
 import com.dragontalker.service.OrderService;
 import com.dragontalker.service.impl.OrderServiceImpl;
-import com.dragontalker.utils.JdbcUtils;
 
 public class OrderServlet extends BaseServlet{
 
