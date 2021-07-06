@@ -61,6 +61,11 @@ public class JsonTest {
 		String personMapJsonString = gson.toJson(personMap);
 		
 		System.out.println(personMapJsonString);
+		
+		Map<Integer, Person> personMapFromJson = 
+				gson.fromJson(personMapJsonString, new PersonMapType().getType());
+		
+		System.out.println(personMapFromJson);
 	}
 	
 }
