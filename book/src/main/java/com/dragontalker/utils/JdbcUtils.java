@@ -38,10 +38,17 @@ public class JdbcUtils {
 		if (conn == null) {
 			try {
 				conn = dataSource.getConnection();
+				
+				conns.set(conn);
+				
+				conn.setAutoCommit(false);
+				
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
+		
+		return conn;
 	}
 	
 	public static void close(Connection conn) {
