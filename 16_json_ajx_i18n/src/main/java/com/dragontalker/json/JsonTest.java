@@ -40,7 +40,10 @@ public class JsonTest {
 		
 		System.out.println(personListJsonString);
 		
-		List<Person> personListFromJson = gson.fromJson(personListJsonString, List<Person.class>);
+		List<Person> personListFromJson = 
+				gson.fromJson(personListJsonString, new PersonListType().getType());
+		
+		System.out.println(personListFromJson);
 	}
 	
 }
