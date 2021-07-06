@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.google.gson.reflect.TypeToken;
+
 import org.junit.Test;
 
 import com.dragontalker.pojo.Person;
@@ -43,7 +45,7 @@ public class JsonTest {
 		System.out.println(personListJsonString);
 		
 		List<Person> personListFromJson = 
-				gson.fromJson(personListJsonString, new PersonListType().getType());
+				gson.fromJson(personListJsonString, new TypeToken<List<Person>>(){}.getType());
 		
 		System.out.println(personListFromJson);
 	}
@@ -63,7 +65,7 @@ public class JsonTest {
 		System.out.println(personMapJsonString);
 		
 		Map<Integer, Person> personMapFromJson = 
-				gson.fromJson(personMapJsonString, new PersonMapType().getType());
+				gson.fromJson(personMapJsonString, new TypeToken<Map<Integer, Person>>(){}.getType());
 		
 		System.out.println(personMapFromJson);
 	}
