@@ -29,6 +29,8 @@ public class AdminFilter implements Filter {
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		System.out.println("2. init() method of AdminFilter called...");
+		System.out.println("filter-name=" + filterConfig.getFilterName());
+		System.out.println("init-param_username=" + filterConfig.getInitParameter("username"));
 	}
 
 
