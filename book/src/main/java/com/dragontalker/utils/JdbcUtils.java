@@ -33,15 +33,15 @@ public class JdbcUtils {
 
 	public static Connection getConnection() {
 		
-		Connection conn = null;
+		Connection conn = conns.get();
 		
-		try {
-			conn = dataSource.getConnection();
-		} catch (Exception e) {
-			e.printStackTrace();
+		if (conn == null) {
+			try {
+				conn = dataSource.getConnection();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
-		
-		return conn;
 	}
 	
 	public static void close(Connection conn) {
