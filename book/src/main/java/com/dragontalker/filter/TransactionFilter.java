@@ -11,9 +11,10 @@ import javax.servlet.ServletResponse;
 public class TransactionFilter implements Filter {
 
 	@Override
-	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
+	public void doFilter(ServletRequest servletRequest, 
+			ServletResponse servletResponse, FilterChain filterChain)
 			throws IOException, ServletException {
-		// TODO Auto-generated method stub
+		
 
 	}
 
