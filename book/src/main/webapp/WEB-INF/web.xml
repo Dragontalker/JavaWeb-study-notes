@@ -71,5 +71,6 @@
   <filter-mapping>
   	<filter-name>ManagerFilter</filter-name>
   	<url-pattern>/pages/manager/*</url-pattern>
+  	<url-pattern>/manager/bookServlet</url-pattern>
   </filter-mapping>
 </web-app>
