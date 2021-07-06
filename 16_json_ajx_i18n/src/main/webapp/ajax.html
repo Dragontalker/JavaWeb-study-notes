@@ -9,10 +9,13 @@
 		<script type="text/javascript">
 			function ajaxRequest() {
 // 				1、我们首先要创建XMLHttpRequest 
+				var xmlHttpRequest = new XMLHttpRequest();
 
 // 				2、调用open方法设置请求参数
+				xmlHttpRequest.open("GET", "http://localhost:8080/16_json_ajax_i18n/ajaxServlet?action=ajaxServlet");
 
 // 				3、调用send方法发送请求
+				xmlHttpRquest.send();
 
 // 				4、在send方法前绑定onreadystatechange事件，处理请求完成后的操作。
 			}
