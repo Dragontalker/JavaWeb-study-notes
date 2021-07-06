@@ -34,7 +34,12 @@ public class OrderServlet extends BaseServlet{
 		
 		Integer userId = loginUser.getId();
 		
-		String orderId = orderService.createOrder(cart, userId);
+		String orderId = null;
+		try {
+			orderId = orderService.createOrder(cart, userId);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		req.getSession().setAttribute("orderId", orderId);
 		
