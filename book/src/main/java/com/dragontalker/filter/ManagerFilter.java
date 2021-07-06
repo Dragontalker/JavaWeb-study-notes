@@ -16,7 +16,6 @@ public class ManagerFilter implements Filter {
 			ServletResponse servletResponse, 
 			FilterChain filterChain)
 			throws IOException, ServletException {
-		// TODO Auto-generated method stub
 
 		HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
 		
@@ -25,6 +24,8 @@ public class ManagerFilter implements Filter {
 		if (user == null) {
 			httpServletRequest.getRequestDispatcher("/pages/user/login.jsp")
 				.forward(httpServletRequest, servletResponse);
+		} else {
+			filterChain.doFilter(httpServletRequest, servletResponse);
 		}
 	}
 
