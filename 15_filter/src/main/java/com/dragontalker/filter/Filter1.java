@@ -13,8 +13,12 @@ public class Filter1 implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		// TODO Auto-generated method stub
-
+		
+		System.out.println("Filter1: before chaining...");
+		
+		chain.doFilter(request, response);
+		
+		System.out.println("Filter1: after chaining...");
 	}
 
 }
