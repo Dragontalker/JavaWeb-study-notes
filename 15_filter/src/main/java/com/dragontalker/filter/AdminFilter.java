@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -11,12 +12,34 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public class AdminFilter implements Filter {
+	
+	public AdminFilter() {
+		System.out.println("1. Constructor of AdminFilter called...");
+	}
+	
+	
+
+	@Override
+	public void destroy() {
+		System.out.println("4. destroy() method of AdminFilter called...");
+	}
+
+
+
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {
+		System.out.println("2. init() method of AdminFilter called...");
+	}
+
+
 
 	@Override
 	public void doFilter(ServletRequest servletRequest, 
 			ServletResponse servletResponse, 
 			FilterChain filterChain) 
 					throws IOException, ServletException {
+		
+		System.out.println("3. doFilter() method of AdminFilter called...");
 		
 		HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
 		
