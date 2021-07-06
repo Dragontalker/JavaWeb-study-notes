@@ -11,6 +11,7 @@ import com.alibaba.druid.pool.DruidDataSourceFactory;
 public class JdbcUtils {
 	
 	private static DruidDataSource dataSource;
+	private static ThreadLocal<Connection> conns = new ThreadLocal<Connection>();
 	
 	static {
 
