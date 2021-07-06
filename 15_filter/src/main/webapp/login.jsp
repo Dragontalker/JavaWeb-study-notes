@@ -8,7 +8,7 @@
 </head>
 <body>
 	This is login.jsp.
-	<form action="" method="GET">
+	<form action="http://localhost:8080/15_filter/loginServlet" method="GET">
 		User Name: <input type="text" name="username" /> <br>
 		Password: <input type="password" name="password" /> <br>
 		<input type="submit" value="Submit"/>
