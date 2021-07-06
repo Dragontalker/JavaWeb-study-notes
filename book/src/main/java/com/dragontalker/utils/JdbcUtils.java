@@ -54,4 +54,9 @@ public class JdbcUtils {
 	public static void commitAndClose() {
 		
 	}
+	
+	public static void rollbackAndClose() {
+		
+	}
+	
 }
