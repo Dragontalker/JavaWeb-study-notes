@@ -74,7 +74,24 @@ public class JdbcUtils {
 	}
 	
 	public static void rollbackAndClose() {
+		Connection connection = conns.get();
 		
+		if (connection != null) {
+			
+			try {
+				connection.rollback();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					connection.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		conns.remove();
 	}
 	
 }
