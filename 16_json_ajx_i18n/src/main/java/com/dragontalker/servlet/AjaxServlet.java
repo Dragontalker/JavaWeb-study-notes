@@ -10,6 +10,6 @@ public class AjaxServlet extends BaseServlet{
 
     protected void javaScriptAjax(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     	
-    	
+    	System.out.println("Ajax Request recieved....");
     }
 }
