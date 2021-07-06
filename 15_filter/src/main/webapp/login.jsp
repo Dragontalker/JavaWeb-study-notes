@@ -4,16 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>a.jsp</title>
+<title>login.jsp</title>
 </head>
 <body>
-	<%
-		Object user = session.getAttribute("user");
-	
-		if (user == null) {
-			
-		}
-	%>
-	This is a.jsp.
+	This is login.jsp.
 </body>
 </html>
