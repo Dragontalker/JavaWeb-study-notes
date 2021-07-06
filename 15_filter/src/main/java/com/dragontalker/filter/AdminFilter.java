@@ -31,6 +31,7 @@ public class AdminFilter implements Filter {
 		System.out.println("2. init() method of AdminFilter called...");
 		System.out.println("filter-name=" + filterConfig.getFilterName());
 		System.out.println("init-param_username=" + filterConfig.getInitParameter("username"));
+		System.out.println(filterConfig.getServletContext());
 	}
 
 
