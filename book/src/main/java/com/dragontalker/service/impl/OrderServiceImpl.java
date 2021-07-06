@@ -25,6 +25,8 @@ public class OrderServiceImpl implements OrderService {
 	@Override
 	public String createOrder(Cart cart, Integer userId) {
 		
+		System.out.println("OrderServlet程序在[" + Thread.currentThread().getName() + "]中...");
+		
 		String orderId = System.currentTimeMillis() + "" + userId;
 		
 		Order order = new Order(orderId, new Date(), cart.getTotalPrice(), 0, userId);
