@@ -9,6 +9,7 @@
 </head>
 <body>
 	<%
+		System.out.println("a.jsp executed...");
 		Object user = session.getAttribute("user");
 	
 		if (user == null) {
