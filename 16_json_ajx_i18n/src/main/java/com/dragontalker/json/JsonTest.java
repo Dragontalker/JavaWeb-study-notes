@@ -1,7 +1,9 @@
 package com.dragontalker.json;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -49,6 +51,16 @@ public class JsonTest {
 	@Test
 	public void test3() {
 		
+		Map<Integer, Person> personMap = new HashMap<>();
+		
+		personMap.put(1,  new Person(1, "GuoGeHaoShuai"));
+		personMap.put(2,  new Person(2, "KangShiFuYeHaoShuai"));
+		
+		Gson gson = new Gson();
+		
+		String personMapJsonString = gson.toJson(personMap);
+		
+		System.out.println(personMapJsonString);
 	}
 	
 }
